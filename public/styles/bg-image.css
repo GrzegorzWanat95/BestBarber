@@ -2,6 +2,7 @@ body {
     background-color: #29231e;
     background-image: url('https://i.ibb.co/41qTwJb/Best-Barber.png');
     background-repeat: no-repeat;
-    max-width: 100%;
-    height: auto;
+    height: 100%;
+    background-position-x: right;
+    background-size: 50%
 }
