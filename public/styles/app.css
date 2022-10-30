@@ -79,16 +79,6 @@ a:active {
     margin: 2vw;
 }
 
-.main__content {
-    height: 85vh;
-    width: 100vw;
-    background-image: url('../img/BestBarber.png');
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    max-height: 100%;
-}
-
 .left__content:before {
     content: " ";
     position: absolute;
@@ -111,4 +101,14 @@ a:active {
     transform: skewX(-20deg);
     overflow: hidden;
     left: -10%;
+}
+
+.right__content {
+    height: 85vh;
+    width: 100vw;
+    content:" "; background:url('../img/BestBarber.png') brown;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    max-height: 100%;
 }
