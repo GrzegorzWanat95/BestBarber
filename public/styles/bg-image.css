@@ -1,8 +1,45 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    color: #2d1d15;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
 body {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
     background-color: #29231e;
-    background-image: url('https://i.ibb.co/41qTwJb/Best-Barber.png');
+    background-image: url('/public/img/BestBarber.png');
     background-repeat: no-repeat;
     height: 100%;
     background-position-x: right;
     background-size: 50%
 }
+
+p{
+    font-family: 'Roboto Slab', serif;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: rgb(44, 39, 39);
+  }
+  
+  a:active {
+    color: black;
+  }
