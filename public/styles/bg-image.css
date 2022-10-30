@@ -7,7 +7,7 @@ html {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    color:#edcfb2;
+    color: #edcfb2;
     background-color: #29231e;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.5rem;
@@ -24,19 +24,19 @@ p {
 
 a:link {
     text-decoration: none;
-    color:#edcfb2;
+    color: #edcfb2;
 }
 
 a:visited {
-    color:#edcfb2;
+    color: #edcfb2;
 }
 
 a:hover {
-    color:#c2a991 !important;
+    color: #c2a991 !important;
 }
 
 a:active {
-    color:#edcfb2;
+    color: #edcfb2;
 }
 
 .menu__top {
@@ -44,14 +44,14 @@ a:active {
     width: 100%;
 }
 
-.left__menu{
+.left__menu {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 70vw;
 }
 
-.right__menu{
+.right__menu {
     color: white;
     display: flex;
     align-items: center;
@@ -59,13 +59,13 @@ a:active {
     width: 30vw;
 }
 
-.collapse{
+.collapse {
     display: flex;
     align-content: center;
     text-align: center;
 }
 
-.navbar{
+.navbar {
     margin: 0px !important;
     padding: 0px !important;
 }
@@ -75,7 +75,7 @@ a:active {
     height: 12vh;
 }
 
-.nav-item{
+.nav-item {
     margin: 2vw;
 }
 
@@ -87,4 +87,28 @@ a:active {
     background-repeat: no-repeat;
     background-size: 50%;
     max-height: 100%;
+}
+
+.left__content:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 20px solid white;
+    border-radius: 10px;
+  }
+
+.left__content {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    height: 85vh;
+    display: inline-block;
+    border-right: 20px solid #29231e;
+    transform: skewX(-20deg);
+    overflow: hidden;
+    left: -10%;
 }
