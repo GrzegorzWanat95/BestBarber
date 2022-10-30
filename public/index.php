@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="left__menu">
-                        <img class="logo" src="/img/logo2biel.png" alt="BestBarber logo">
+                        <img class="logo" src="../img/logo2biel.png" alt="BestBarber logo">
                         <a class="nav-item nav-link" href="#">O NAS</a>
                         <a class="nav-item nav-link" href="#">CENNIK</a>
                         <a class="nav-item nav-link" href="#">KONTAKT</a>
@@ -50,18 +49,19 @@
         <div class="right__content">
             <div class="main__text">
                 <div class="img__field">
-                    <img class="img-fluid middle_image" src="/img/logo1biel.png" alt="BestBarber logo">
+                    <img class="img-fluid middle_image" src="../img/logo1biel.png" alt="BestBarber logo">
                 </div>
                 <div class="text__field">
                     <p1 class="text">
-                         Cenimy tradycyjną elegancję, profesjonalizm i styl. <br>Serdecznie zapraszamy do odwiedzenia naszego salonu.
+                        Cenimy tradycyjną elegancję, profesjonalizm i styl. <br>Serdecznie zapraszamy do odwiedzenia
+                        naszego salonu.
                     </p1>
                 </div>
                 <a link href="#" class="button__container mt-5">
                     <div class="button__field">
-                          <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                        <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
                     </div>
-                  </a>
+                </a>
             </div>
         </div>
     </div>
@@ -81,4 +81,3 @@
 </body>
 
 </html>
-

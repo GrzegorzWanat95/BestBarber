@@ -82,7 +82,7 @@ a:active {
 .main__content {
     height: 85vh;
     width: 100vw;
-    background-image: url('/img/BestBarber.png');
+    background-image: url('../../img/BestBarber.png');
     background-position-x: right;
     background-repeat: no-repeat;
     background-size: 45%;
