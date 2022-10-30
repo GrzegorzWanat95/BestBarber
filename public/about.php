@@ -30,7 +30,7 @@
                 <div class="navbar-nav">
                     <div class="left__menu">
                         <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
-                        <a class="nav-item nav-link" href="about.php">O NAS</a>
+                        <a class="nav-item nav-link" href="#">O NAS</a>
                         <a class="nav-item nav-link" href="#">CENNIK</a>
                         <a class="nav-item nav-link" href="#">KONTAKT</a>
                         <a class="nav-item nav-link" href="#">OPINIE</a>
@@ -43,27 +43,8 @@
             </div>
         </nav>
     </div>
-    <div class="main__content">
-        <div class="left__content">
-        </div>
-        <div class="right__content">
-            <div class="main__text">
-                <div class="img__field">
-                    <img class="img-fluid middle_image" src="/../img/logo1biel.png" alt="BestBarber logo1biel">
-                </div>
-                <div class="text__field">
-                    <p1 class="text">
-                        Cenimy tradycyjną elegancję, profesjonalizm i styl. <br>Serdecznie zapraszamy do odwiedzenia
-                        naszego salonu.
-                    </p1>
-                </div>
-                <a link href="#" class="button__container mt-5">
-                    <div class="button__field">
-                        <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
-                    </div>
-                </a>
-            </div>
-        </div>
+    <div class="subpage__content">
+
     </div>
     <!--  <?php
    # declare(strict_types = 1);
