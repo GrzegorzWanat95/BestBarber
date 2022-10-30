@@ -49,7 +49,7 @@
         <div class="right__content">
             <div class="main__text">
                 <div class="img__field">
-                    <img class="img-fluid middle_image" src="../img/logo1biel.png" alt="BestBarber logo">
+                    <img class="img-fluid middle_image" src="/../img/logo1biel.png" alt="BestBarber logo1biel">
                 </div>
                 <div class="text__field">
                     <p1 class="text">
