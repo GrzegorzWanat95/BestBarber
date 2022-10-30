@@ -112,3 +112,62 @@ a:active {
     overflow: hidden;
     left: -10%;
 }
+
+.main__text{
+    position: absolute;
+    height:75%;
+    width: 60%;
+    z-index: 2;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 8vh;
+}
+
+.img__field{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin: 3vh;
+}
+
+.middle_image{
+    width: auto;
+    width: 65%;
+    height: auto;
+}
+
+.text__field{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    margin: 2vh;
+}
+
+.text{
+    text-align: center;
+}
+
+.button__container{
+    display: flex;
+    width: 20vw;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 1vh;
+    background-color: #edcfb2;
+}
+
+.button__field{
+    background-color: inherit !important;
+}
+
+.button__text{
+    background-color: #edcfb2;
+    color: #29231e !important;
+}
+
