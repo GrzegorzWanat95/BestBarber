@@ -30,14 +30,14 @@
                 <div class="navbar-nav">
                     <div class="left__menu">
                         <img class="logo" src="../img/logo2biel.png" alt="BestBarber logo">
-                        <a class="nav-item nav-link" href="#">O NAS</a>
-                        <a class="nav-item nav-link" href="#">CENNIK</a>
-                        <a class="nav-item nav-link" href="#">KONTAKT</a>
-                        <a class="nav-item nav-link" href="#">OPINIE</a>
+                        <a class="nav-item nav-link" href="/onas">O NAS</a>
+                        <a class="nav-item nav-link" href="/cennik">CENNIK</a>
+                        <a class="nav-item nav-link" href="/kontakt">KONTAKT</a>
+                        <a class="nav-item nav-link" href="/opinie">OPINIE</a>
                     </div>
                     <div class="right__menu">
-                        <a class="nav-item text-light nav-link" href="#">LOGOWANIE</a>
-                        <a class="nav-item text-light nav-link" href="#">REJESTRACJA</a>
+                        <a class="nav-item text-light nav-link" href="/logowanie">LOGOWANIE</a>
+                        <a class="nav-item text-light nav-link" href="/rejestracja">REJESTRACJA</a>
                     </div>
                 </div>
             </div>
