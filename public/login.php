@@ -32,6 +32,9 @@ require('index.php');
                         LOGOWANIE
                     </h1>
                 </div>
+                <div class="button-corner">
+                    <button onclick="window.location = '/index.php';">Close window</button>
+                </div>
             </div>
         </div>
     </div>

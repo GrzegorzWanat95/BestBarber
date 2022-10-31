@@ -267,6 +267,12 @@ a:active {
 
 .settings{
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     background-color: inherit;
+}
+
+.button-corner {
+    position: absolute;
+    right:    10px;
+    bottom:   10px;
 }
