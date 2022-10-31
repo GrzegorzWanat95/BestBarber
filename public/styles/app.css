@@ -170,3 +170,9 @@ a:active {
     background-color: #edcfb2;
     color: #29231e !important;
 }
+
+.subpage__content{
+    width: 100vw;
+    height: 85vh;
+    background-color: #fff5eb;
+}
