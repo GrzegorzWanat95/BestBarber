@@ -32,7 +32,7 @@
                         <a class="nav-item nav-link" href="#">OPINIE</a>
                     </div>
                     <div class="right__menu">
-                        <a class="nav-item text-light nav-link" href="#">LOGOWANIE</a>
+                        <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
                         <a class="nav-item text-light nav-link" href="#">REJESTRACJA</a>
                     </div>
                 </div>
