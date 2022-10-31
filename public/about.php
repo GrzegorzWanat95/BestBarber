@@ -17,6 +17,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -44,12 +45,21 @@
         </nav>
     </div>
     <div class="subpage__content">
-
+        <?php include 'scripts/slider.php';?>
+        <div class="imager">
+            <div class="image-nav">
+                <a href="?img=<?=$first;?>">First</a>
+                <a href="?img=<?=$prev;?>">Previous</a>
+                <span class="sp"></span>
+                <a href="?img=<?=$next;?>">Next</a>
+                <a href="?img=<?=$last;?>">Last</a>
+            </div>
+            <div class="image-image">
+                <img src="<?=WEBIMGDIR;?><?=$is_active;?>" alt="" />
+            </div>
+            <p class="image-image-label"><?=$img_cpt_name;?></p>
+        </div>
     </div>
-    <!--  <?php
-   # declare(strict_types = 1);
-   # require __DIR__ . '/../src/Bootstrap.php';
-    ?> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
