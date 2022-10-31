@@ -35,7 +35,7 @@ require('index.php');
                 <div class="button-corner">
                     <button onclick="window.location='/index.php';">Zamknij okno</button>
                 </div>
-                <form action="index.php" method="post">
+                <form action="/user-main.php" method="post">
                 <div class="settingss">
                        Login: <input type="text" name="login">
                 </div>
@@ -44,7 +44,7 @@ require('index.php');
                 </div>
                 <div class="settingss">
                     <h1 class="header mt-5">
-                       <input type="submit" value="Zaloguj się" action="/index.php">
+                       <input type="submit" value="Zaloguj się">
                     </h1>
                 </div>
                 </form>

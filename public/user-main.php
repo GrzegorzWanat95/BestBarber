@@ -1,3 +1,8 @@
+<?php
+$login = $_POST['login'];
+$haslo = $_POST['password'];
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 
