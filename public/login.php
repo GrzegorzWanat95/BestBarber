@@ -45,6 +45,11 @@ require('index.php');
                        Hasło: <input type="password" name="password">
                     </h1>
                 </div>
+                <div class="settings">
+                    <h1 class="header mt-5">
+                       <input type="submit" value="Login">
+                    </h1>
+                </div>
             </div>
         </div>
     </div>
