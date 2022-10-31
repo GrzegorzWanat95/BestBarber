@@ -221,3 +221,14 @@ a:active {
     width: 100%;
     object-fit: contain;
 }
+
+.holder{
+    background-color: inherit;
+    display: flex;
+}
+
+.half__side{
+    background-color: inherit;
+    width: 50%;
+    height: 44vh;
+}
