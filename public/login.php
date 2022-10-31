@@ -35,6 +35,16 @@ require('index.php');
                 <div class="button-corner">
                     <button onclick="window.location = '/index.php';">Close window</button>
                 </div>
+                <div class="settings">
+                    <h1 class="header mt-5">
+                       Login: <input type="text" name="login">
+                    </h1>
+                </div>
+                <div class="settings">
+                    <h1 class="header mt-5">
+                       Hasło: <input type="password" name="password">
+                    </h1>
+                </div>
             </div>
         </div>
     </div>
