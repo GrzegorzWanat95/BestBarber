@@ -33,23 +33,21 @@ require('index.php');
                     </h1>
                 </div>
                 <div class="button-corner">
-                    <button onclick="window.location = '/index.php';">Close window</button>
+                    <button onclick="window.location='/index.php';">Zamknij okno</button>
                 </div>
-                <div class="settings">
-                    <h1 class="header mt-5">
+                <form action="index.php" method="post">
+                <div class="settingss">
                        Login: <input type="text" name="login">
-                    </h1>
                 </div>
-                <div class="settings">
-                    <h1 class="header mt-5">
+                <div class="settingss">
                        Hasło: <input type="password" name="password">
-                    </h1>
                 </div>
-                <div class="settings">
+                <div class="settingss">
                     <h1 class="header mt-5">
-                       <input type="submit" value="Login">
+                       <input type="submit" value="Zaloguj się" action="/index.php">
                     </h1>
                 </div>
+                </form>
             </div>
         </div>
     </div>

@@ -271,6 +271,13 @@ a:active {
     background-color: inherit;
 }
 
+.settingss{
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+    padding-top: 5%;
+}
+
 .button-corner {
     position: absolute;
     right:    10px;
