@@ -33,7 +33,7 @@
                         <a class="nav-item nav-link" href="about.php">O NAS</a>
                         <a class="nav-item nav-link" href="#">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                        <a class="nav-item nav-link" href="#">OPINIE</a>
+                        <a class="nav-item nav-link" href="#">UMÓW WIZYTĘ</a>
                     </div>
                     <div class="right__menu">
                         <a class="nav-item text-light nav-link" href="#">LOGOWANIE</a>
