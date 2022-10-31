@@ -234,5 +234,39 @@ a:active {
 }
 
 .absolute__window{
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff5eb9c;
+}
+
+.operation__window{
+    position: fixed;
+    z-index: 1001;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 50%;
+    height: 80%;
+    background-color: #fff5eb;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.window__frame{
+    width: 90%;
+    height: 90%;
+    background-color: inherit;
+}
+
+.settings{
+    display: flex;
+    justify-content: center;    
+    background-color: inherit;
 }

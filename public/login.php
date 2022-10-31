@@ -25,7 +25,15 @@ require('index.php');
 
 <body>
     <div class="absolute__window">
-
+        <div class="operation__window">
+            <div class="window__frame">
+                <div class="settings">
+                    <h1 class="header mt-5">
+                        LOGOWANIE
+                    </h1>
+                </div>
+            </div>
+        </div>
     </div>
     <!--  <?php
    # declare(strict_types = 1);
