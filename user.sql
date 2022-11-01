@@ -39,9 +39,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `login`, `password`, `email`) VALUES
-(1, 'mateusz', '123456', 'mateusz@email.com'),
-(2, 'grzegorz', '123456abc', 'grzegorz@email.com'),
-(3, 'bartosz', '123456xyz', 'bartosz@email.com');
+(1, 'mateusz', '123', 'mateusz@email.com'),
+(2, 'grzegorz', '123', 'grzegorz@email.com'),
+(3, 'bartosz', '123', 'bartosz@email.com');
 
 --
 -- Indeksy dla zrzutów tabel
