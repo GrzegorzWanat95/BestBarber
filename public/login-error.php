@@ -48,11 +48,9 @@ require('index.php');
                         </div>
                     </div>
                 </form>
-                <form class="user__forms" action="/contact.php" method="post">
-                    <div class="button-center mt-2">
-                        <button class="small__button" onclick="window.location='/contact.php';">Nie pamiętam hasła</button>
-                    </div>
-                </form>
+                <div class="button-center mt-2">
+                    <button class="small__button" onclick="window.location='/contact.php';">Nie pamiętam hasła</button>
+                </div>
             </div>
         </div>
     </div>
