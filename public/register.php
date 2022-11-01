@@ -28,32 +28,34 @@ require('index.php');
         <div class="operation__window">
             <div class="window__frame">
                 <div class="settings">
-                    <h1 class="header mt-5 mb-4">
+                    <h1 class="header mt-5 mb-2">
                         REJESTRACJA
                     </h1>
                 </div>
                 <div class="button-corner">
                     <button class="small__button" onclick="window.location='/index.php';">✕</button>
                 </div>
-                <form class="user__forms" action="scripts/registerscript.php" method="post">
-                <div class="settings__fields">
-                       Login: <input class="input__fields" type="text" name="login">
-                </div>
-                <div class="settings__fields">
-                       Hasło: <input class="input__fields" type="password" name="password_1">
-                </div>
-                <div class="settings__fields">
-                       Powtórz hasło: <input class="input__fields" type="password" name="password_2">
-                </div>
-                <div class="settings__fields">
-                       e-mail: <input class="input__fields" type="text" name="email">
-                </div>
-                <div class="settings__fields">
-                    <div class="header mt-4">
-                       <input class="button__regular" type="submit" value="Zarejestruj się">
+                <div class="form__content">
+                    <form class="user__forms" action="scripts/registerscript.php" method="post">
+                    <div class="settings__fields">
+                        Login: <input class="input__fields" type="text" name="login">
                     </div>
+                    <div class="settings__fields">
+                        Hasło: <input class="input__fields" type="password" name="password_1">
+                    </div>
+                    <div class="settings__fields">
+                        Potwierdź: <input class="input__fields" type="password" name="password_2">
+                    </div>
+                    <div class="settings__fields">
+                        e-mail: <input class="input__fields" type="text" name="email">
+                    </div>
+                    <div class="settings__fields">
+                        <div class="header mt-2">
+                        <input class="button__regular" type="submit" value="Zarejestruj się">
+                        </div>
+                    </div>
+                    </form>
                 </div>
-                </form>
             </div>
         </div>
     </div>

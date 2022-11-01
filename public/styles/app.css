@@ -306,6 +306,13 @@ a:active {
     background-color: inherit;
 }
 
+.form__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+}
+
 .settings{
     display: flex;
     justify-content: center;
@@ -321,10 +328,11 @@ a:active {
 }
 
 .input__fields{
+    width: 50%;
     background-color: inherit;
     border: none; 
     border-bottom: 1px solid #29231e;
-    margin-left: 2%;
+    margin-left: 5%;
     color: #29231e;
 }
 
@@ -358,6 +366,7 @@ a:active {
 
 .user__forms{
     background-color: inherit;
+    overflow: hidden;
 }
 
 .small__button{
