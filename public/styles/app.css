@@ -120,22 +120,33 @@ a:active {
     left: -10%;
 }
 
-.main__text{
-    position: absolute;
-    height:70%;
-    width: 58%;
-    z-index: 2;
-    margin-top: 2.5%;
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    padding-top: 6vh;
-}
-
 @media screen and (min-width: 1300px) {
-    .main__text {
-      background-color: inherit;
+    .main__text{
+        position: absolute;
+        height:70%;
+        width: 58%;
+        z-index: 2;
+        margin-top: 2.5%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        padding-top: 6vh;
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .main__text{
+        position: absolute;
+        height:70%;
+        width: 58%;
+        z-index: 2;
+        margin-top: 2.5%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        padding-top: 6vh;
     }
   }
 

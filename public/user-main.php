@@ -40,7 +40,7 @@
                         <a class="nav-item nav-link" href="#">UMÓW WIZYTĘ</a>
                     </div>
                     <div class="right__menu">
-                        <?php echo "Witaj ".$_SESSION['user']." !" ?>
+                        <?php echo strtoupper("WITAJ ".$_SESSION['user']."!") ?>
                         <a class="nav-item text-light nav-link" href="#">MOJE KONTO</a>
                     </div>
                 </div>
