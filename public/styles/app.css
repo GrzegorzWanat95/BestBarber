@@ -328,7 +328,7 @@ a:active {
 }
 
 .input__fields{
-    width:50%;
+    width: 90%;
     background-color: inherit;
     border: none; 
     border-bottom: 1px solid #29231e;

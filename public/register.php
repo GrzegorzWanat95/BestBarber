@@ -47,7 +47,7 @@ require('index.php');
                         Potwierdź: <input class="input__fields" type="password" name="password_2">
                     </div>
                     <div class="settings__fields">
-                        e-mail: <input class="input__fields" type="text" name="email">
+                        email: <input class="input__fields" type="text" name="email">
                     </div>
                     <div class="settings__fields">
                         <div class="header mt-2">
