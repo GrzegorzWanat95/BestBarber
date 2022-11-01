@@ -123,7 +123,7 @@ a:active {
 .main__text{
     position: absolute;
     height:70%;
-    width: 60%;
+    width: 58%;
     z-index: 2;
     margin-top: 2.5%;
     display: flex;
@@ -132,6 +132,12 @@ a:active {
     flex-wrap: wrap;
     padding-top: 6vh;
 }
+
+@media screen and (min-width: 1300px) {
+    .main__text {
+      background-color: inherit;
+    }
+  }
 
 .footer{
     display: flex;
