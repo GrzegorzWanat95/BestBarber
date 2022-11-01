@@ -27,7 +27,7 @@
 
 
                 $result->free_result();
-                header('Location: /user-main.php');
+                header('Location: /index.php');
             }
             else
             {
