@@ -28,24 +28,27 @@ require('index.php');
         <div class="operation__window">
             <div class="window__frame">
                 <div class="settings">
-                    <h1 class="header mt-5">
+                    <h1 class="header mt-5 mb-4">
                         LOGOWANIE
                     </h1>
                 </div>
                 <div class="button-corner">
-                    <button onclick="window.location='/index.php';">Zamknij okno</button>
+                    <button class="small__button" onclick="window.location='/index.php';">✕</button>
                 </div>
-                <form action="/user-main.php" method="post">
-                <div class="settingss">
-                       Login: <input type="text" name="login">
+                <form class="user__forms" action="/user-main.php" method="post">
+                <div class="settings__fields">
+                       Login: <input class="input__fields" type="text" name="login">
                 </div>
-                <div class="settingss">
-                       Hasło: <input type="password" name="password">
+                <div class="settings__fields">
+                       Hasło: <input class="input__fields" type="password" name="password">
                 </div>
-                <div class="settingss">
-                    <h1 class="header mt-5">
-                       <input type="submit" value="Zaloguj się">
-                    </h1>
+                <div class="settings__fields">
+                    <div class="header mt-4">
+                       <input class="button__regular" type="submit" value="Zaloguj się">
+                    </div>
+                </div>
+                <div class="button-center mt-2">
+                    <button class="small__button" onclick="window.location='contact.php';">Nie pamiętam hasła</button>
                 </div>
                 </form>
             </div>

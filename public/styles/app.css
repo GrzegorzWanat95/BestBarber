@@ -246,12 +246,12 @@ a:active {
 .operation__window{
     position: fixed;
     z-index: 1001;
-    margin-left: 25vw;
-    margin-right: 25vw;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    width: 50%;
-    height: 80%;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    width: 30%;
+    height: 50%;
     background-color: #fff5eb;
     display: flex;
     justify-content: center;
@@ -271,15 +271,61 @@ a:active {
     background-color: inherit;
 }
 
-.settingss{
+.settings__fields{
     display: flex;
     justify-content: center;
     background-color: inherit;
     padding-top: 5%;
+    color: #29231e;
+}
+
+.input__fields{
+    background-color: inherit;
+    border: none; 
+    border-bottom: 1px solid #29231e;
+    margin-left: 2%;
+    color: #29231e;
 }
 
 .button-corner {
+    background-color: inherit;
     position: absolute;
     right:    10px;
-    bottom:   10px;
+    top:   10px;
+}
+
+.button-center{
+    width: 90%;
+    background-color: inherit;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow:auto;
+}
+
+.button__regular{
+    border: 2px solid #30342f;
+    width: 10vw;
+}
+
+.button__regular:hover{
+    color: #29231e;
+    background-color: #fff5eb9c;
+}
+
+.user__forms{
+    background-color: inherit;
+}
+
+.small__button{
+    background-color: inherit;
+    border: none;
+    color: #29231e;
+    font-size: 1.2rem;
+}
+
+.small__button:hover{
+    border-bottom: 2px solid #29231e;
 }
