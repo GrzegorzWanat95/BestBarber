@@ -1,7 +1,3 @@
-<?php
-require('index.php');
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -35,7 +31,7 @@ require('index.php');
                 <div class="button-corner">
                     <button class="small__button" onclick="window.location='/index.php';">✕</button>
                 </div>
-                <form class="user__forms" action="/user-main.php" method="post">
+                <form class="user__forms" action="scripts/loginscript.php" method="post">
                 <div class="settings__fields">
                        Login: <input class="input__fields" type="text" name="login">
                 </div>

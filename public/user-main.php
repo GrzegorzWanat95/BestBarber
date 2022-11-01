@@ -1,6 +1,5 @@
 <?php
-$login = $_POST['login'];
-$haslo = $_POST['password'];
+    session_start();
 ?>
 
 <!DOCTYPE html>
