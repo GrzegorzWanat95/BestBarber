@@ -41,7 +41,7 @@
                     </div>
                     <div class="right__menu">
                         <a class="nav-item text-light nav-link" href="#"><?php echo strtoupper("WITAJ ".$_SESSION['user']."!") ?></a>
-                        <a class="nav-item text-light nav-link" href="scripts/loginscript.php">WYLOGUJ</a>
+                        <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
                     </div>
                 </div>
             </div>
