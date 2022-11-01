@@ -13,9 +13,9 @@
     else
     {
         $login = $_POST['login'];
-        $haslo = $_POST['password'];
+        $password = $_POST['password'];
 
-        $sql = "SELECT * FROM user WHERE login='$login' AND password='$haslo'";
+        $sql = "SELECT * FROM user WHERE login='$login' AND password='$password'";
 
         if ($result = $connection->query($sql))
         {
