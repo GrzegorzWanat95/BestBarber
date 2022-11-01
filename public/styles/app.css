@@ -75,6 +75,13 @@ a:active {
     height: 12vh;
 }
 
+.logo__footer{
+    height: 100%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 4vw;
+}
+
 .nav-item {
     margin: 2vw;
 }
@@ -127,8 +134,20 @@ a:active {
 }
 
 .footer{
+    display: flex;
+    flex-wrap: nowrap;
     height: 10vh;
     width: 100vw;
+    justify-content:space-between;
+    align-content: flex-start;
+    align-items: flex-end;
+}
+
+.footer__text{
+    display: flex;
+    font-size: 1rem;
+    padding-right: 5vw;
+    padding-bottom: 1vh;
 }
 
 .img__field{
