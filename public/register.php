@@ -40,7 +40,10 @@ require('index.php');
                        Login: <input class="input__fields" type="text" name="login">
                 </div>
                 <div class="settings__fields">
-                       Hasło: <input class="input__fields" type="password" name="password">
+                       Hasło: <input class="input__fields" type="password" name="password_1">
+                </div>
+                <div class="settings__fields">
+                       Powtórz hasło: <input class="input__fields" type="password" name="password_2">
                 </div>
                 <div class="settings__fields">
                        e-mail: <input class="input__fields" type="text" name="email">
