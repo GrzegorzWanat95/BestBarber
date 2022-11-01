@@ -31,7 +31,7 @@
             }
             else
             {
-                echo "NO USER OR WRONG PASSWORD";
+                header('Location: ../login.php');
             }
         }
 
