@@ -5,13 +5,13 @@
 
     $connection = new mysqli($host,$db_user,$db_password,$db_name);   
     $errors = array(); 
-    $username = "";
-    $email = "";
-    $password_1 = ""; 
-    $password_2 = ""; 
+    $username = $_POST['login'];
+    $email = $_POST['email'];
+    $password_1 = $_POST['password_1']; 
+    $password_2 = $_POST['password_2']; 
  
 
-    if (isset($_POST['reg_user'])) {
+    /*if (isset($_POST['reg_user'])) {
         // receive all input values from the form in register.php
         $username = mysqli_real_escape_string($connection, $_POST['login']);
         $email = mysqli_real_escape_string($connection, $_POST['email']);
@@ -40,7 +40,7 @@
         if ($user['email'] === $email) {
           array_push($errors, "Podany email jest już w bazie!");
         }
-    }
+    }*/
 
     // Finally, register user if there are no errors in the form
     if (count($errors) == 0) {
