@@ -1,3 +1,7 @@
+<?php
+require('index.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -20,48 +24,33 @@
 </head>
 
 <body>
-    <div class="menu__top">
-        <nav class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <div class="left__menu">
-                        <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
-                        <a class="nav-item nav-link" href="about.php">O NAS</a>
-                        <a class="nav-item nav-link" href="#">CENNIK</a>
-                        <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                        <a class="nav-item nav-link" href="#">UMÓW WIZYTĘ</a>
-                    </div>
-                    <div class="right__menu">
-                        <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
-                        <a class="nav-item text-light nav-link" href="#">REJESTRACJA</a>
+    <div class="absolute__window">
+        <div class="operation__window">
+            <div class="window__frame">
+                <div class="settings">
+                    <h1 class="header mt-5 mb-4">
+                        REJESTRACJA
+                    </h1>
+                </div>
+                <div class="button-corner">
+                    <button class="small__button" onclick="window.location='/index.php';">✕</button>
+                </div>
+                <form class="user__forms" action="/user-main.php" method="post">
+                <div class="settings__fields">
+                       Login: <input class="input__fields" type="text" name="login">
+                </div>
+                <div class="settings__fields">
+                       Hasło: <input class="input__fields" type="password" name="password">
+                </div>
+                <div class="settings__fields">
+                       e-mail: <input class="input__fields" type="text" name="email">
+                </div>
+                <div class="settings__fields">
+                    <div class="header mt-4">
+                       <input class="button__regular" type="submit" value="Zarejestruj się">
                     </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-    <div class="main__content">
-        <div class="left__content">
-        </div>
-        <div class="right__content">
-            <div class="main__text">
-                <div class="img__field">
-                    <img class="img-fluid middle_image" src="/../img/logo1biel.png" alt="BestBarber logo1biel">
-                </div>
-                <div class="text__field">
-                    <p1 class="text">
-                        Cenimy tradycyjną elegancję, profesjonalizm i styl. <br>Serdecznie zapraszamy do odwiedzenia
-                        naszego salonu.
-                    </p1>
-                </div>
-                <a link href="#" class="button__container mt-5">
-                    <div class="button__field">
-                        <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
-                    </div>
-                </a>
+                </form>
             </div>
         </div>
     </div>

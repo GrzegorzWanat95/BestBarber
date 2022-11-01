@@ -33,7 +33,7 @@
                     </div>
                     <div class="right__menu">
                         <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
-                        <a class="nav-item text-light nav-link" href="#">REJESTRACJA</a>
+                        <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
                     </div>
                 </div>
             </div>
