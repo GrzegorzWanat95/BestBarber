@@ -23,7 +23,7 @@
             if($users > 0)
             {
                 $row = $result->fetch_assoc();
-                $user = $row['login'];
+                $_SESSION['user'] = $row['login'];
 
 
                 $result->free_result();
