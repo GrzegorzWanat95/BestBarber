@@ -41,7 +41,6 @@
                 <div class="button-corner">
                     <button class="small__button" onclick="window.location='/index.php';">✕</button>
                 </div>
-                <div class="form__content">
                     <form class="user__forms" action="scripts/registerscript.php" method="post">
                     <div class="settings__fields">
                         Login: <input class="input__fields" type="text" name="login">
@@ -53,12 +52,11 @@
                         Potwierdź: <input class="input__fields" type="password" name="password_2">
                     </div>
                     <div class="settings__fields">
-                        email: <input class="input__fields" type="text" name="email">
+                        E-mail: <input class="input__fields" type="text" name="email">
                     </div>
                     <div class="settings__fields">
                         <div class="header mt-2">
                         <input class="button__regular" type="submit" value="Zarejestruj się">
-                        </div>
                     </div>
                     </form>
                 </div>
