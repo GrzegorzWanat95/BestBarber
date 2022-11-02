@@ -51,38 +51,98 @@
     <div class="subpage__content">
         <div class="content__frame">
             <h1 class="header">
-                KONTAKT
+                CENNIK
             </h1>
             <div class="holder">
-                <div class="half__side">
-                    <div class="subpage__text">
-                        BestBarber ul. Ratajczaka 31, 64-816 Poznań <br>
-                        telefon: 132 456 867 <br>
-                        mail: bestbarber@email.com
-                    </div>
-                </div>
-                <div class="half__side">
-                    <div class="mapouter">
-                        <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Ratajczaka%2031%20Pozna%C5%84&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">
-                                divi discount</a><br>
-                            <style>
-                                .mapouter {
-                                    position: relative;
-                                    text-align: right;
-                                    height: 500px;
-                                    width: 600px;
-                                }
-                            </style><a href="https://www.embedgooglemap.net">show google maps on website</a>
-                            <style>
-                                .gmap_canvas {
-                                    overflow: hidden;
-                                    background: none !important;
-                                    height: 500px;
-                                    width: 600px;
-                                }
-                            </style>
-                        </div>
-                    </div>
+             <div class="half__side">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">Rodzaj usługi</th>
+                        <th scope="col">Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">Strzyżenie brody nożyczkami</th>
+                        <td>50</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Strzyżenie brody nożyczkami / brzytwą</th>
+                        <td>65</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Strzyżenie włosów + brody</th>
+                        <td>95</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Strzyżenie włosów + golenie karku brzytwą</th>
+                        <td>55</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Golenie pełne głowy brzytwą</th>
+                        <td>55</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Golenie pełne głowy brzytwą + strzyżenie z goleniem brody</th>
+                        <td>110</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Golenie pełne brody brzytwą</th>
+                        <td>50</td>
+                        </tr>
+                        
+                        
+
+                    </tbody>
+                </table>
+             </div>
+             <div class="half__side">
+             <img class="price" src="../img/priceList.png"  alt="Service image">
+                    <!-- <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">Rodzaj usługi</th>
+                        <th scope="col">Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">Strzyżenie brody nożyczkami</th>
+                        <td>50</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Strzyżenie brody nożyczkami / brzytwą</th>
+                        <td>65</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Strzyżenie włosów + brody</th>
+                        <td>95</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Strzyżenie włosów + golenie karku brzytwą</th>
+                        <td>55</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Golenie pełne głowy brzytwą</th>
+                        <td>55</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Golenie pełne głowy brzytwą + strzyżenie z goleniem brody</th>
+                        <td>110</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Golenie pełne brody brzytwą</th>
+                        <td>50</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Konturowanie brody</th>
+                        <td>50</td>
+                        </tr>
+                        
+
+                    </tbody>
+                </table> -->
                 </div>
             </div>
         </div>
