@@ -52,7 +52,7 @@
                         Potwierdź: <input class="input__fields" type="password" name="password_2">
                     </div>
                     <div class="settings__fields">
-                        E-mail: <input class="input__fields" type="text" name="email">
+                        Mail: <input class="input__fields" type="text" name="email">
                     </div>
                     <div class="settings__fields">
                         <div class="header mt-2">
