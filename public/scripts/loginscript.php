@@ -3,6 +3,12 @@
     session_start();
     require_once("connectdb.php");
 
+    if ((!isset($_POST['login'])) || (!isset($_POST['password'])))
+    {
+        header('Location: ../login.php');
+        exit();
+    }
+
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
 
     if(!$connection)
@@ -34,8 +40,8 @@
             }
             else
             {
-                 $_SESSION['login-error'] = "Błędny login lub hasło!";
-                 header('Location: ../login.php');
+                $_SESSION['login-error'] = "Błędny login lub hasło!";
+                header('Location: ../login.php');
             }
         }
 
