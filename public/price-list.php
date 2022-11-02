@@ -36,7 +36,7 @@
                         <a class="nav-item nav-link" href="#">OPINIE</a>
                     </div>
                     <div class="right__menu">
-                        <?php if (isset($_SESSION['user'])) { ?>
+                        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                             <a class="nav-item text-light nav-link" href="#"><?php echo strtoupper("WITAJ ".$_SESSION['user']."!") ?></a>
                             <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
                         <?php } else { ?>
@@ -91,8 +91,8 @@
                         <th scope="row">Golenie pełne brody brzytwą</th>
                         <td>50</td>
                         </tr>
-                        
-                        
+
+
 
                     </tbody>
                 </table>
@@ -139,7 +139,7 @@
                         <th scope="row">Konturowanie brody</th>
                         <td>50</td>
                         </tr>
-                        
+
 
                     </tbody>
                 </table> -->
