@@ -31,7 +31,7 @@
                     <div class="left__menu">
                         <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
                         <a class="nav-item nav-link" href="about.php">O NAS</a>
-                        <a class="nav-item nav-link" href="#">CENNIK</a>
+                        <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
                         <a class="nav-item nav-link" href="#">OPINIE</a>
                     </div>
