@@ -26,9 +26,10 @@
 
                 $row = $result->fetch_assoc();
                 $_SESSION['user'] = $row['login'];
-                unset($_SESSION['login-error']);
+
 
                 $result->free_result();
+                unset($_SESSION['login-error']);
                 header('Location: /index.php');
             }
             else
