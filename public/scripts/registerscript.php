@@ -17,6 +17,20 @@
     $password_2 = $_POST['password_2'];
 
     // form validation
+    $user_check_query = "SELECT * FROM user WHERE login='$username' OR email='$email' LIMIT 1";
+    $result = mysqli_query($connection, $user_check_query);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user) { // if user exists
+        if ($user['login'] === $username) {
+          array_push($errors, "Użytkownik o podanej nazwie już istnieje!");
+        }
+
+        if ($user['email'] === $email) {
+          array_push($errors, "Podany email jest już w bazie!");
+        }
+    }
+
     if (empty($username)) 
     { 
       array_push($errors, "Musisz podać login użytkownika!");
@@ -32,20 +46,6 @@
     if ($password_1 != $password_2) 
     {
       array_push($errors, "Hasła nie są ze sobą zgodne");
-    }
-
-    $user_check_query = "SELECT * FROM user WHERE login='$username' OR email='$email' LIMIT 1";
-    $result = mysqli_query($connection, $user_check_query);
-    $user = mysqli_fetch_assoc($result);
-
-    if ($user) { // if user exists
-        if ($user['login'] === $username) {
-          array_push($errors, "Użytkownik o podanej nazwie już istnieje!");
-        }
-
-        if ($user['email'] === $email) {
-          array_push($errors, "Podany email jest już w bazie!");
-        }
     }
 
     if(count($errors) == 0)

@@ -289,10 +289,10 @@ a:active {
     z-index: 1001;
     margin-left: 35vw;
     margin-right: 35vw;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    margin-top: 22.5vh;
+    margin-bottom: 22.5vh;
     width: 30%;
-    height: 50%;
+    height: 55%;
     background-color: #fff5eb;
     display: flex;
     justify-content: center;
