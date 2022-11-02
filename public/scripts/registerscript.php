@@ -3,9 +3,9 @@
     session_start();
     require_once("connectdb.php");
 
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+    if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false)
     {
-        header('Location: /index.php');
+        header('Location: ../register.php');
         exit();
     }
 
