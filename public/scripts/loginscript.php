@@ -24,7 +24,7 @@
             {
                 $row = $result->fetch_assoc();
                 $_SESSION['user'] = $row['login'];
-
+                $_SESSION['loggedin'] = "";
 
                 $result->free_result();
                 header('Location: /index.php');
