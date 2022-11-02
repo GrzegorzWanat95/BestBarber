@@ -3,13 +3,19 @@
     session_start();
     require_once("connectdb.php");
 
-    $connection = new mysqli($host,$db_user,$db_password,$db_name);   
-    $errors = array(); 
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+    {
+        header('Location: /index.php');
+        exit();
+    }
+
+    $connection = new mysqli($host,$db_user,$db_password,$db_name);
+    $errors = array();
     $username = $_POST['login'];
     $email = $_POST['email'];
-    $password_1 = $_POST['password_1']; 
-    $password_2 = $_POST['password_2']; 
- 
+    $password_1 = $_POST['password_1'];
+    $password_2 = $_POST['password_2'];
+
 
     /*if (isset($_POST['reg_user'])) {
         // receive all input values from the form in register.php
@@ -17,7 +23,7 @@
         $email = mysqli_real_escape_string($connection, $_POST['email']);
         $password_1 = mysqli_real_escape_string($connection, $_POST['password_1']);
         $password_2 = mysqli_real_escape_string($connection, $_POST['password_2']);
-      
+
         // form validation
         // by adding (array_push()) corresponding error into $errors array
         if (empty($username)) { array_push($errors, "Nazwa użytkownika jest wymagana"); }
@@ -36,7 +42,7 @@
         if ($user['login'] === $username) {
           array_push($errors, "Użytkownik o podanej nazwie już istnieje!");
         }
-    
+
         if ($user['email'] === $email) {
           array_push($errors, "Podany email jest już w bazie!");
         }
@@ -46,7 +52,7 @@
     if (count($errors) == 0) {
         $password = md5($password_1);//encrypt the password before saving in the database
 
-        $query = "INSERT INTO user (login, email, password) 
+        $query = "INSERT INTO user (login, email, password)
                 VALUES('$username', '$email', '$password')";
         mysqli_query($connection, $query);
         $_SESSION['login'] = $username;
