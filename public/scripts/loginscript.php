@@ -21,6 +21,9 @@
         $login = $_POST['login'];
         $password = $_POST['password'];
 
+        $login = htmlentities($login,ENT_QUOTES, "UTF-8");
+        $password = htmlentities($password,ENT_QUOTES, "UTF-8");
+
         $sql = "SELECT * FROM user WHERE login='$login' AND password='$password'";
 
         if ($result = $connection->query($sql))
@@ -32,7 +35,6 @@
 
                 $row = $result->fetch_assoc();
                 $_SESSION['user'] = $row['login'];
-
 
                 $result->free_result();
                 unset($_SESSION['login-error']);
