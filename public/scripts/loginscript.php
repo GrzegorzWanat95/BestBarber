@@ -26,13 +26,15 @@
 
                 $row = $result->fetch_assoc();
                 $_SESSION['user'] = $row['login'];
+                unset($_SESSION['login-error']);
 
                 $result->free_result();
                 header('Location: /index.php');
             }
             else
             {
-                header('Location: ../login-error.php');
+                 $_SESSION['login-error'] = "Błędny login lub hasło!";
+                 header('Location: ../login.php');
             }
         }
 
