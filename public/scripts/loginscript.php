@@ -24,9 +24,10 @@
         $login = htmlentities($login,ENT_QUOTES, "UTF-8");
         $password = htmlentities($password,ENT_QUOTES, "UTF-8");
 
-        $sql = "SELECT * FROM user WHERE login='$login' AND password='$password'";
-
-        if ($result = $connection->query($sql))
+        if ($result = $connection->query(
+        sprintf("SELECT * FROM user WHERE login='%s' AND password='%s'",
+        mysqli_real_escape_string($connection,$login),
+        mysqli_real_escape_string($connection,$password))))
         {
             $users = $result->num_rows;
             if($users > 0)
