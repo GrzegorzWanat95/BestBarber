@@ -323,10 +323,10 @@ a:active {
     text-align: center;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 300px) {
     .button__container{
         display: flex;
-        width: 20vw;
+        width: 80vw;
         justify-content: center;
         align-content: center;
         text-align: center;
@@ -335,10 +335,10 @@ a:active {
     }
   }
 
-  @media screen and (min-width: 300px) {
+@media screen and (min-width: 1300px) {
     .button__container{
         display: flex;
-        width: 80vw;
+        width: 20vw;
         justify-content: center;
         align-content: center;
         text-align: center;
