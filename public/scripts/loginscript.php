@@ -27,7 +27,7 @@
         if ($result = $connection->query(
         sprintf("SELECT * FROM user WHERE login='%s' AND password='%s'",
         mysqli_real_escape_string($connection,$login),
-        mysqli_real_escape_string($connection,$password))))
+        mysqli_real_escape_string($connection,md5($password)))))
         {
             $users = $result->num_rows;
             if($users > 0)
