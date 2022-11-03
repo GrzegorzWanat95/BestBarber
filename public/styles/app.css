@@ -346,9 +346,19 @@ a:active {
     margin: 2vh;
 }
 
-.text{
-    text-align: center;
-}
+@media screen and (min-width: 300px) {
+    .text{
+        text-align: center;
+        font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .text{
+        text-align: center;
+        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    }
+  }
 
 @media screen and (min-width: 300px) {
     .button__container{
