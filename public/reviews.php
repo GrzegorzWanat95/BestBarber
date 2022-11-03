@@ -32,7 +32,7 @@
                                     <a class="nav-item nav-link" href="about.php">O NAS</a>
                                     <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
                                     <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                                    <a class="nav-item nav-link" href="#">OPINIE</a>
+                                    <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
                                 </div>
                                 <div class="right__menu">
                                     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
