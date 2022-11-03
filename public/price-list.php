@@ -55,94 +55,58 @@
             </h1>
             <div class="holder">
              <div class="half__side">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                        <th scope="col">Rodzaj usługi</th>
-                        <th scope="col">Cena</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row">Strzyżenie brody nożyczkami</th>
-                        <td>50</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Strzyżenie brody nożyczkami / brzytwą</th>
-                        <td>65</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Strzyżenie włosów + brody</th>
-                        <td>95</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Strzyżenie włosów + golenie karku brzytwą</th>
-                        <td>55</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Golenie pełne głowy brzytwą</th>
-                        <td>55</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Golenie pełne głowy brzytwą + strzyżenie z goleniem brody</th>
-                        <td>110</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Golenie pełne brody brzytwą</th>
-                        <td>50</td>
-                        </tr>
+             <table class="table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Rodzaj usługi</th>
+                                <th>Cena</th>
+                                
+                            </tr>
+                        </thead>
 
+                        <tbody>
+                            <?php
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $database = "bestbarber";
 
+                            // Create connection
+                            $connection = new mysqli($servername, $username, $password, $database);
 
-                    </tbody>
+                            // Check connection
+                            if ($connection->connect_error) {
+                                die("Connection failed: " . $connection->connect_error);
+                            }
+
+                            // read all row from database table
+                            $sql = "SELECT * FROM services";
+                            $result = $connection->query($sql);
+
+                            if (!$result) {
+                                die("Invalid query: " . $connection->error);
+                            }
+
+                            // read data of each row
+                            while($row = $result->fetch_assoc()) {
+                                echo "<tr>
+                                    
+                                    <td>" . $row["description"] . "</td>
+                                    <td>" . $row["price"] . "</td>
+                                
+                                    
+                                </tr>";
+                            }
+
+                            $connection->close();
+                            ?>
+                        </tbody>
                 </table>
              </div>
              <div class="half__side">
              <img class="price" src="../img/priceList.png"  alt="Service image">
-                    <!-- <table class="table table-striped">
-                    <thead>
-                        <tr>
-                        <th scope="col">Rodzaj usługi</th>
-                        <th scope="col">Cena</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row">Strzyżenie brody nożyczkami</th>
-                        <td>50</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Strzyżenie brody nożyczkami / brzytwą</th>
-                        <td>65</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Strzyżenie włosów + brody</th>
-                        <td>95</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Strzyżenie włosów + golenie karku brzytwą</th>
-                        <td>55</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Golenie pełne głowy brzytwą</th>
-                        <td>55</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Golenie pełne głowy brzytwą + strzyżenie z goleniem brody</th>
-                        <td>110</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Golenie pełne brody brzytwą</th>
-                        <td>50</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">Konturowanie brody</th>
-                        <td>50</td>
-                        </tr>
-
-
-                    </tbody>
-                </table> -->
+            
                 </div>
             </div>
         </div>
