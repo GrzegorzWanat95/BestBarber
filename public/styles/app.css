@@ -39,9 +39,56 @@ a:active {
     color: #edcfb2;
 }
 
-.menu__top {
+@media screen and (min-width: 300px) {
+    .menu__top {
+        height: 15vh;
+        width: 100%;
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .menu__top {
+        height: 15vh;
+        width: 100%;
+        display:flex;
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .menu__top__mobile {
+        height: 15vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap:wrap;
+    }
+  }
+
+@media screen and (min-width: 1300px) {
+    .menu__top__mobile {
+        display: none;
+    }
+  }
+
+.menu__container{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
     height: 15vh;
+}
+
+.pos-f-t{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse{
+    width: 100%;
+    height: auto;
+    height: auto;
+    position: absolute;
 }
 
 .left__menu {
@@ -86,39 +133,92 @@ a:active {
     margin: 2vw;
 }
 
-.main__content {
-    height: 85vh;
-    width: 100vw;
-    background-image: url('../../img/BestBarber.png');
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-size: 45%;
-    max-height: 100%;
-}
-
-.left__content:before {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border: 20px solid white;
-    border-radius: 10px;
+  @media screen and (min-width: 300px) {
+    .main__content {
+        display:none;
+    }
   }
 
-.left__content {
-    position: absolute;
-    z-index: 1;
-    width: 80%;
-    height: 85vh;
-    display: inline-block;
-    border-right: 20px solid #29231e;
-    transform: skewX(-20deg);
-    overflow: hidden;
-    left: -10%;
-}
+  @media screen and (min-width: 1300px) {
+    .main__content {
+        height: 85vh;
+        width: 100vw;
+        background-image: url('../../img/BestBarber.png');
+        background-position-x: right;
+        background-repeat: no-repeat;
+        background-size: 45%;
+        max-height: 100%;
+        display: flex;
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .main__content__mobile {
+        height: 85vh;
+        width: 100vw;
+        background-image: url('../../img/BestBarber.png');
+        background-position-x: right;
+        background-repeat: no-repeat;
+        background-size: 45%;
+        max-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .main__content__mobile {
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .left__content:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 20px solid white;
+        border-radius: 10px;
+      }
+  }
+
+  @media screen and (min-width: 300px) {
+    .left__content {
+        display: none;    
+        }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .left__content {
+        position: absolute;
+        z-index: 1;
+        width: 80%;
+        height: 85vh;
+        display: inline-block;
+        border-right: 20px solid #29231e;
+        transform: skewX(-20deg);
+        overflow: hidden;
+        left: -10%;
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .right__content {
+        width: 100%;
+        border-top: 20px solid white;
+        border-bottom: 20px solid white;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .right__content {
+        width: auto;
+    }
+  }
 
 @media screen and (min-width: 1300px) {
     .main__text{
@@ -181,6 +281,36 @@ a:active {
     height: auto;
 }
 
+  @media screen and (min-width: 300px) {
+    .main__text{
+        position: absolute;
+        height:auto;
+        width: 100%;
+        z-index: 2;
+        margin-top: 2.5%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        padding-top: 6vh;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .main__text{
+        position: absolute;
+        height:70%;
+        width: 58%;
+        z-index: 2;
+        margin-top: 2.5%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        padding-top: 6vh;
+    }
+  }
+
 .text__field{
     display: flex;
     justify-content: center;
@@ -193,15 +323,29 @@ a:active {
     text-align: center;
 }
 
-.button__container{
-    display: flex;
-    width: 20vw;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    padding: 1vh;
-    background-color: #edcfb2;
-}
+@media screen and (min-width: 1300px) {
+    .button__container{
+        display: flex;
+        width: 20vw;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 1vh;
+        background-color: #edcfb2;
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .button__container{
+        display: flex;
+        width: 80vw;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 1vh;
+        background-color: #edcfb2;
+    }
+  }
 
 .button__field{
     background-color: inherit !important;
