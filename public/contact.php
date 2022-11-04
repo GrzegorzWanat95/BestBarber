@@ -48,6 +48,34 @@
             </div>
         </nav>
     </div>
+    <!-- mobile version -->
+    <div class="menu__top__mobile">
+        <div class="menu__container">
+            <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
+            <nav class="navbar navbar-dark m-4">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="menu__collapse">
+                    <a class="nav-item nav-link" href="about.php">O NAS</a>
+                    <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
+                    <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
+                    <a class="nav-item nav-link" href="#">OPINIE</a>
+                    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                        <a class="nav-item text-light nav-link" href="#"><?php echo strtoupper("WITAJ " . $_SESSION['user'] . "!") ?></a>
+                        <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
+                    <?php } else { ?>
+                        <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
+                        <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="subpage__content">
         <div class="content__frame">
             <h1 class="header">

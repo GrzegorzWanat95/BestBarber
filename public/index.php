@@ -60,11 +60,11 @@ session_start();
         </div>
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
-                <div class="menu__collapse p-2">
+                <div class="menu__collapse">
                     <a class="nav-item nav-link" href="about.php">O NAS</a>
                     <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
                     <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                    <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                    <a class="nav-item nav-link" href="#">OPINIE</a>
                     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                         <a class="nav-item text-light nav-link" href="#"><?php echo strtoupper("WITAJ " . $_SESSION['user'] . "!") ?></a>
                         <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
@@ -88,10 +88,10 @@ session_start();
                 <div class="text__field">
                     <p1 class="text">
                         Cenimy tradycyjną elegancję, profesjonalizm i styl. <br>Serdecznie zapraszamy do odwiedzenia
-                        naszego salonu.
+                        naszego&nbsp;salonu.
                     </p1>
                 </div>
-                <a link href="book-visit.php" class="button__container mt-5">
+                <a link href="#" class="button__container mt-2">
                     <div class="button__field">
                         <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
                     </div>

@@ -60,11 +60,18 @@
         </div>
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
-                <div class="p-2">
+                <div class="menu__collapse">
                     <a class="nav-item nav-link" href="about.php">O NAS</a>
                     <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
                     <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
                     <a class="nav-item nav-link" href="#">OPINIE</a>
+                    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                        <a class="nav-item text-light nav-link" href="#"><?php echo strtoupper("WITAJ " . $_SESSION['user'] . "!") ?></a>
+                        <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
+                    <?php } else { ?>
+                        <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
+                        <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
