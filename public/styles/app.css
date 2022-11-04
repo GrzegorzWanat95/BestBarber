@@ -520,9 +520,9 @@ a:active {
   @media screen and (min-width: 1300px) {
     .carousel__field{
         width: 50%;
-        height: 44vh;
+        height: auto;
         overflow-y: hidden;
-        margin-right: 2vw;
+        margin: 1vw;
         background-color: inherit;
     }
   }
