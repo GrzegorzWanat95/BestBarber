@@ -447,6 +447,7 @@ a:active {
 
 @media screen and (min-width: 300px) {
     .header{
+        margin-top: 1vh;
         background-color: inherit;
         background-color: #fff5eb;
         color: #29231e;
