@@ -104,7 +104,7 @@ require('./scripts/price-listscript.php');
                                         <?php echo "<a href=/scripts/delete-service.php?id=" . $row['id'] . ">🗑</a>"; ?>
                                     </td>
                                     <td>
-                                        <?php echo "<a href=/scripts/edit-service.php?id=" . $row['id'] . ">🖉</a>";} ?>
+                                        <?php echo "<a href=edit-service.php?id=" . $row['id'] . ">🖉</a>";} ?>
                                     </td>
                                 </tr>
                         </tbody>
