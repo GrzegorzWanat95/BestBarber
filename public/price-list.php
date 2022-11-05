@@ -89,19 +89,20 @@ require('./scripts/price-listscript.php');
                             <tr>
                                 <th>Rodzaj usługi</th>
                                 <th>Cena</th>
+                                <th>Opcje</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             // print all data from price-list.php
-                            while ($service = $result->fetch_assoc()) {
-                                echo "<tr> 
-                                    <td>" . $service["description"] . "</td>
-                                    <td>" . $service["price"] . "zł" . "</td>
-                                    <td>" . $service["id"] . "</td>
-                                </tr>";
-                            }
-                            ?>
+                            while ($row = $result->fetch_assoc()) { ?>
+                                <tr>
+                                    <td><?php echo $row['description']; ?></td>
+                                    <td><?php echo $row['price']; ?></td>
+                                    <td>
+                                        <?php echo "<a href=/scripts/delete-service.php?id=" . $row['id'] . ">🗑</a>";} ?>
+                                    </td>
+                                </tr>
                         </tbody>
                     </table>
                     <?php
