@@ -103,6 +103,16 @@ require('./scripts/price-listscript.php');
                             ?>
                         </tbody>
                     </table>
+                    <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                        <a link href="#">
+                            <div class="button__field">
+                                <p1 class="button__text__table p-1">Dodaj usługę</p1>
+                            </div>
+                        </a>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/priceList.png" alt="Zdjęcie narzędzi fryzjerskich">
