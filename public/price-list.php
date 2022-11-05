@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('./scripts/price-listscript.php');
 ?>
 
 <!DOCTYPE html>
@@ -92,39 +93,13 @@ session_start();
                         </thead>
                         <tbody>
                             <?php
-                            $servername = "localhost";
-                            $username = "root";
-                            $password = "";
-                            $database = "bestbarber";
-
-                            // Create connection
-                            $connection = new mysqli($servername, $username, $password, $database);
-
-                            // Check connection
-                            if ($connection->connect_error) {
-                                die("Connection failed: " . $connection->connect_error);
-                            }
-
-                            // read all row from database table
-                            $sql = "SELECT * FROM services";
-                            $result = $connection->query($sql);
-
-                            if (!$result) {
-                                die("Invalid query: " . $connection->error);
-                            }
-
-                            // read data of each row
-                            while ($row = $result->fetch_assoc()) {
-                                echo "<tr>
-                                    
-                                    <td>" . $row["description"] . "</td>
-                                    <td>" . $row["price"] . "zł" . "</td>
-                                
-                                    
+                            // print all data from price-list.php
+                            while ($service = $result->fetch_assoc()) {
+                                echo "<tr> 
+                                    <td>" . $service["description"] . "</td>
+                                    <td>" . $service["price"] . "zł" . "</td>
                                 </tr>";
                             }
-
-                            $connection->close();
                             ?>
                         </tbody>
                     </table>
