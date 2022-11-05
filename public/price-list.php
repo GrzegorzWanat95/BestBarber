@@ -37,7 +37,7 @@
                     </div>
                     <div class="right__menu">
                         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                            <a class="nav-item text-light nav-link" href="#"><?php echo strtoupper("WITAJ ".$_SESSION['user']."!") ?></a>
+                            <a class="nav-item text-light nav-link" href="#"><?php echo "WITAJ&nbsp;" . strtoupper($_SESSION['user']) . "!" ?></a>
                             <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
                         <?php } else { ?>
                             <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
@@ -66,7 +66,7 @@
                     <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
                     <a class="nav-item nav-link" href="#">OPINIE</a>
                     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                        <a class="nav-item text-light nav-link" href="#"><?php echo strtoupper("WITAJ " . $_SESSION['user'] . "!") ?></a>
+                        <a class="nav-item text-light nav-link" href="#"><?php echo "WITAJ&nbsp;" . strtoupper($_SESSION['user']) . "!" ?></a>
                         <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
                     <?php } else { ?>
                         <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
