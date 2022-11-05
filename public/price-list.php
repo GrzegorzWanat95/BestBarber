@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -61,10 +61,6 @@
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="menu__collapse">
-                    <a class="nav-item nav-link" href="about.php">O NAS</a>
-                    <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
-                    <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                    <a class="nav-item nav-link" href="#">OPINIE</a>
                     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                         <a class="nav-item text-light nav-link" href="#"><?php echo "WITAJ&nbsp;" . strtoupper($_SESSION['user']) . "!" ?></a>
                         <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
@@ -72,6 +68,10 @@
                         <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
                         <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
                     <?php } ?>
+                    <a class="nav-item nav-link" href="about.php">O NAS</a>
+                    <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
+                    <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
+                    <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
                 </div>
             </div>
         </div>
@@ -82,14 +82,14 @@
                 CENNIK
             </h1>
             <div class="holder">
-             <div class="half__side">
-             <table class="table">
+                <div class="half__side">
+                    <table class="table">
                         <thead>
                             <tr>
-                                
+
                                 <th>Rodzaj usługi</th>
                                 <th>Cena</th>
-                                
+
                             </tr>
                         </thead>
 
@@ -117,7 +117,7 @@
                             }
 
                             // read data of each row
-                            while($row = $result->fetch_assoc()) {
+                            while ($row = $result->fetch_assoc()) {
                                 echo "<tr>
                                     
                                     <td>" . $row["description"] . "</td>
@@ -130,11 +130,11 @@
                             $connection->close();
                             ?>
                         </tbody>
-                </table>
-             </div>
-             <div class="half__side">
-             <img class="price" src="../img/priceList.png"  alt="Service image">
-            
+                    </table>
+                </div>
+                <div class="half__side">
+                    <img class="price" src="../img/priceList.png" alt="Service image">
+
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
     <div class="footer">
         <img class="logo__footer" src="../img/logo1biel.png" alt="BestBarber logo">
         <div class="footer__text">
-        Copyright©2022 BestBarber
+            Copyright©2022 BestBarber
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
