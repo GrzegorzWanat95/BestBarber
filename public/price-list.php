@@ -98,6 +98,7 @@ require('./scripts/price-listscript.php');
                                 echo "<tr> 
                                     <td>" . $service["description"] . "</td>
                                     <td>" . $service["price"] . "zł" . "</td>
+                                    <td>" . $service["id"] . "</td>
                                 </tr>";
                             }
                             ?>
