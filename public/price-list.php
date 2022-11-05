@@ -86,13 +86,10 @@ session_start();
                     <table class="table">
                         <thead>
                             <tr>
-
                                 <th>Rodzaj usługi</th>
                                 <th>Cena</th>
-
                             </tr>
                         </thead>
-
                         <tbody>
                             <?php
                             $servername = "localhost";
@@ -121,7 +118,7 @@ session_start();
                                 echo "<tr>
                                     
                                     <td>" . $row["description"] . "</td>
-                                    <td>" . $row["price"] . "</td>
+                                    <td>" . $row["price"] . "zł" . "</td>
                                 
                                     
                                 </tr>";
@@ -133,7 +130,7 @@ session_start();
                     </table>
                 </div>
                 <div class="half__side">
-                    <img class="price" src="../img/priceList.png" alt="Service image">
+                    <img class="price" src="../img/priceList.png" alt="Zdjęcie narzędzi fryzjerskich">
 
                 </div>
             </div>

@@ -124,6 +124,7 @@ a:active {
     justify-content: flex-start;
     width: 100%;
     text-align: start;
+    margin: 0vh !important;
 }
 
 .left__menu {
@@ -154,6 +155,7 @@ a:active {
 
 .logo {
     padding-left: 2vw;
+    padding-right: 2vw;
     height: 12vh;
 }
 
@@ -533,16 +535,38 @@ a:active {
     object-fit: contain;
 }
 
-.holder{
-    background-color: inherit;
-    display: flex;
-}
+@media screen and (min-width: 300px) {
+    .holder{
+        background-color: inherit;
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
 
-.half__side{
-    background-color: inherit;
-    width: 50%;
-    height: 44vh;
-}
+  @media screen and (min-width: 1300px) {
+    .holder{
+        background-color: inherit;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+  }
+
+@media screen and (min-width: 300px) {
+    .half__side{
+        background-color: inherit;
+        width: 100%;
+        height: auto;
+    }
+  }
+
+@media screen and (min-width: 1300px) {
+    .half__side{
+        background-color: inherit;
+        width: 50%;
+        height: 44vh;
+    }
+  }
+
 
 .absolute__window{
     position: fixed;
@@ -648,10 +672,22 @@ a:active {
 .small__button:hover{
     border-bottom: 2px solid #29231e;
 }
-.price{
-    width: 700px;
-    height: auto;
-    background-color: #c2a991;
-    margin-left: 10%;
 
-}
+@media screen and (min-width: 300px) {
+    .price{
+        width: 100%;
+        height: auto;
+        background-color: #c2a991;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+  }
+
+@media screen and (min-width: 1300px) {
+    .price{
+        width: 100%;
+        height: auto;
+        background-color: #c2a991;
+        margin-left: 10%;
+    }
+  }
