@@ -597,6 +597,7 @@ a:active {
     justify-content: center;
     align-content: center;
     align-items: center;
+    border: 1px solid #29231e8a;
 }
 
 .window__frame{
