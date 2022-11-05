@@ -90,6 +90,7 @@ require('./scripts/price-listscript.php');
                                 <th>Rodzaj usługi</th>
                                 <th>Cena</th>
                                 <th>Opcje</th>
+                                <th>Edycja</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -98,9 +99,12 @@ require('./scripts/price-listscript.php');
                             while ($row = $result->fetch_assoc()) { ?>
                                 <tr>
                                     <td><?php echo $row['description']; ?></td>
-                                    <td><?php echo $row['price']; ?></td>
+                                    <td><?php echo $row['price'] . '&nbsp;zł'; ?></td>
                                     <td>
-                                        <?php echo "<a href=/scripts/delete-service.php?id=" . $row['id'] . ">🗑</a>";} ?>
+                                        <?php echo "<a href=/scripts/delete-service.php?id=" . $row['id'] . ">🗑</a>"; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo "<a href=/scripts/edit-service.php?id=" . $row['id'] . ">🖉</a>";} ?>
                                     </td>
                                 </tr>
                         </tbody>
