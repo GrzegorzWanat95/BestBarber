@@ -3,22 +3,34 @@
     require_once("connectdb.php");
 
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
-    $id = $_GET["id"];
-
-    $errors = array();
-
-    if(count($errors) == 0)
+    if(!$connection)
     {
-      //Finally, register service if there are no errors in the form
-       unset($_SESSION['service-error']);
-       $query = "DELETE FROM services where id=$id";
-       mysqli_query($connection, $query);
-       $_SESSION['success'] = "Usunięto usługę!";
-       header('location: ../price-list.php');
+        error_reporting(0);
+        echo "Błąd połączenia z bazą danych!";
     }
     else
     {
-      $_SESSION['service-error'] = $errors;
-      header('Location: ../price-list.php');
+      $id = $_GET["id"];
+
+      $errors = array();
+  
+      // form validation
+      $service_query_check = "SELECT * FROM services WHERE id='$id' LIMIT 1";
+      $result = mysqli_query($connection, $service_query_check);
+      $service = mysqli_fetch_assoc($result);
+      
+      if($service['id'] == $id)
+      {
+        $query = "DELETE FROM services where id=$id";
+        mysqli_query($connection, $query);
+        $_SESSION['success'] = "Usunięto usługę!";
+        header('location: ../price-list.php');
+      }
+      else
+      {
+        header('Location: ../price-list.php');
+      }
+
+        $connection->close();
     }
 ?>
