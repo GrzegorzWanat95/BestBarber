@@ -1,5 +1,5 @@
 <?php
-    session_start();
+require('./scripts/userscript.php');
 ?>
 
 <!DOCTYPE html>
@@ -79,65 +79,43 @@
     <div class="subpage__content">
         <div class="content__frame">
             <h1 class="header">
-                O NAS
+                PANEL UŻYTKOWNIKA
             </h1>
-            <div class="subpage__text">
-                BestBarber to tradycyjny salon barberski w centrum Poznania. Każdego dnia nasz zespół profesjonalnych fryzjerów
-                dokłada wszelkich starań, by zadbać o&nbsp;satysfakcję klientów. Poza usługami strzyżenia włosów i&nbsp;brody z&nbsp;przyjemnością
-                pomożemy w&nbsp;dobraniu odpowiednich kosmetyków oraz przygotujemy spersonalizowany plan pielęgnącji.
-            </div>
-            <div class="carousel__section">
-                <div class="carousel__field">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100 carousele__img" src="../img/7.png" alt="First slide">
+            <div class="holder">
+            <div class="half__side">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Dane konta:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // print all data from price-list.php
+                            while ($row = $result->fetch_assoc()) { ?>
+                                <tr>
+                                    <td>Login:</td>
+                                    <td class="table__end__simple"><?php echo $row['login']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>e-mail:</td>
+                                    <td class="table__end__simple"><?php echo $row['email']; }?></td>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                        <a link href="add-service.php">
+                            <div class="button__field__xxl">
+                                <p1 class="button__text__table p-1">Zmień dane konta</p1>
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="../img/8.png" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="../img/9.png" alt="Third slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="../img/10.png" alt="Fourth slide">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Poprzedni</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Następny</span>
-                        </a>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
-                <div class="carousel__field">
-                    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100 carousele__img" src="../img/12.png" alt="First slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="../img/13.png" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="../img/14.png" alt="Third slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="../img/11.png" alt="Fourth slide">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Poprzedni</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Następny</span>
-                        </a>
-                    </div>
+                <div class="half__side">
+                    <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
                 </div>
             </div>
         </div>
@@ -145,7 +123,7 @@
     <div class="footer">
         <img class="logo__footer" src="../img/logo1biel.png" alt="BestBarber logo">
         <div class="footer__text">
-        Copyright©2022 BestBarber
+            Copyright©2022 BestBarber
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -746,3 +746,8 @@ label{
     text-align: end;
     color: #f5a624;
 }
+
+.table__end__simple{
+    justify-items: flex-end;
+    text-align: end;
+}
