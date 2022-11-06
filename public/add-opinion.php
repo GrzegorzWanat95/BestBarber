@@ -43,7 +43,7 @@ require('price-list.php');
                         Nick: <input class="input__fields" type="text" name="name">
                     </div>
                     <div class="settings__fields">
-                        Ocena: <input class="input__fields" type="number" name="rating">
+                        Ocena: <input class="input__fields" type="number" name="rating" min="1" max="5">
                     </div>
                     <div class="settings__fields__comments">
                         <label for="comment">Komentarz:</label>
