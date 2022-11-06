@@ -82,7 +82,7 @@ require('./scripts/userscript.php');
                 PANEL UŻYTKOWNIKA
             </h1>
             <div class="holder">
-            <div class="half__side">
+                <div class="half__side">
                     <table class="table">
                         <thead>
                             <tr>
@@ -90,17 +90,14 @@ require('./scripts/userscript.php');
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            // print all data from price-list.php
-                            while ($row = $result->fetch_assoc()) { ?>
-                                <tr>
-                                    <td>Login:</td>
-                                    <td class="table__end__simple"><?php echo $row['login']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>e-mail:</td>
-                                    <td class="table__end__simple"><?php echo $row['email']; }?></td>
-                                </tr>
+                            <tr>
+                                <td>Login:</td>
+                                <td class="table__end__simple"><?php echo $user['login']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>e-mail:</td>
+                                <td class="table__end__simple"><?php echo $user['email']; ?></td>
+                            </tr>
                         </tbody>
                     </table>
                     <?php

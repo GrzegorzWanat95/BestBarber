@@ -1,5 +1,6 @@
 <?php
     require('user-panel.php');
+    require('./scripts/userscript.php');
 
     if ($_SESSION['loggedin'] != true)
     {
@@ -41,18 +42,19 @@
                 <div class="button-corner">
                     <button class="small__button" onclick="window.location='/user-panel.php';">✕</button>
                 </div>
-                    <form class="user__forms" action="scripts/registerscript.php" method="post">
+                    <form class="user__forms" action="scripts/edit-user.php" method="post">
+                        
                     <div class="settings__fields">
-                        Login: <input class="input__fields" type="text" name="login">
+                        Login: <input class="input__fields" type="text" name="login" placeholder="<?php echo $user['login']; ?>">
+                    </div>
+                    <div class="settings__fields">
+                        Mail: <input class="input__fields" type="text" name="email" placeholder="<?php echo $user['email']; ?>">
                     </div>
                     <div class="settings__fields">
                         Hasło: <input class="input__fields" type="password" name="password_1">
                     </div>
                     <div class="settings__fields">
                         Potwierdź: <input class="input__fields" type="password" name="password_2">
-                    </div>
-                    <div class="settings__fields">
-                        Mail: <input class="input__fields" type="text" name="email">
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['register-error']))
