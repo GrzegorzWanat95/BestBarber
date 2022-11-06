@@ -730,3 +730,8 @@ label{
     display: block;
     background-color: inherit;
 }
+
+.table__end{
+    justify-items: flex-end;
+    text-align: end;
+}

@@ -102,7 +102,7 @@ require('./scripts/review-list.php');
                             while ($row = $result->fetch_assoc()) { ?>
                                 <tr>
                                     <td colspan="2"><?php echo $row['name']; ?></td>
-                                    <td><?php echo str_repeat('★', $row['rating']) ; ?></td>
+                                    <td class="table__end"><?php echo str_repeat('★', $row['rating']) ; ?></td>
                                 </tr>
                                 <tr>
                                     <td colspan="3"><?php echo $row['content'];} ?></td>
