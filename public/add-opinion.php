@@ -1,5 +1,5 @@
 <?php
-require('price-list.php');
+require('reviews.php');
 
 /*if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {

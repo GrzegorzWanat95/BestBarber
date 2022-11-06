@@ -396,11 +396,21 @@ a:active {
     }
   }
 
+.button__field__xxl{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width:100%;
+    background-color: inherit !important;
+}
+
 .button__field{
     background-color: inherit !important;
 }
 
 .button__text__table{
+    text-align: center;
+    width: 60%;
     background-color: #29231e;
     color: #edcfb2 !important;
 }

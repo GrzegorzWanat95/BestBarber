@@ -112,7 +112,7 @@ require('./scripts/review-list.php');
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                         <a link href="add-opinion.php">
-                            <div class="button__field">
+                            <div class="button__field__xxl">
                                 <p1 class="button__text__table p-1">Dodaj opinię</p1>
                             </div>
                         </a>

@@ -112,7 +112,7 @@ require('./scripts/price-listscript.php');
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                         <a link href="add-service.php">
-                            <div class="button__field">
+                            <div class="button__field__xxl">
                                 <p1 class="button__text__table p-1">Dodaj usługę</p1>
                             </div>
                         </a>
