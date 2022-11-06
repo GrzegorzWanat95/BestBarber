@@ -628,8 +628,17 @@ a:active {
     color: #29231e;
 }
 
+.settings__fields__comments{
+    display: flex;
+    justify-content: start;
+    background-color: inherit;
+    padding-top: 5%;
+    color: #29231e;
+    flex-wrap: wrap;
+}
+
 .input__fields{
-    width: 90%;
+    width: 100%;
     background-color: inherit;
     border: none; 
     border-bottom: 1px solid #29231e;
@@ -696,6 +705,7 @@ a:active {
         height: auto;
         background-color: #c2a991;
         margin-left: 10%;
+        margin-top: 0;
     }
   }
 
@@ -714,3 +724,9 @@ a:active {
     width: 100%;
     height: 100%;
   }
+
+label{
+    color: #29231e;
+    display: block;
+    background-color: inherit;
+}

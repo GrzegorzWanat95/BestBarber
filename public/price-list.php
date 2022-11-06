@@ -122,11 +122,9 @@ require('./scripts/price-listscript.php');
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/priceList.png" alt="Zdjęcie narzędzi fryzjerskich">
-
                 </div>
             </div>
         </div>
-
     </div>
     <div class="footer">
         <img class="logo__footer" src="../img/logo1biel.png" alt="BestBarber logo">

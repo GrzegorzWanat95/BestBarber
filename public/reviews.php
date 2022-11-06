@@ -1,3 +1,8 @@
+<?php
+session_start();
+require('./scripts/review-list.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -73,37 +78,57 @@
             </div>
         </div>
     </div>
-    <div class="reviews"></div>
+    <div class="subpage__content">
+        <div class="content__frame">
+            <h1 class="header">
+                OPINIE
+            </h1>
+            <div class="holder">
+                <div class="half__side">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nick</th>
+                                <th>Komentarz</th>
+                                <th>Ocena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // print all data from price-list.php
+                            while ($row = $result->fetch_assoc()) { ?>
+                                <tr>
+                                    <td><?php echo $row['name']; ?></td>
+                                    <td><?php echo $row['content'] . '&nbsp;zł'; ?></td>
+                                    <td>
+                                        <?php echo "<a href=edit-service.php?id=" . $row['rating'] . ">★</a>";} ?>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                        <a link href="add-opinion.php">
+                            <div class="button__field">
+                                <p1 class="button__text__table p-1">Dodaj opinię</p1>
+                            </div>
+                        </a>
+                    <?php
+                    }
+                    ?>
+                </div>
+                <div class="half__side">
+                    <img class="price" src="../img/priceList.png" alt="Zdjęcie narzędzi fryzjerskich">
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <img class="logo__footer" src="../img/logo1biel.png" alt="BestBarber logo">
         <div class="footer__text">
             Copyright©2022 BestBarber
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-        const reviews_page_id = 1;
-        fetch("scripts/reviewsscript.php?page_id=" + reviews_page_id).then(response => response.text()).then(data => {
-            document.querySelector(".reviews").innerHTML = data;
-            document.querySelector(".reviews .write_review_btn").onclick = event => {
-                event.preventDefault();
-                document.querySelector(".reviews .write_review").style.display = 'block';
-                document.querySelector(".reviews .write_review input[name='name']").focus();
-            };
-            document.querySelector(".reviews .write_review form").onsubmit = event => {
-                event.preventDefault();
-                fetch("scripts/reviewsscript.php?page_id=" + reviews_page_id, {
-                    method: 'POST',
-                    body: new FormData(document.querySelector(".reviews .write_review form"))
-                }).then(response => response.text()).then(data => {
-                    document.querySelector(".reviews .write_review").innerHTML = data;
-                });
-            };
-        });
-    </script>
-
 </body>
 
 </html>
