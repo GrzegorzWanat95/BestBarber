@@ -43,7 +43,7 @@
                     <button class="small__button" onclick="window.location='/user-panel.php';">✕</button>
                 </div>
                     <form class="user__forms" action="scripts/edit-user.php" method="post">
-                        
+                    <input type="hidden" name="id" value="<?php echo $user['ID']; ?>">
                     <div class="settings__fields">
                         Login: <input class="input__fields" type="text" name="login" placeholder="<?php echo $user['login']; ?>">
                     </div>

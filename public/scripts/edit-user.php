@@ -6,52 +6,60 @@
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
     //get data for placeholder
+    $id=$_POST['id'];
     $name = $_POST['login'];
     $email = $_POST['email'];
     $password_1 = $_POST['password_1'];
     $password_2 = $_POST['password_2'];
  
-    $service_query_check = "SELECT * FROM services WHERE id='$id' LIMIT 1";
-    $result = mysqli_query($connection, $service_query_check);
-    $service = mysqli_fetch_assoc($result);
     // form validation
-    if ($service) { // if service exists
-        if ($service['description'] === $description) {
-          array_push($errors, "Usługa o podanej nazwie już istnieje!");
+    $user_check_query = "SELECT * FROM user WHERE login='$name' OR email='$email' LIMIT 1";
+    $result = mysqli_query($connection, $user_check_query);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user) { // if user exists
+        if ($user['login'] === $name) {
+          array_push($errors, "Użytkownik o podanej nazwie już istnieje!");
+        }
+
+        if ($user['email'] === $email) {
+          array_push($errors, "Podany email jest już w bazie!");
         }
     }
 
-    if (empty($description)) 
+    if (empty($name)) 
     { 
-      array_push($errors, "Musisz podać nazwę usługi!");
+      array_push($errors, "Musisz podać login użytkownika!");
     }
-    if (empty($price)) 
+    if (empty($email)) 
     { 
-      array_push($errors, "Musisz podać cenę usługi!");
+      array_push($errors, "Email jest wymagany");
     }
-
-    if($service['id'] == $id)
-    {
-      
+    if (empty($password_1)) 
+    { 
+      array_push($errors, "Hasło jest wymagane");
     }
-    else
+    if ($password_1 != $password_2) 
     {
-      array_push($errors, "Nie znaleziono takiej usługi!");
+      array_push($errors, "Hasła nie są ze sobą zgodne");
     }
   
     if(count($errors) == 0)
     {
-      //Finally, register service if there are no errors in the form
-       unset($_SESSION['service-error']);
-       $query = "UPDATE services SET description = '$description', price = '$price' WHERE id='$id'";
+      //Finally, register user if there are no errors in the form
+       unset($_SESSION['register-error']);
+       $password = md5($password_1);//encrypt the password before saving in the database
+
+       $query = "UPDATE user SET login = '$name', email = '$email', password = '$password' WHERE id='$id'";
        mysqli_query($connection, $query);
-       $_SESSION['success'] = "Edytowano usługę!";
-       header('location: ../price-list.php');
+       $_SESSION['login'] = $name;
+       $_SESSION['success'] = "Zmieniono dane konta!";
+       header('location: logout.php');
     }
     else
     {
-      $_SESSION['edit-service-error'] = $errors;
-      header('Location: ../edit-service.php');
+      $_SESSION['register-error'] = $errors;
+      header('Location: ../data-change.php');
     }
     $connection->close();           
 ?>
