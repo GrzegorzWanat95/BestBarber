@@ -734,4 +734,5 @@ label{
 .table__end{
     justify-items: flex-end;
     text-align: end;
+    color: #f5a624;
 }
