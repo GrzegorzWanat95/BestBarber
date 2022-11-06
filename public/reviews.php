@@ -101,9 +101,11 @@ require('./scripts/review-list.php');
                             // print all data from price-list.php
                             while ($row = $result->fetch_assoc()) { ?>
                                 <tr>
-                                    <td><?php echo $row['name']; ?></td>
-                                    <td><?php echo $row['content']; ?></td>
-                                    <td><?php echo str_repeat('★', $row['rating']) ;} ?></td>
+                                    <td colspan="2"><?php echo $row['name']; ?></td>
+                                    <td><?php echo str_repeat('★', $row['rating']) ; ?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><?php echo $row['content'];} ?></td>
                                 </tr>
                         </tbody>
                     </table>
