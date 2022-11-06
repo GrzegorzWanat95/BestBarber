@@ -15,6 +15,9 @@
     $result = mysqli_query($connection, $service_query_check);
     $service = mysqli_fetch_assoc($result);
 
+    $_SESSION['name'] = $service['description'];
+    $_SESSION['price'] = $service['price'];
+
     if ($service) { // if service exists
         if ($service['description'] === $description) {
           array_push($errors, "Usługa o podanej nazwie już istnieje!");

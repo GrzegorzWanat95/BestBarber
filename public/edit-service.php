@@ -1,6 +1,9 @@
 <?php
 require('price-list.php');
 $id = $_GET["id"];
+require('./scripts/find-service.php');
+$name = $_SESSION['name'];
+$price = $_SESSION['price'];
 
 /*if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {
@@ -42,10 +45,10 @@ $id = $_GET["id"];
                 <form class="user__forms" action="scripts/edit-service.php" method="post">
                     <div class="settings__fields">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        Nazwa: <input class="input__fields" type="text" name="description">
+                        Nazwa: <input class="input__fields" type="text" name="description" placeholder="<?php echo $name; ?>">
                     </div>
                     <div class="settings__fields">
-                        Cena: <input class="input__fields" type="number" name="price">
+                        Cena: <input class="input__fields" type="number" name="price" placeholder="<?php echo $price; ?>">
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['edit-service-error'])) {
