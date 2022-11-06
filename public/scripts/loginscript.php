@@ -37,6 +37,11 @@
                 $row = $result->fetch_assoc();
                 $_SESSION['user'] = $row['login'];
 
+                if($_SESSION['user'] == 'ADMIN')
+                {
+                    $_SESSION['ADMIN'] = true;
+                }
+
                 $result->free_result();
                 unset($_SESSION['login-error']);
                 header('Location: /index.php');
