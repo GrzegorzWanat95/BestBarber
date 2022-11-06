@@ -91,7 +91,7 @@ session_start();
                         naszego&nbsp;salonu.
                     </p1>
                 </div>
-                <a link href="#" class="button__container mt-2">
+                <a link href="book-visit.php" class="button__container mt-2">
                     <div class="button__field">
                         <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
                     </div>
