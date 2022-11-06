@@ -5,19 +5,15 @@
 
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
-
+    //get data for placeholder
     $id = $_POST["id"];
     $description = $_POST['description'];
     $price = $_POST['price'];
-
-    // form validation
+ 
     $service_query_check = "SELECT * FROM services WHERE id='$id' LIMIT 1";
     $result = mysqli_query($connection, $service_query_check);
     $service = mysqli_fetch_assoc($result);
-
-    $_SESSION['name'] = $service['description'];
-    $_SESSION['price'] = $service['price'];
-
+    // form validation
     if ($service) { // if service exists
         if ($service['description'] === $description) {
           array_push($errors, "Usługa o podanej nazwie już istnieje!");

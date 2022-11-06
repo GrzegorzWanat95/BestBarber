@@ -1,5 +1,4 @@
 <?php
-
     session_start();
     require_once("connectdb.php");
 
@@ -12,7 +11,7 @@
     $service_query_check = "SELECT * FROM services WHERE id='$id' LIMIT 1";
     $result = mysqli_query($connection, $service_query_check);
     $service = mysqli_fetch_assoc($result);
-
     $_SESSION['name'] = $service['description'];
-    $_SESSION['price'] = $service['price'];    
+    $_SESSION['price'] = $service['price'];
+    $connection->close();           
 ?>
