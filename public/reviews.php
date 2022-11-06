@@ -88,9 +88,12 @@ require('./scripts/review-list.php');
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Nick</th>
-                                <th>Komentarz</th>
-                                <th>Ocena</th>
+                                <th colspan="3">
+                                <?php
+                                foreach ($_SESSION['avg'] as &$value) {
+                                echo("Średnia ocen: " . round($value,1) . ("&nbsp;★"));}
+                                ?>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,7 +102,7 @@ require('./scripts/review-list.php');
                             while ($row = $result->fetch_assoc()) { ?>
                                 <tr>
                                     <td><?php echo $row['name']; ?></td>
-                                    <td><?php echo $row['content'] . '&nbsp;zł'; ?></td>
+                                    <td><?php echo $row['content']; ?></td>
                                     <td><?php echo str_repeat('★', $row['rating']) ;} ?></td>
                                 </tr>
                         </tbody>

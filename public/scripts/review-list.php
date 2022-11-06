@@ -9,6 +9,9 @@
     // make a query to price-list 
     $sql = "SELECT * FROM reviews";
     $result = $connection->query($sql);
+    $countRatingSql = "SELECT AVG(rating) FROM reviews";
+    $avg = $connection->query($countRatingSql );
+    $_SESSION['avg'] = $avg->fetch_assoc();
     
     if (!$result) {
         die("Wystąpił błąd podczas wykonywania zapytania: " . $connection->error);
