@@ -5,6 +5,10 @@
         $id = $_POST["id"];
         $description = $_POST['description'];
         $price = $_POST['price'];
+
+        echo($description);
+        echo($price);
+        echo($id);
         //connection error
         if ($connection->connect_error) {
             die("Błąd połączenia z bazą danych: " . $connection->connect_error);
@@ -30,12 +34,7 @@
             header('Location: ../price-list.php');
           }
     
-            $connection->close();
-        // make a query to price-list 
-        $sql = "SELECT * FROM services WHERE id='$id' LIMIT 1";
-        $result = $connection->query($sql);
-        
-        if (!$result) {
-            die("Wystąpił błąd podczas wykonywania zapytania: " . $connection->error);
-        }    
-        }?>
+            $connection->close();      
+
+        } 
+?>

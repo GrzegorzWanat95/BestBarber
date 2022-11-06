@@ -41,6 +41,7 @@ $id = $_GET["id"];
                 </div>
                 <form class="user__forms" action="scripts/edit-service.php" method="post">
                     <div class="settings__fields">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
                         Nazwa: <input class="input__fields" type="text" name="description">
                     </div>
                     <div class="settings__fields">
@@ -55,9 +56,6 @@ $id = $_GET["id"];
                         }
                         ?>
                     </div>
-                    <?php
-                        $_POST['id'] = $id;
-                    ?>
                     <div class="settings__fields">
                         <div class="header mt-4">
                             <input class="button__regular" type="submit" value="Zmień">
