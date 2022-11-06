@@ -100,9 +100,7 @@ require('./scripts/review-list.php');
                                 <tr>
                                     <td><?php echo $row['name']; ?></td>
                                     <td><?php echo $row['content'] . '&nbsp;zł'; ?></td>
-                                    <td>
-                                        <?php echo "<a href=edit-service.php?id=" . $row['rating'] . ">★</a>";} ?>
-                                    </td>
+                                    <td><?php echo str_repeat('★', $row['rating']) ;} ?></td>
                                 </tr>
                         </tbody>
                     </table>
