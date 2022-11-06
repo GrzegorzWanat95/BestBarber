@@ -121,7 +121,7 @@ require('./scripts/review-list.php');
                     ?>
                 </div>
                 <div class="half__side">
-                    <img class="price" src="../img/priceList.png" alt="Zdjęcie narzędzi fryzjerskich">
+                    <img class="price" src="../img/13.png" alt="Zdjęcie narzędzi fryzjerskich">
                 </div>
             </div>
         </div>
