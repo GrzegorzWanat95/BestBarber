@@ -592,7 +592,7 @@ a:active {
     margin-top: 22.5vh;
     margin-bottom: 22.5vh;
     width: 30%;
-    height: 55%;
+    min-height: 55%;
     background-color: #fff5eb;
     display: flex;
     justify-content: center;
