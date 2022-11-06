@@ -105,7 +105,7 @@ require('./scripts/userscript.php');
                     </table>
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                        <a link href="add-service.php">
+                        <a link href="data-change.php">
                             <div class="button__field__xxl">
                                 <p1 class="button__text__table p-1">Zmień dane konta</p1>
                             </div>
