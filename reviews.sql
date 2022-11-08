@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 03 Lis 2022, 07:54
--- Wersja serwera: 10.4.25-MariaDB
--- Wersja PHP: 8.1.10
+-- Czas generowania: 08 Lis 2022, 12:43
+-- Wersja serwera: 10.4.24-MariaDB
+-- Wersja PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,7 +41,7 @@ CREATE TABLE `reviews` (
 --
 
 INSERT INTO `reviews` (`id`, `page_id`, `name`, `content`, `rating`, `submit_date`) VALUES
-(1, 1, 'David Deacon', 'I use this website daily, the amount of content is brilliant.', 5, '2020-01-09 20:43:02'),
+(1, 1, 'David Deacon', 'I use this website daily, the amount of content is brilliant.', 5, '2022-01-05 20:43:02'),
 (2, 1, 'John Doe', 'Great website, great content, and great support!', 4, '2020-01-09 21:00:41'),
 (3, 1, 'Robert Billings', 'Website needs more content, good website but content is lacking.', 3, '2020-01-09 21:10:16'),
 (4, 1, 'Daniel Callaghan', 'Great!', 5, '2020-01-09 23:51:05'),
@@ -56,7 +56,8 @@ INSERT INTO `reviews` (`id`, `page_id`, `name`, `content`, `rating`, `submit_dat
 (13, 1, 'Warren Mills', 'Everything is awesome!', 5, '2020-01-16 19:34:08'),
 (14, 1, 'Larry Johnson', 'Brilliant, thank you for providing quality content!', 5, '2020-01-29 18:40:36'),
 (15, 1, 'adaa', 'nice page', 4, '2022-11-02 13:44:37'),
-(17, 1, 'sad', 'sad', 2, '2022-11-03 07:17:32');
+(17, 1, 'sad', 'sad', 2, '2022-11-03 07:17:32'),
+(18, 1, 'Sandals Problem', 'Bo TAK!', 1, '2022-11-03 18:25:36');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -76,7 +77,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT dla tabeli `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

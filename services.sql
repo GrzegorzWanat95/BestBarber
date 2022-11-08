@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 03 Lis 2022, 12:33
--- Wersja serwera: 10.4.25-MariaDB
--- Wersja PHP: 8.1.10
+-- Czas generowania: 08 Lis 2022, 12:43
+-- Wersja serwera: 10.4.24-MariaDB
+-- Wersja PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,8 +43,7 @@ INSERT INTO `services` (`id`, `description`, `price`) VALUES
 (3, 'Strzyżenie włosów + brody', 95),
 (4, 'Strzyżenie włosów + golenie karku brzytwą', 55),
 (5, 'Golenie pełne głowy brzytwą', 55),
-(6, 'Golenie pełne głowy brzytwą + strzyżenie z goleniem brody', 110),
-(7, 'Golenie pełne brody brzytwą', 50);
+(6, 'Golenie pełne głowy brzytwą + strzyżenie z goleniem brody', 110);
 
 --
 -- Indeksy dla zrzutów tabel
