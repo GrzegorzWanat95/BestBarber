@@ -95,6 +95,40 @@ require('scripts/time-range.php');
                 <div class="half__side">
                     <?php
                     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Data</th>
+                                    <th>Godzina</th>
+                                    <th>Usługa</th>
+                                    <th>Usuń</th>
+                                    <th>Edycja</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                // print all data from price-list.php
+                                while ($row = $result_bookings->fetch_assoc()) { ?>
+                                    <tr>
+                                        <td><?php echo $row['id']; ?></td>
+                                        <td><?php echo $row['date']; ?></td>
+                                        <td><?php echo $row['hour']; ?></td>
+                                        <td><?php echo $row['service']; ?></td>
+                                        <!-- if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {  -->
+                                        <td>
+                                            <?php echo "<a href=scripts/delete-booking.php?id=" . $row['id'] . ">🗑</a>"; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "<a href=edit-booking.php?id=" . $row['id'] . ">🖉</a>"; ?>
+                                        </td>
+
+                                    <?php } ?>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    <?php
+                    } else { ?>
                         <form method="post" action="booking-script.php">
                             <div>
                                 <div class="nativeDateTimePicker">
@@ -126,39 +160,6 @@ require('scripts/time-range.php');
                                 </div>
                             </div>
                         </form>
-                    <?php } else { ?>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Data</th>
-                                <th>Godzina</th>
-                                <th>Usługa</th>
-                                <th>Usuń</th>
-                                <th>Edycja</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            // print all data from price-list.php
-                            while ($row = $result_bookings->fetch_assoc()) { ?>
-                                <tr>
-                                    <td><?php echo $row['id']; ?></td>
-                                    <td><?php echo $row['date']; ?></td>
-                                    <td><?php echo $row['hour']; ?></td>
-                                    <td><?php echo $row['service']; ?></td>
-                                    <!-- if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {  -->
-                                    <td>
-                                        <?php echo "<a href=scripts/delete-booking.php?id=" . $row['id'] . ">🗑</a>"; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<a href=edit-booking.php?id=" . $row['id'] . ">🖉</a>"; ?>
-                                    </td>
-
-                                <?php } ?>
-                                </tr>
-                        </tbody>
-                    </table>
                     <?php
                     } ?>
                     <?php
