@@ -172,7 +172,7 @@ require('scripts/time-range.php');
                     <?php } ?>
                 </div>
                 <div class="half__side">
-                    <img class="price" src="../img/priceList.png" alt="Zdjęcie narzędzi fryzjerskich">
+                    <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
                 </div>
             </div>
         </div>
