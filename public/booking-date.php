@@ -165,14 +165,9 @@ $_SESSION['date'] = $timestamp;
                                     <tbody>
                                         <?php
                                         // print all data from price-list.php and delete rows which are occupied
-                                        if(isset($result))
+                                        if(isset($row))
                                         {
                                             while ($row = $result->fetch_assoc()) {
-                                                echo($row['date']); ?><br><?php
-                                                /*foreach($row as $x)
-                                                {
-                                                    echo($x);
-                                                }*/
                                                 foreach ($hours as &$value) {
                                                     if ($value != $row['hour']) {
                                                     ?>

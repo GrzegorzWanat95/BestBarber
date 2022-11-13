@@ -4,13 +4,12 @@
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
 
-    $timestamp = $_POST['date'];
+    $date = $_POST['date'];
     
     $service_query_check = "SELECT * FROM services";
     $service = mysqli_query($connection, $service_query_check);
     #$service = mysqli_fetch_assoc($result);
 
-    $date = $_SESSION['date'];
     // form validation
     $sql = "SELECT * FROM bookings WHERE date='$date'";
     $result = $connection->query($sql);
