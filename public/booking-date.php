@@ -168,6 +168,11 @@ $_SESSION['date'] = $timestamp;
                                         if(isset($result))
                                         {
                                             while ($row = $result->fetch_assoc()) {
+                                                echo($row['date']); ?><br><?php
+                                                /*foreach($row as $x)
+                                                {
+                                                    echo($x);
+                                                }*/
                                                 foreach ($hours as &$value) {
                                                     if ($value != $row['hour']) {
                                                     ?>

@@ -3,6 +3,8 @@
 
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
+
+    $timestamp = $_POST['date'];
     
     $service_query_check = "SELECT * FROM services";
     $service = mysqli_query($connection, $service_query_check);

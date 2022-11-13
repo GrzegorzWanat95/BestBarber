@@ -19,7 +19,7 @@
        VALUES('$date', '$hour', '$service_name')";
        mysqli_query($connection, $query);
        $_SESSION['success'] = "Zarezerwowano termin!";
-       header('location: ../booking.php');
+       header('location: ../user-panel.php');
     }
     else
     {
