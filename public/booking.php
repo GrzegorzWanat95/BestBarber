@@ -165,7 +165,7 @@ $timestamp = date('Y-m-d', time());
                                         <tr>
                                             <th>Data</th>
                                             <th>Godzina</th>
-                                            <th>Akcje</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -173,18 +173,11 @@ $timestamp = date('Y-m-d', time());
                                         // print all data from price-list.php
                                         while ($row = $result_bookings->fetch_assoc()) { ?>
                                             <tr>
-                                                <td><?php echo $row['id']; ?></td>
                                                 <td><?php echo $row['date']; ?></td>
                                                 <td><?php echo $row['hour']; ?></td>
-                                                <td><?php echo $row['service']; ?></td>
-                                                <!-- if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {  -->
                                                 <td>
-                                                    <?php echo "<a href=scripts/delete-booking.php?id=" . $row['id'] . ">🗑</a>"; ?>
+                                                    <?php echo "<a href=scripts/delete-booking.php?id=" . $row['id'] . ">Wybierz</a>"; ?>
                                                 </td>
-                                                <td>
-                                                    <?php echo "<a href=edit-booking.php?id=" . $row['id'] . ">🖉</a>"; ?>
-                                                </td>
-
                                             <?php } ?>
                                             </tr>
                                     </tbody>
