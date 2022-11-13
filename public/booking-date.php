@@ -177,6 +177,11 @@ $_SESSION['date'] = $timestamp;
                                 </table>
                                 <?php if (isset($_SESSION['login-error'])) echo $_SESSION['login-error'] ?>
                             </div>
+                            <a link href="booking.php">
+                            <div class="button__field__xxl">
+                                <p1 class="button__text__table p-1">Powrót</p1>
+                            </div>
+                        </a>
                         </div>
                     <?php
                     } ?>
