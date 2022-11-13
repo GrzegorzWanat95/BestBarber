@@ -796,3 +796,7 @@ label{
 .calendar{
     background-color: inherit;
 }
+
+.no-border{
+    border: none;
+}

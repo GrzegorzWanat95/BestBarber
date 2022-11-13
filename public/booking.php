@@ -129,7 +129,7 @@ $timestamp = date('Y-m-d', time());
                             <tbody>
                                 <?php
                                 // print all data from price-list.php
-                                while ($row = $result_bookings->fetch_assoc()) { ?>
+                                while ($row = $booking->fetch_assoc()) { ?>
                                     <tr>
                                         <td><?php echo $row['id']; ?></td>
                                         <td><?php echo $row['date']; ?></td>

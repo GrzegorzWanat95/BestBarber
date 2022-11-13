@@ -158,27 +158,41 @@ $_SESSION['date'] = $timestamp;
                                         <tr>
                                             <th>Data</th>
                                             <th>Godzina</th>
+                                            <th>Usługa</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
-                                        // print all data from price-list.php
+                                        // print all data from price-list.php and delete rows which are occupied
                                         while ($row = $result->fetch_assoc()) {
                                             foreach ($hours as &$value) {
                                                 if ($value != $row['hour']) {
-                                                ?>
+                                        ?>
                                                     <tr>
-                                                        <td><?php echo $row['date']; ?></td>
-                                                        <td><?php echo $value; ?></td>
-                                                        <td>
-                                                            <?php echo "<a href=scripts/edit-booking.php?hour=" . $row['hour'] . ">Wybierz</a>"; ?>
-                                                        </td>
-                                                    <?php
-                                                    }
+                                                        <form method="post" action="./scripts/booking-script.php">
+                                                            <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
+                                                            <input type="hidden" id="date" name="date" value="<?php echo $row['hour']; ?>" />
+                                                            <td><?php echo $row['date']; ?></td>
+                                                            <td><?php echo $value; ?></td>
+                                                            <td>
+                                                                <select class="no-border" name="service" required>
+                                                                    <option disabled selected>Wybierz usługę</option>;
+                                                                    <?php while ($rows = mysqli_fetch_array($result)) { ?>
+                                                                        <option value="<?php echo $rows['description']; ?>"><?php echo $rows['description']; ?></option>;
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+                                                                </select><br>
+                                                            </td>
+                                                            <td> <button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button>
+                                                            </td>
+                                                        </form>
+                                            <?php
                                                 }
-                                            } ?>
-                                            </tr>
+                                            }
+                                        } ?>
+                                                    </tr>
                                     </tbody>
                                 </table>
                                 <?php if (isset($_SESSION['login-error'])) echo $_SESSION['login-error'] ?>
