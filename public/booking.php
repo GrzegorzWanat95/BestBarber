@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('booking-script.php');
+require('./scripts/booking-script.php');
 require('scripts/time-range.php');
 
 
@@ -143,7 +143,7 @@ require('scripts/time-range.php');
                         </table>
                     <?php
                     } else { ?>
-                        <form method="post" action="booking-script.php">
+                        <form method="post" action="./scripts/booking-script.php">
                             <div>
                                 <div class="nativeDateTimePicker">
                                     <input type="date" id="date" name="date" required />
