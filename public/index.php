@@ -47,8 +47,8 @@ session_start();
                             <a class="nav-item text-light nav-link" href="user-panel.php"><?php echo "WITAJ&nbsp;" . strtoupper($_SESSION['user']) . "!" ?></a>
                             <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
                         <?php } else { ?>
-                            <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
-                            <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
+                            <a class="nav-item menu-login text-light nav-link" href="login.php">LOGOWANIE</a>
+                            <a class="nav-item menu-login text-light nav-link" href="register.php">REJESTRACJA</a>
                         <?php } ?>
                     </div>
                 </div>
@@ -158,6 +158,12 @@ session_start();
                     </div>
                 </a>
             </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img class="logo__footer" src="../img/logo1biel.png" alt="BestBarber logo">
+        <div class="footer__text">
+            Copyright©2022 BestBarber
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
