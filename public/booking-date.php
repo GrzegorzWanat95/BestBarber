@@ -150,14 +150,8 @@ $_SESSION['date'] = $timestamp;
                         </table>
                     <?php
                     } else { ?>
-                        <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
+                        <h5 class="calendar__title">Wolne terminy dla daty: <?php echo($timestamp) ?></h5>
                         <div class="calendar__holder">
-                            <form class="booking" method="post" action="scripts/check-booking.php">
-                                <div class="calendar">
-                                    <input type="date" id="date" name="date" min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
-                                </div>
-                                <button class="booking__button" type="submit" name="book">Sprawdź termin</button>
-                            </form>
                             <div class="settings__fields">
                                 <table class="table">
                                     <thead>
