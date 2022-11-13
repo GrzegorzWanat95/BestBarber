@@ -21,7 +21,7 @@ require('./scripts/userscript.php');
 </head>
 
 <body>
-    <div class="menu__top">
+<div class="menu__top">
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,6 +34,13 @@ require('./scripts/userscript.php');
                         <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
                         <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                        <?php
+                        if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                            <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
+                        <?php
+                        } else { ?>
+                            <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                        <?php } ?>
                     </div>
                     <div class="right__menu">
                         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
@@ -68,10 +75,17 @@ require('./scripts/userscript.php');
                         <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
                         <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
                     <?php } ?>
-                    <a class="nav-item nav-link" href="about.php">O NAS</a>
-                    <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
-                    <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                    <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                        <a class="nav-item nav-link" href="about.php">O NAS</a>
+                        <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
+                        <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
+                        <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                    <?php
+                    if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                        <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
+                    <?php
+                    } else { ?>
+                        <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>

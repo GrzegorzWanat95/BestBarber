@@ -34,6 +34,13 @@ session_start();
                         <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
                         <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                        <?php
+                        if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                            <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
+                        <?php
+                        } else { ?>
+                            <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                        <?php } ?>
                     </div>
                     <div class="right__menu">
                         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
@@ -68,10 +75,17 @@ session_start();
                         <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
                         <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
                     <?php } ?>
-                    <a class="nav-item nav-link" href="about.php">O NAS</a>
-                    <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
-                    <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                    <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                        <a class="nav-item nav-link" href="about.php">O NAS</a>
+                        <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
+                        <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
+                        <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                    <?php
+                    if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                        <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
+                    <?php
+                    } else { ?>
+                        <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -95,28 +109,26 @@ session_start();
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                     <a link href="booking.php" class="button__container mt-2">
                         <div class="button__field">
-                         <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
                         </div>
                     </a>
                 <?php
-                }
-                elseif (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {?>
+                } elseif (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
                     <a link href="booking.php" class="button__container mt-2">
                         <div class="button__field">
-                         <p1 class="button__text p-1">SPRAWDŹ REZERWACJE</p1>
+                            <p1 class="button__text p-1">SPRAWDŹ REZERWACJE</p1>
                         </div>
                     </a>
                 <?php
-                }
-                else {?>
+                } else { ?>
                     <a link href="login.php" class="button__container mt-2">
-                    <div class="button__field">
-                        <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
-                    </div>
-                </a>
+                        <div class="button__field">
+                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                        </div>
+                    </a>
                 <?php }
                 ?>
-                
+
             </div>
         </div>
     </div>
