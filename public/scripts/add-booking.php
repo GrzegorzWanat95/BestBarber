@@ -25,5 +25,5 @@
       $_SESSION['edit-service-error'] = $errors;
       header('Location: ../booking.php');
     }
-    $connection->close();           
+    $connection->close();        
 ?>

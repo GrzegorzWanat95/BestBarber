@@ -159,7 +159,7 @@ $_SESSION['date'] = $timestamp;
                                             <th>Data</th>
                                             <th>Godzina</th>
                                             <th>Usługa</th>
-                                            <th></th>
+                                            <th>Zarezerwuj</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -168,27 +168,26 @@ $_SESSION['date'] = $timestamp;
                                         while ($row = $result->fetch_assoc()) {
                                             foreach ($hours as &$value) {
                                                 if ($value != $row['hour']) {
-                                        ?>
+                                                ?>
                                                     <tr>
                                                         <form method="post" action="./scripts/add-booking.php">
-                                                            <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
-                                                            <input type="hidden" id="date" name="date" value="<?php echo $row['hour']; ?>" />
-                                                            <td><?php echo $row['date']; ?></td>
-                                                            <td><?php echo $value; ?></td>
-                                                            <td>
+                                                            <td class="quarter"><?php echo $row['date']; ?></td>
+                                                            <td class="quarter"><?php echo $value; ?></td>
+                                                            <td class="quarter">
+                                                                <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
+                                                                <input type="hidden" id="hour" name="hour" value="<?php echo $value; ?>" />
                                                                 <select class="no-border" name="service" required>
                                                                     <option disabled selected>Wybierz usługę</option>;
                                                                     <?php while ($rows = mysqli_fetch_array($result)) { ?>
-                                                                        <option value="<?php echo $rows['description']; ?>"><?php echo $rows['description']; ?></option>;
+                                                                        <option class="option__field" value="<?php echo $rows['description']; ?>"><?php echo $rows['description']; ?></option>;
                                                                     <?php
                                                                     }
                                                                     ?>
                                                                 </select><br>
                                                             </td>
-                                                            <td> <button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button>
-                                                            </td>
+                                                            <td class="quarter"><button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button></td>
                                                         </form>
-                                            <?php
+                                                <?php
                                                 }
                                             }
                                         } ?>

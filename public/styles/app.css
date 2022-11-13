@@ -799,4 +799,13 @@ label{
 
 .no-border{
     border: none;
+    width: 100%;
+}
+
+.quarter{
+    width: 25%;
+}
+
+.option__field{
+    width: 100px;
 }
