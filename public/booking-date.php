@@ -169,7 +169,7 @@ $_SESSION['date'] = $timestamp;
                                                 <td><?php echo $row['date']; ?></td>
                                                 <td><?php echo $row['hour']; ?></td>
                                                 <td>
-                                                    <?php echo "<a href=scripts/delete-booking.php?id=" . $row['id'] . ">Wybierz</a>"; ?>
+                                                    <?php echo "<a href=scripts/add-booking.php?hour=" . $row['hour'] . ">Wybierz</a>"; ?>
                                                 </td>
                                             <?php } ?>
                                             </tr>
