@@ -151,7 +151,7 @@ $timestamp = date('Y-m-d', time());
                     } else { ?>
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
                         <div class="calendar__holder">
-                            <form class="booking" method="post" action="scripts/reservations.php">
+                            <form class="booking" method="post" action="booking-date.php">
                                 <div class="calendar">
                                     <input type="date" id="date" name="date" min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
                                 </div>

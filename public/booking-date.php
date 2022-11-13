@@ -1,7 +1,9 @@
 <?php
 session_start();
 require('scripts/time-range.php');
-$timestamp = date('Y-m-d', time());
+require('scripts/check-date.php');
+$timestamp = $_POST['date'];
+$_SESSION['date'] = $timestamp; 
 
 ?>
 
@@ -150,7 +152,7 @@ $timestamp = date('Y-m-d', time());
                     } else { ?>
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
                         <div class="calendar__holder">
-                            <form class="booking" method="post" action="scripts/booking-script.php">
+                            <form class="booking" method="post" action="scripts/check-booking.php">
                                 <div class="calendar">
                                     <input type="date" id="date" name="date" min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
                                 </div>
@@ -168,7 +170,7 @@ $timestamp = date('Y-m-d', time());
                                     <tbody>
                                         <?php
                                         // print all data from price-list.php
-                                        while ($row = $result_bookings->fetch_assoc()) { ?>
+                                        while ($row = $result->fetch_assoc()) { ?>
                                             <tr>
                                                 <td><?php echo $row['date']; ?></td>
                                                 <td><?php echo $row['hour']; ?></td>
