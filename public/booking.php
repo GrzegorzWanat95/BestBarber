@@ -3,7 +3,7 @@ session_start();
 require('./scripts/booking-script.php');
 require('scripts/time-range.php');
 #require('book-visit.php');
-$timestamp=date('Y-m-d', time());
+$timestamp = date('Y-m-d', time());
 
 
 ?>
@@ -154,11 +154,43 @@ $timestamp=date('Y-m-d', time());
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
                         <div class="calendar__holder">
                             <form class="booking" method="post" action="./scripts/booking-script.php">
-                                    <div class="calendar">
-                                        <input type="date" id="date" name="date" value=<?php echo $timestamp?> required />
-                                    </div>
-                                    <button class="booking__button" type="submit" name="book">Sprawdź termin</button>
+                                <div class="calendar">
+                                    <input type="date" id="date" name="date" value=<?php echo $timestamp ?> required />
+                                </div>
+                                <button class="booking__button" type="submit" name="book">Sprawdź termin</button>
                             </form>
+                            <div class="settings__fields">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Godzina</th>
+                                            <th>Akcje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        // print all data from price-list.php
+                                        while ($row = $result_bookings->fetch_assoc()) { ?>
+                                            <tr>
+                                                <td><?php echo $row['id']; ?></td>
+                                                <td><?php echo $row['date']; ?></td>
+                                                <td><?php echo $row['hour']; ?></td>
+                                                <td><?php echo $row['service']; ?></td>
+                                                <!-- if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {  -->
+                                                <td>
+                                                    <?php echo "<a href=scripts/delete-booking.php?id=" . $row['id'] . ">🗑</a>"; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo "<a href=edit-booking.php?id=" . $row['id'] . ">🖉</a>"; ?>
+                                                </td>
+
+                                            <?php } ?>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                                <?php if (isset($_SESSION['login-error'])) echo $_SESSION['login-error'] ?>
+                            </div>
                         </div>
                     <?php
                     } ?>
