@@ -170,7 +170,7 @@ $_SESSION['date'] = $timestamp;
                                                 if ($value != $row['hour']) {
                                         ?>
                                                     <tr>
-                                                        <form method="post" action="./scripts/booking-script.php">
+                                                        <form method="post" action="./scripts/add-booking.php">
                                                             <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
                                                             <input type="hidden" id="date" name="date" value="<?php echo $row['hour']; ?>" />
                                                             <td><?php echo $row['date']; ?></td>
