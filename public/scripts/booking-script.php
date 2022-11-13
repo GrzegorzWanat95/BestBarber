@@ -13,6 +13,7 @@ if(isset($_POST['date']) )
   $date = $_POST['date'];
   $booking_upload_query = "SELECT * from bookings where date='$date'";
   $result_bookings = mysqli_query($connection, $booking_upload_query);
+  header('Location: ../booking.php');
 }
 else
 {
