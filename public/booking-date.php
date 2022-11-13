@@ -3,7 +3,7 @@ session_start();
 require('scripts/time-range.php');
 require('scripts/check-date.php');
 $timestamp = $_POST['date'];
-$_SESSION['date'] = $timestamp; 
+$_SESSION['date'] = $timestamp;
 
 ?>
 
@@ -150,7 +150,7 @@ $_SESSION['date'] = $timestamp;
                         </table>
                     <?php
                     } else { ?>
-                        <h5 class="calendar__title">Wolne terminy dla daty: <?php echo($timestamp) ?></h5>
+                        <h5 class="calendar__title">Wolne terminy dla daty: <?php echo ($timestamp) ?></h5>
                         <div class="calendar__holder">
                             <div class="settings__fields">
                                 <table class="table">
@@ -164,24 +164,30 @@ $_SESSION['date'] = $timestamp;
                                     <tbody>
                                         <?php
                                         // print all data from price-list.php
-                                        while ($row = $result->fetch_assoc()) { ?>
-                                            <tr>
-                                                <td><?php echo $row['date']; ?></td>
-                                                <td><?php echo $row['hour']; ?></td>
-                                                <td>
-                                                    <?php echo "<a href=scripts/add-booking.php?hour=" . $row['hour'] . ">Wybierz</a>"; ?>
-                                                </td>
-                                            <?php } ?>
+                                        while ($row = $result->fetch_assoc()) {
+                                            foreach ($hours as &$value) {
+                                                if ($value != $row['hour']) {
+                                                ?>
+                                                    <tr>
+                                                        <td><?php echo $row['date']; ?></td>
+                                                        <td><?php echo $value; ?></td>
+                                                        <td>
+                                                            <?php echo "<a href=scripts/edit-booking.php?hour=" . $row['hour'] . ">Wybierz</a>"; ?>
+                                                        </td>
+                                                    <?php
+                                                    }
+                                                }
+                                            } ?>
                                             </tr>
                                     </tbody>
                                 </table>
                                 <?php if (isset($_SESSION['login-error'])) echo $_SESSION['login-error'] ?>
                             </div>
                             <a link href="booking.php">
-                            <div class="button__field__xxl">
-                                <p1 class="button__text__table p-1">Powrót</p1>
-                            </div>
-                        </a>
+                                <div class="button__field__xxl">
+                                    <p1 class="button__text__table p-1">Powrót</p1>
+                                </div>
+                            </a>
                         </div>
                     <?php
                     } ?>

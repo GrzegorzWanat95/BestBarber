@@ -26,7 +26,7 @@
             <div class="window__frame">
                 <div class="settings">
                     <h1 class="header mt-5 mb-4">
-                        LOGOWANIE
+                        REZERWACJA WIZYTY
                     </h1>
                 </div>
                 <div class="button-corner">

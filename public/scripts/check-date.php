@@ -8,13 +8,7 @@
     // form validation
     $sql = "SELECT * FROM bookings WHERE date='$date'";
     $result = $connection->query($sql);
-
-    #$_SESSION['date'] = $booking['date'];
-    #$_SESSION['hour'] = $booking['hour'];
-    #$_SESSION['service'] = $booking['service'];
-    
-    #$service_upload_query = "SELECT description from services";
-    #$result_service = mysqli_query($connection, $service_upload_query);
+    $hours = array('8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'); 
 
     $connection->close();           
 ?>
