@@ -7,22 +7,13 @@ $service_upload_query = "SELECT description from services";
 $result = mysqli_query($connection, $service_upload_query);
 $errors = array();
 
+$date = $_POST['date'];
+$booking_upload_query = "SELECT * from bookings where date='$date'";
+$result_bookings = mysqli_query($connection, $booking_upload_query);
+header('Location: ../booking-reservation.php');
 
-if(isset($_POST['date']) ) 
-{
-  $date = $_POST['date'];
-  $booking_upload_query = "SELECT * from bookings where date='$date'";
-  $result_bookings = mysqli_query($connection, $booking_upload_query);
-  header('Location: ../booking.php');
-}
-else
-{
-  $sql = "SELECT * FROM services";
-  #$booking_upload_query = "SELECT * from bookings";
-  #$result_bookings = $connection->query($sql);
-  $booking_upload_query = "SELECT * from bookings";
-  $result_bookings = mysqli_query($connection, $booking_upload_query);
-}
+
+
 
 
 /*if(isset($_POST['book']) ) {
