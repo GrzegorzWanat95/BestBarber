@@ -2,6 +2,7 @@
 session_start();
 require('./scripts/booking-script.php');
 require('scripts/time-range.php');
+#require('book-visit.php');
 
 
 ?>
@@ -31,7 +32,7 @@ require('scripts/time-range.php');
 </head>
 
 <body>
-<div class="menu__top">
+    <div class="menu__top">
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -85,10 +86,10 @@ require('scripts/time-range.php');
                         <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
                         <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
                     <?php } ?>
-                        <a class="nav-item nav-link" href="about.php">O NAS</a>
-                        <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
-                        <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                        <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
+                    <a class="nav-item nav-link" href="about.php">O NAS</a>
+                    <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
+                    <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
+                    <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
                     <?php
                     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
                         <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
@@ -103,7 +104,13 @@ require('scripts/time-range.php');
     <div class="subpage__content">
         <div class="content__frame">
             <h1 class="header">
-                REZERWACJE
+                <?php
+                if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                    ZBLIŻAJĄCE&nbsp;SIĘ&nbsp;WIZYTY
+                <?php
+                } else { ?>
+                    TWOJE&nbsp;WIZYTY
+                <?php } ?>
             </h1>
             <div class="holder">
                 <div class="half__side">
