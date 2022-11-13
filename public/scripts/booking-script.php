@@ -3,21 +3,28 @@
 require_once("connectdb.php");
 
 $connection = new mysqli($host,$db_user,$db_password,$db_name);
+$service_upload_query = "SELECT description from services";
+$result = mysqli_query($connection, $service_upload_query);
 $errors = array();
 
 
-if(!$connection)
+if(isset($_POST['date']) ) 
 {
-    error_reporting(0);
-    echo "Błąd połączenia z bazą danych";
+  $date = $_POST['date'];
+  $booking_upload_query = "SELECT * from bookings where date='$date'";
+  $result_bookings = mysqli_query($connection, $booking_upload_query);
 }
 else
 {
-  $service_upload_query = "SELECT description from services";
-  $result = mysqli_query($connection, $service_upload_query);
+  $sql = "SELECT * FROM services";
+  #$booking_upload_query = "SELECT * from bookings";
+  #$result_bookings = $connection->query($sql);
   $booking_upload_query = "SELECT * from bookings";
   $result_bookings = mysqli_query($connection, $booking_upload_query);
-  if(isset($_POST['book']) ) {
+}
+
+
+/*if(isset($_POST['book']) ) {
     $date = $_POST['date'];
     $hour=$_POST['hour'];
     $service=$_POST['service'];
@@ -36,13 +43,10 @@ else
     else
     {
       $_SESSION['booking-error'] = $errors;
-      header('Location: ../booking.php');
+      header('Location: booking.php');
     }
    
-}
-}
-
-
+}*/
 $connection->close();
 
 
