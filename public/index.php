@@ -107,20 +107,25 @@ session_start();
                 </div>
                 <?php
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                    <a link href="booking.php" class="button__container mt-2">
-                        <div class="button__field">
-                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
-                        </div>
-                    </a>
-                <?php
-                } elseif (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                    <?php
+                    if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
                     <a link href="booking.php" class="button__container mt-2">
                         <div class="button__field">
                             <p1 class="button__text p-1">SPRAWDŹ REZERWACJE</p1>
                         </div>
                     </a>
-                <?php
-                } else { ?>
+                    <?php
+                    }
+                    else
+                    { ?>
+                        <a link href="booking.php" class="button__container mt-2">
+                        <div class="button__field">
+                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                        </div>
+                        </a>
+                    <?php } 
+                } 
+                else { ?>
                     <a link href="login.php" class="button__container mt-2">
                         <div class="button__field">
                             <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
