@@ -754,3 +754,46 @@ label{
     justify-items: flex-end;
     text-align: end;
 }
+
+.calendar__title{
+    background-color: inherit;
+    color: #29231e;
+}
+
+.calendar__holder{
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.booking{
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    background-color: inherit;
+}
+
+#date{
+    background-color: inherit;
+    color: #29231e;
+    border: none;
+
+}
+
+.booking__button{
+    background-color: #29231e;
+    color: #c2a991;
+    border: 1px solid #29231e;
+    padding: 0.2rem;
+}
+
+.booking__button:hover{
+    background-color: inherit;
+    color: #29231e;
+    border: 1px solid #29231e;
+    padding: 0.2rem;
+}
+
+.calendar{
+    background-color: inherit;
+}

@@ -3,6 +3,7 @@ session_start();
 require('./scripts/booking-script.php');
 require('scripts/time-range.php');
 #require('book-visit.php');
+$timestamp=date('Y-m-d', time());
 
 
 ?>
@@ -109,7 +110,7 @@ require('scripts/time-range.php');
                     ZBLIŻAJĄCE&nbsp;SIĘ&nbsp;WIZYTY
                 <?php
                 } else { ?>
-                    TWOJE&nbsp;WIZYTY
+                    REZERWACJE
                 <?php } ?>
             </h1>
             <div class="holder">
@@ -150,47 +151,17 @@ require('scripts/time-range.php');
                         </table>
                     <?php
                     } else { ?>
-                        <form method="post" action="./scripts/booking-script.php">
-                            <div>
-                                <div class="nativeDateTimePicker">
-                                    <input type="date" id="date" name="date" required />
-                                </div>
-                                <select name="hour" required>
-                                    <option value="" disabled selected>Wybierz godzinę</option><br>
-                                    <?php foreach ($times as $key => $val) { ?>
-                                        <option value="<?php echo $val; ?>"><?php echo $val; ?></option>
-                                    <?php } ?>
-                                </select><br>
-                                <select name="service" required>
-                                    <option disabled selected>Wybierz usługę</option>;
-                                    <?php while ($rows = mysqli_fetch_array($result)) { ?>
-                                        <option value="<?php echo $rows['description']; ?>"><?php echo $rows['description']; ?></option>;
-                                    <?php
-                                    }
-                                    ?>
-                                </select><br>
-                                <button type="submit" name="book">Zarezerwuj</button>
-                                <div class="settings__fields">
-                                    <?php if (isset($_SESSION['booking-error'])) {
-                                        foreach ($_SESSION['booking-error'] as $error) {
-                                            echo $error;
-                                            break;
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                            </div>
-                        </form>
+                        <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
+                        <div class="calendar__holder">
+                            <form class="booking" method="post" action="./scripts/booking-script.php">
+                                    <div class="calendar">
+                                        <input type="date" id="date" name="date" value=<?php echo $timestamp?> required />
+                                    </div>
+                                    <button class="booking__button" type="submit" name="book">Sprawdź termin</button>
+                            </form>
+                        </div>
                     <?php
                     } ?>
-                    <?php
-                    if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                        <a link href="add-service.php">
-                            <div class="button__field__xxl">
-                                <p1 class="button__text__table p-1">Dodaj usługę</p1>
-                            </div>
-                        </a>
-                    <?php } ?>
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">

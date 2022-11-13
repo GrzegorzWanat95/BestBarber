@@ -36,7 +36,7 @@ session_start();
                         <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
                         <?php
                         if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                            <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
+                            <a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>
                         <?php
                         } else { ?>
                             <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
@@ -81,7 +81,7 @@ session_start();
                         <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
                     <?php
                     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                        <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
+                        <a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>
                     <?php
                     } else { ?>
                         <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
