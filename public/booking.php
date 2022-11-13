@@ -155,7 +155,7 @@ $timestamp = date('Y-m-d', time());
                         <div class="calendar__holder">
                             <form class="booking" method="post" action="./scripts/booking-script.php">
                                 <div class="calendar">
-                                    <input type="date" id="date" name="date" value=<?php echo $timestamp ?> required />
+                                    <input type="date" id="date" name="date" min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
                                 </div>
                                 <button class="booking__button" type="submit" name="book">Sprawdź termin</button>
                             </form>
