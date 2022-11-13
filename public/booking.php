@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('scripts/check-booking.php');
 require('scripts/time-range.php');
 $timestamp = date('Y-m-d', time());
 
