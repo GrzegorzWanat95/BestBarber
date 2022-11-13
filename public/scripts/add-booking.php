@@ -9,6 +9,7 @@
     $date = $_POST['date'];
     $hour = $_POST['hour'];
     $service_name = $_POST['service'];
+
   
     if(count($errors) == 0)
     {

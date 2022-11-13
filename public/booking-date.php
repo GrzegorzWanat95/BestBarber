@@ -178,7 +178,7 @@ $_SESSION['date'] = $timestamp;
                                                                 <input type="hidden" id="hour" name="hour" value="<?php echo $value; ?>" />
                                                                 <select class="no-border" name="service" required>
                                                                     <option disabled selected>Wybierz usługę</option>;
-                                                                    <?php while ($rows = mysqli_fetch_array($result)) { ?>
+                                                                    <?php while ($rows = mysqli_fetch_array($service)) { ?>
                                                                         <option class="option__field" value="<?php echo $rows['description']; ?>"><?php echo $rows['description']; ?></option>;
                                                                     <?php
                                                                     }
