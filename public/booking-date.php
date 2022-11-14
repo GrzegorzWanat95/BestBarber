@@ -2,13 +2,10 @@
 session_start();
 require('scripts/time-range.php');
 require('scripts/check-date.php');
-if(array_key_exists('date', $_POST))
-{
-    $timestamp=($_POST['date']);
+if (array_key_exists('date', $_POST)) {
+    $timestamp = ($_POST['date']);
     $_SESSION['date'] = $_POST['date'];
-}
-else
-{
+} else {
     $timestamp = $_SESSION['date'];
 }
 
@@ -173,10 +170,10 @@ else
                                         <?php
                                         // print all data from price-list.php and delete rows which are occupied
                                         $iterator = 0;
-                                        foreach ($hours as $term)
+                                        foreach ($hours as $term) 
                                         {
-                                            if($term == 0)
-                                            {
+                                            if ($term == 0) 
+                                                {
                                                 ?>
                                                     <tr class="inactive">
                                                         <td class="quarter inactive"><?php echo $timestamp; ?></td>
@@ -185,35 +182,37 @@ else
                                                         <td class="quarter inactive">-</td>
                                                     </tr>
                                                 <?php
+                                                } 
+                                                else 
+                                                {
+                                                    ?>
+                                                        <tr>
+                                                            <form method="post" action="./scripts/add-booking.php">
+                                                                <td class="quarter"><?php echo $timestamp; ?></td>
+                                                                <td class="quarter"><?php echo $hours_pattern[$iterator]; ?></td>
+                                                                <td class="quarter">
+                                                                    <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
+                                                                    <input type="hidden" id="hour" name="hour" value="<?php echo $hours_pattern[$iterator]; ?>" />
+                                                                    <select class="no-border" name="service" required>
+                                                                        <option disabled selected>Wybierz usługę</option>;
+                                                                        <?php while ($rows = mysqli_fetch_array($service)) 
+                                                                            { 
+                                                                                ?>
+                                                                                    <option class="option__field" value="<?php echo $rows['description']; ?>"><?php echo $rows['description']; ?></option>;
+                                                                                <?php
+                                                                            }
+                                                                        ?>
+                                                                    </select><br>
+                                                                </td>
+                                                                <td class="quarter"><button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button></td>
+                                                            </form>
+                                                        </tr>
+                                                    <?php
+                                                }
+                                                $iterator = $iterator + 1;
                                             }
-                                            else
-                                            {
-                                                ?>
-                                                <tr>
-                                                    <form method="post" action="./scripts/add-booking.php">
-                                                        <td class="quarter"><?php echo $timestamp; ?></td>
-                                                        <td class="quarter"><?php echo $hours_pattern[$iterator]; ?></td>
-                                                        <td class="quarter">
-                                                            <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
-                                                            <input type="hidden" id="hour" name="hour" value="<?php echo $hours_pattern[$iterator]; ?>" />
-                                                            <select class="no-border" name="service" required>
-                                                                <option disabled selected>Wybierz usługę</option>;
-                                                                <?php while ($rows = mysqli_fetch_array($service)) { ?>
-                                                                    <option class="option__field" value="<?php echo $rows['description']; ?>"><?php echo $rows['description']; ?></option>;
-                                                                <?php
-                                                                }
-                                                                ?>
-                                                            </select><br>
-                                                        </td>
-                                                        <td class="quarter"><button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button></td>
-                                                    </form>
-                                                <?php
-                                            }
-                                            $iterator = $iterator + 1;
                                         }
-                                    }
-                                        ?>
-                                        </tr>
+                                    ?>
                                     </tbody>
                                 </table>
                                 <?php if (isset($_SESSION['login-error'])) echo $_SESSION['login-error'] ?>
@@ -224,8 +223,8 @@ else
                                 </div>
                             </a>
                         </div>
-                    <?php
-                    ?>
+                        <?php
+                        ?>
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
