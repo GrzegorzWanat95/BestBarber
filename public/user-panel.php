@@ -1,6 +1,5 @@
 <?php
 require('./scripts/userscript.php');
-require('./scripts/check-booking.php');
 ?>
 
 <!DOCTYPE html>
@@ -136,20 +135,24 @@ require('./scripts/check-booking.php');
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <?php echo "Data:";?>
-                                    <?php echo $user_bookings['date']; ?>
-                                </td>
-                                <td>
-                                    <?php echo "Godzina:"; ?>
-                                    <?php echo $user_bookings['hour']; ?>
-                                </td>
-                                <td>
-                                    <?php echo "Usługa:"; ?>
-                                    <?php echo $user_bookings['service']; ?>
-                                </td>
-                            </tr>
+                            <?php
+                                $connection = new mysqli($host, $db_user, $db_password, $db_name);
+                                $query = "SELECT * FROM bookings ORDER BY hour DESC";
+                                if ($result = $connection->query($query)) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        $date = $row["date"];
+                                        $hour = $row["hour"];
+                                        $service = $row["service"];
+
+                                        echo '<tr>
+                                                <td>'.$date.'</td>
+                                                <td>'.$hour.'</td>
+                                                <td>'.$service.'</td>
+                                            </tr>';
+                                    }
+                                    $result->free();
+                                }
+                            ?>
                         </tbody>
                     </table>
                 </div>
