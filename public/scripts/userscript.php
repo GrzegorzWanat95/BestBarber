@@ -12,6 +12,7 @@
     $sql = "SELECT * FROM user WHERE login='$username' LIMIT 1";
     $result = $connection->query($sql);
     $user = mysqli_fetch_assoc($result);
+    $datenow= date("Y-m-d");
     
     if (!$result) {
         die("Wystąpił błąd podczas wykonywania zapytania: " . $connection->error);

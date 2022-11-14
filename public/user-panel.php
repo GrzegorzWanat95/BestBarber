@@ -137,9 +137,10 @@ require('./scripts/userscript.php');
                         <tbody>
                             <?php
                                 $username = $_SESSION['user'];
+                                
                                 $connection = new mysqli($host, $db_user, $db_password, $db_name);
-                                $query = "SELECT * FROM bookings WHERE username='$username' ORDER BY hour DESC";
-                                if ($result = $connection->query($query)) {
+                                $query = "SELECT * FROM bookings WHERE username='$username' and date>='$datenow' ORDER BY hour ASC";
+                                if ($result = $connection->query($query)){
                                     while ($row = $result->fetch_assoc()) {
                                         $date = $row["date"];
                                         $hour = $row["hour"];
