@@ -2,8 +2,15 @@
 session_start();
 require('scripts/time-range.php');
 require('scripts/check-date.php');
-$timestamp = $_POST['date'];
-$_SESSION['date'] = $timestamp;
+if(array_key_exists('date', $_POST))
+{
+    $timestamp=($_POST['date']);
+    $_SESSION['date'] = $_POST['date'];
+}
+else
+{
+    $timestamp = $_SESSION['date'];
+}
 
 ?>
 

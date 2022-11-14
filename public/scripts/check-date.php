@@ -4,7 +4,14 @@
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
 
-    $date = $_POST['date'];
+    if(isset($_POST['date']))
+    {
+        $date = $_POST['date'];
+    }
+    else
+    {
+        $date = $_SESSION['date'];
+    }
     
     $service_query_check = "SELECT * FROM services";
     $service = mysqli_query($connection, $service_query_check);
