@@ -13,7 +13,24 @@
     // form validation
     $sql = "SELECT * FROM bookings WHERE date='$date'";
     $result = $connection->query($sql);
+    $rows = [];
+    while($row = mysqli_fetch_array($result))
+    {
+        $rows[] = $row;
+    }
+
+    $hours_pattern = array('8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'); 
     $hours = array('8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'); 
 
+    foreach($rows as $x)
+    {
+        foreach($hours as $hour)
+        {
+            if (($key = array_search($x['hour'], $hours)) !== false) {
+                $hours[$key] = 0;
+            }
+        }
+    }
+    
     $connection->close();           
 ?>
