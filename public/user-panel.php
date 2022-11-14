@@ -1,5 +1,6 @@
 <?php
 require('./scripts/userscript.php');
+require('./scripts/check-booking.php');
 ?>
 
 <!DOCTYPE html>
@@ -128,6 +129,29 @@ require('./scripts/userscript.php');
                     <?php
                     }
                     ?>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Umówione wizyty:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <?php echo "Data:";?>
+                                    <?php echo $user_bookings['date']; ?>
+                                </td>
+                                <td>
+                                    <?php echo "Godzina:"; ?>
+                                    <?php echo $user_bookings['hour']; ?>
+                                </td>
+                                <td>
+                                    <?php echo "Usługa:"; ?>
+                                    <?php echo $user_bookings['service']; ?>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
