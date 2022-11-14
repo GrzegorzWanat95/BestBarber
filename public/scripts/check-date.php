@@ -15,6 +15,11 @@
     
     $service_query_check = "SELECT * FROM services";
     $service = mysqli_query($connection, $service_query_check);
+    $services = [];
+    while($row = mysqli_fetch_array($service))
+    {
+        $services[] = $row;
+    }
     #$service = mysqli_fetch_assoc($result);
 
     // form validation
