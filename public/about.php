@@ -36,10 +36,14 @@
                         <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
                         <?php
                         if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                            <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
+                            <a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>
                         <?php
                         } else { ?>
+                            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                             <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                            <?php } else { ?>
+                                <a class="nav-item nav-link" href="login.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                            <?php } ?>
                         <?php } ?>
                     </div>
                     <div class="right__menu">

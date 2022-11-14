@@ -39,7 +39,11 @@ session_start();
                             <a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>
                         <?php
                         } else { ?>
+                            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                             <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                            <?php } else { ?>
+                                <a class="nav-item nav-link" href="login.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
+                            <?php } ?>
                         <?php } ?>
                     </div>
                     <div class="right__menu">
@@ -123,8 +127,8 @@ session_start();
                             <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
                         </div>
                         </a>
-                    <?php } 
-                } 
+                    <?php }
+                }
                 else { ?>
                     <a link href="login.php" class="button__container mt-2">
                         <div class="button__field">
