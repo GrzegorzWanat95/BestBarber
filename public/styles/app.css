@@ -835,3 +835,14 @@ label{
     align-items: center;
     flex-wrap: wrap;
 }
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.error{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
