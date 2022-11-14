@@ -809,3 +809,8 @@ label{
 .option__field{
     width: 100px;
 }
+
+.inactive{
+    background-color: #aba8a442;
+    color: rgb(137, 132, 132);
+}

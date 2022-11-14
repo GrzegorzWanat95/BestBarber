@@ -171,11 +171,11 @@ $_SESSION['date'] = $timestamp;
                                             if($term == 0)
                                             {
                                                 ?>
-                                                    <tr>
-                                                        <td class="quarter"><?php echo $timestamp; ?></td>
-                                                        <td class="quarter"><?php echo $hours_pattern[$iterator]; ?></td>
-                                                        <td class="quarter">-</td>
-                                                        <td class="quarter">-</td>
+                                                    <tr class="inactive">
+                                                        <td class="quarter inactive"><?php echo $timestamp; ?></td>
+                                                        <td class="quarter inactive"><?php echo $hours_pattern[$iterator]; ?></td>
+                                                        <td class="quarter inactive">-</td>
+                                                        <td class="quarter inactive">-</td>
                                                     </tr>
                                                 <?php
                                             }
