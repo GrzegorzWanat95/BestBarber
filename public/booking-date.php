@@ -188,7 +188,7 @@ $_SESSION['date'] = $timestamp;
                                                         <td class="quarter"><?php echo $hours_pattern[$iterator]; ?></td>
                                                         <td class="quarter">
                                                             <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
-                                                            <input type="hidden" id="hour" name="hour" value="<?php echo $value; ?>" />
+                                                            <input type="hidden" id="hour" name="hour" value="<?php echo $hours_pattern[$iterator]; ?>" />
                                                             <select class="no-border" name="service" required>
                                                                 <option disabled selected>Wybierz usługę</option>;
                                                                 <?php while ($rows = mysqli_fetch_array($service)) { ?>
