@@ -40,7 +40,7 @@ require('booking.php');
                         </h1>
                     </div>
                     <div class="settings__fields">
-                            Swoje rezerwacje znajdziesz w&nbsp;<a class="text__link" href=user-panel>panelu użytkownika</a>. 
+                            Swoje rezerwacje znajdziesz w&nbsp;<a class="text__link" href=user-panel.php>panelu użytkownika</a>.
                     </div>
                 </div>
                 <a link href="booking.php">
