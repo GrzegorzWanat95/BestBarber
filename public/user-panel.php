@@ -92,9 +92,7 @@ require('./scripts/userscript.php');
                                 <p1 class="button__text__table p-1">Zmień dane konta</p1>
                             </div>
                         </a>
-                    <?php
-                    }
-                    ?>
+                    <?php } ?>
                     <table class="table">
                     <?php if (!isset($_SESSION['ADMIN'])) { ?>
                         <thead>
