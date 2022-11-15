@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('./scripts/price-listscript.php');
 ?>
 
 <!DOCTYPE html>
@@ -69,44 +68,7 @@ require('./scripts/price-listscript.php');
             </h1>
             <div class="holder">
                 <div class="half__side">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Rodzaj usługi</th>
-                                <th>Cena</th>
-                                <?php if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                                    <th>Opcje</th>
-                                    <th>Edycja</th>
-                                <?php } ?>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            // print all data from price-list.php
-                            while ($row = $result->fetch_assoc()) { ?>
-                                <tr>
-                                    <td><?php echo $row['description']; ?></td>
-                                    <td><?php echo $row['price'] . '&nbsp;zł'; ?></td>
-                                    <?php if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                                    <td>
-                                        <?php echo "<a href=/scripts/delete-service.php?id=" . $row['id'] . ">🗑</a>"; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<a href=edit-service.php?id=" . $row['id'] . ">🖉</a>"; ?>
-                                    </td>
-                                        <?php } ?>
-                                    <?php } ?>
-                                </tr>
-                        </tbody>
-                    </table>
-                    <?php
-                    if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                        <a link href="add-service.php">
-                            <div class="button__field__xxl">
-                                <p1 class="button__text__table p-1">Dodaj usługę</p1>
-                            </div>
-                        </a>
-                    <?php } ?>
+                    <?php include 'scripts/price-listscript.php'; ?>
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/priceList.png" alt="Zdjęcie narzędzi fryzjerskich">
