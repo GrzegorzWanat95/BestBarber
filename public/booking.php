@@ -1,9 +1,22 @@
 <?php
 session_start();
+if(isset($_SESSION['date']))
+{
+    $_SESSION['date'] = date('Y-m-d', time());
+}
+if (array_key_exists('date', $_POST))
+{
+    $timestamp = ($_POST['date']);
+    $_SESSION['date'] = $_POST['date'];
+}
+else
+{
+    $timestamp = date('Y-m-d', time());
+    $_SESSION['date'] = $timestamp;
+}
+
 require('scripts/time-range.php');
-$timestamp = date('Y-m-d', time());
-
-
+require('scripts/check-date.php');
 ?>
 
 <!DOCTYPE html>
@@ -155,15 +168,78 @@ $timestamp = date('Y-m-d', time());
                     } else { ?>
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
                         <div class="calendar__holder">
-                            <form class="booking" method="post" action="booking-date.php">
-                                <div class="calendar">
-                                    <input type="date" id="date" name="date" min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
-                                </div>
-                                <button class="booking__button" type="submit" name="book">Sprawdź termin</button>
+                            <form id="chooseDate" class="booking" method="post" action="booking.php">
+                                        <div class="calendar">
+                                            <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
+                                        </div>
                             </form>
+                            <div class="settings__fields">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Godzina</th>
+                                            <th>Usługa</th>
+                                            <th>Zarezerwuj</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        // print all data from price-list.php and delete rows which are occupied
+                                        $iterator = 0;
+
+                                        foreach ($hours as $term) {
+                                            if ($term == 0) {
+                                        ?>
+                                                <tr class="inactive">
+                                                    <td class="quarter inactive"><?php echo $timestamp; ?></td>
+                                                    <td class="quarter inactive"><?php echo $hours_pattern[$iterator]; ?></td>
+                                                    <td class="quarter inactive">-</td>
+                                                    <td class="quarter inactive">-</td>
+                                                </tr>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <tr>
+                                                    <form method="post" action="./scripts/add-booking.php">
+                                                        <td class="quarter"><?php echo $timestamp; ?></td>
+                                                        <td class="quarter"><?php echo $hours_pattern[$iterator]; ?></td>
+                                                        <td class="quarter">
+                                                            <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
+                                                            <input type="hidden" id="hour" name="hour" value="<?php echo $term; ?>" />
+                                                            <select class="no-border" name="service" required>
+                                                                <option disabled selected>Wybierz usługę</option>;
+                                                                <?php foreach ($services as $options) { ?>
+                                                                    <option class="option__field" value="<?php echo $options['description']; ?>"><?php echo $options['description']; ?></option>;
+                                                                <?php
+                                                                }
+                                                                ?>
+                                                            </select><br>
+                                                        </td>
+                                                        <td class="quarter"><button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button></td>
+                                                    </form>
+                                                </tr>
+                                    <?php
+                                            }
+                                            $iterator = $iterator + 1;
+                                        }
+                                    }
+                                    ?>
+                                    <?php if (isset($_SESSION['edit-service-error'])) {
+                                    ?>
+                                    <tr class="error">
+                                        <td colspan="4"><?php
+                                                foreach ($_SESSION['edit-service-error'] as $error) {
+                                                    echo $error;
+                                                    break;
+                                                }?>
+                                        </td>
+                                    </tr> <?php
+                                    }?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    <?php
-                    } ?>
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">

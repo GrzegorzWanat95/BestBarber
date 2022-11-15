@@ -243,7 +243,6 @@ if (array_key_exists('date', $_POST)) {
             Copyright©2022 BestBarber
         </div>
     </div>
-    <?php unset($_SESSION['edit-service-error']) ?>
     <script>
         const picker = document.getElementById('date');
         picker.addEventListener('input', function(e) {
