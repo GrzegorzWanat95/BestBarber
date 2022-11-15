@@ -21,6 +21,8 @@ else
 
 require('scripts/time-range.php');
 require('scripts/check-date.php');
+$today = date('Y-m-d', time());
+
 ?>
 
 <!DOCTYPE html>
@@ -174,7 +176,7 @@ require('scripts/check-date.php');
                         <div class="calendar__holder">
                             <form id="chooseDate" class="booking" method="post" action="booking.php">
                                         <div class="calendar">
-                                            <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
+                                            <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $today ?>  value=<?php echo $timestamp ?> required />
                                         </div>
                             </form>
                             <div class="settings__fields">
