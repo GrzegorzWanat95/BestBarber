@@ -124,7 +124,7 @@ $today = date('Y-m-d', time());
         </div>
     </div>
     <div class="subpage__content">
-        <div class="content__frame__booking">
+        <div class="content__frame">
             <h1 class="header">
                 <?php
                 if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
@@ -154,10 +154,84 @@ $today = date('Y-m-d', time());
                             <?php include 'scripts/check-admin-booking.php'; ?>
                             </tbody>
                         </table>
-                    <?php } ?>
+                    <?php }
+                 else { ?>
+                        <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
+                        <div class="calendar__holder">
+                            <form id="chooseDate" class="booking" method="post" action="booking.php">
+                                        <div class="calendar">
+                                            <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $today ?>  value=<?php echo $timestamp ?> required />
+                                        </div>
+                            </form>
+                            <div class="settings__fields">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Godzina</th>
+                                            <th>Usługa</th>
+                                            <th>Zarezerwuj</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        // print all data from price-list.php and delete rows which are occupied
+                                        $iterator = 0;
 
+                                        foreach ($hours as $term) {
+                                            if ($term == 0) {
+                                        ?>
+                                                <tr class="inactive">
+                                                    <td class="quarter inactive"><?php echo $timestamp; ?></td>
+                                                    <td class="quarter inactive"><?php echo $hours_pattern[$iterator]; ?></td>
+                                                    <td class="quarter inactive">-</td>
+                                                    <td class="quarter inactive">-</td>
+                                                </tr>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <tr>
+                                                    <form method="post" action="./scripts/add-booking.php">
+                                                        <td class="quarter"><?php echo $timestamp; ?></td>
+                                                        <td class="quarter"><?php echo $hours_pattern[$iterator]; ?></td>
+                                                        <td class="quarter">
+                                                            <input type="hidden" id="date" name="date" value="<?php echo $timestamp; ?>" />
+                                                            <input type="hidden" id="hour" name="hour" value="<?php echo $term; ?>" />
+                                                            <select class="no-border" name="service" required>
+                                                                <option disabled selected>Wybierz usługę</option>;
+                                                                <?php foreach ($services as $options) { ?>
+                                                                    <option class="option__field" value="<?php echo $options['description']; ?>"><?php echo $options['description']; ?></option>;
+                                                                <?php
+                                                                }
+                                                                ?>
+                                                            </select><br>
+                                                        </td>
+                                                        <td class="quarter"><button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button></td>
+                                                    </form>
+                                                </tr>
+                                    <?php
+                                            }
+                                            $iterator = $iterator + 1;
+                                        }
+                                    }
+                                    ?>
+                                    <?php if (isset($_SESSION['edit-service-error'])) {
+                                    ?>
+                                    <tr class="error">
+                                        <td colspan="4"><?php
+                                                foreach ($_SESSION['edit-service-error'] as $error) {
+                                                    echo $error;
+                                                    break;
+                                                }?>
+                                        </td>
+                                    </tr> <?php
+                                    }?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                 </div>
-                <div class="half__side__booking">
+                <div class="half__side">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
                 </div>
             </div>
