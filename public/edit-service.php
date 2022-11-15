@@ -45,10 +45,10 @@ $price = $_SESSION['price'];
                 <form class="user__forms" action="scripts/edit-service.php" method="post">
                     <div class="settings__fields">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        Nazwa: <input class="input__fields" type="text" name="description" placeholder="<?php echo $name; ?>">
+                        Nazwa: <input class="input__fields" type="text" name="description" value="<?php echo $name; ?>">
                     </div>
                     <div class="settings__fields">
-                        Cena: <input class="input__fields" type="number" name="price" placeholder="<?php echo $price; ?>">
+                        Cena: <input class="input__fields" type="number" name="price" value="<?php echo $price; ?>">
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['edit-service-error'])) {

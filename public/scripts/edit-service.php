@@ -15,9 +15,9 @@
     $service = mysqli_fetch_assoc($result);
     // form validation
     if ($service) { // if service exists
-        if ($service['description'] === $description) {
-          array_push($errors, "Usługa o podanej nazwie już istnieje!");
-        }
+        // if ($service['description'] === $description) {
+        //   array_push($errors, "Usługa o podanej nazwie już istnieje!");
+        // }
     }
 
     if (empty($description))
