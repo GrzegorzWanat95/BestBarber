@@ -7,6 +7,7 @@
         {
             while ($row = $result->fetch_assoc())
             {
+                $id = $row["id"];
                 $date = $row["date"];
                 $hour = $row["hour"];
                 $service = $row["service"];
@@ -16,6 +17,7 @@
                     <td>'.$date.'</td>
                     <td>'.$hour.'</td>
                     <td>'.$service.'</td>
+                    <td>'."<a href=scripts/delete-booking.php?id=" . $row['id'] . ">Odwołaj wizytę 🗑</a>".'</td>
                 </tr>';
             }
             $result->free();
