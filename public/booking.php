@@ -105,7 +105,7 @@ $timestamp = date('Y-m-d', time());
         </div>
     </div>
     <div class="subpage__content">
-        <div class="content__frame">
+        <div class="content__frame__booking">
             <h1 class="header">
                 <?php
                 if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
@@ -126,46 +126,19 @@ $timestamp = date('Y-m-d', time());
                                     <th>Data</th>
                                     <th>Godzina</th>
                                     <th>Usługa</th>
+                                    <th>Użytkownik</th>
                                     <th>Usuń</th>
                                     <th>Edycja</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                // print all data from price-list.php
-                                while ($row = $booking->fetch_assoc()) { ?>
-                                    <tr>
-                                        <td><?php echo $row['id']; ?></td>
-                                        <td><?php echo $row['date']; ?></td>
-                                        <td><?php echo $row['hour']; ?></td>
-                                        <td><?php echo $row['service']; ?></td>
-                                        <!-- if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {  -->
-                                        <td>
-                                            <?php echo "<a href=scripts/delete-booking.php?id=" . $row['id'] . ">🗑</a>"; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo "<a href=edit-booking.php?id=" . $row['id'] . ">🖉</a>"; ?>
-                                        </td>
-
-                                    <?php } ?>
-                                    </tr>
+                            <?php include 'scripts/check-admin-booking.php'; ?>
                             </tbody>
                         </table>
-                    <?php
-                    } else { ?>
-                        <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
-                        <div class="calendar__holder">
-                            <form class="booking" method="post" action="booking-date.php">
-                                <div class="calendar">
-                                    <input type="date" id="date" name="date" min=<?php echo $timestamp ?>  value=<?php echo $timestamp ?> required />
-                                </div>
-                                <button class="booking__button" type="submit" name="book">Sprawdź termin</button>
-                            </form>
-                        </div>
-                    <?php
-                    } ?>
+                    <?php } ?>
+
                 </div>
-                <div class="half__side">
+                <div class="half__side__booking">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
                 </div>
             </div>

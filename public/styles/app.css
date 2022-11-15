@@ -227,7 +227,7 @@ a:active {
 
   @media screen and (min-width: 300px) {
     .left__content {
-        display: none;    
+        display: none;
         }
   }
 
@@ -465,6 +465,24 @@ a:active {
     }
   }
 
+  @media screen and (min-width: 300px) {
+    .content__frame__booking{
+        margin: 2vw;
+        width: 100vw;
+        height: auto;
+        background-color: inherit;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .content__frame__booking{
+        margin: 2vw;
+        width: 100vw;
+        height: auto;
+        background-color: inherit;
+    }
+  }
+
 @media screen and (min-width: 300px) {
     .header{
         margin-top: 1vh;
@@ -585,6 +603,22 @@ a:active {
     }
   }
 
+  @media screen and (min-width: 300px) {
+    .half__side__booking{
+        background-color: inherit;
+        width: 45%;
+        height: auto;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .half__side__booking{
+        background-color: inherit;
+        width: 45%;
+        height: auto;
+    }
+  }
+
 
 .absolute__window{
     position: fixed;
@@ -652,7 +686,7 @@ a:active {
 .input__fields{
     width: 100%;
     background-color: inherit;
-    border: none; 
+    border: none;
     border-bottom: 1px solid #29231e;
     color: #29231e;
 }

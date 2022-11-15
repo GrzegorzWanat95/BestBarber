@@ -129,6 +129,7 @@ require('./scripts/userscript.php');
                     }
                     ?>
                     <table class="table">
+                    <?php if (!isset($_SESSION['ADMIN'])) { ?>
                         <thead>
                             <tr>
                                 <th colspan="4">Umówione wizyty:</th>
@@ -136,8 +137,9 @@ require('./scripts/userscript.php');
                         </thead>
                         <tbody>
                             </br>
-                            <?php include 'scripts/check-booking.php'; ?>
+                            <?php include 'scripts/check-user-booking.php'; ?>
                         </tbody>
+                    <?php } ?>
                     </table>
                 </div>
                 <div class="half__side">
