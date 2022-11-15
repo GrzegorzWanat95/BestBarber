@@ -115,7 +115,7 @@ session_start();
                     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
                     <a link href="booking.php" class="button__container mt-2">
                         <div class="button__field">
-                            <p1 class="button__text p-1">SPRAWDŹ REZERWACJE</p1>
+                            <p1 class="button__text p-1">KALENDARZ&nbsp;WIZYT</p1>
                         </div>
                     </a>
                     <?php

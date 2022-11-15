@@ -155,6 +155,7 @@ $today = date('Y-m-d', time());
                             </tbody>
                         </table>
                     <?php } else { ?>
+
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
                         <div class="calendar__holder">
                             <form id="chooseDate" class="booking" method="post" action="booking.php">
@@ -208,23 +209,20 @@ $today = date('Y-m-d', time());
                                                         <td class="quarter"><button class="no-border" type="submit" name="book"><?php echo "Zarezerwuj"; ?></button></td>
                                                     </form>
                                                 </tr>
-                                    <?php
-                                            }
+                                    <?php }
                                             $iterator = $iterator + 1;
-                                        }
-                                    }
-                                    ?>
-                                    <?php if (isset($_SESSION['edit-service-error'])) {
-                                    ?>
+                                    } ?>
+                                    <?php if (isset($_SESSION['edit-service-error'])) { ?>
                                     <tr class="error">
                                         <td colspan="4"><?php
                                                 foreach ($_SESSION['edit-service-error'] as $error) {
                                                     echo $error;
                                                     break;
-                                                }?>
+                                                } ?>
                                         </td>
                                     </tr>
                                     </tbody>
+                                    <?php } ?>
                                 </table>
                             </div>
                         </div>
@@ -233,6 +231,7 @@ $today = date('Y-m-d', time());
                 <div class="half__side">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
                 </div>
+
             </div>
         </div>
     </div>
