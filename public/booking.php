@@ -154,14 +154,13 @@ $today = date('Y-m-d', time());
                             <?php include 'scripts/check-admin-booking.php'; ?>
                             </tbody>
                         </table>
-                    <?php }
-                 else { ?>
+                    <?php } else { ?>
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
                         <div class="calendar__holder">
                             <form id="chooseDate" class="booking" method="post" action="booking.php">
-                                        <div class="calendar">
-                                            <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $today ?>  value=<?php echo $timestamp ?> required />
-                                        </div>
+                                <div class="calendar">
+                                    <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $today ?>  value=<?php echo $timestamp ?> required />
+                                </div>
                             </form>
                             <div class="settings__fields">
                                 <table class="table">
@@ -224,12 +223,12 @@ $today = date('Y-m-d', time());
                                                     break;
                                                 }?>
                                         </td>
-                                    </tr> <?php
-                                    }?>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+                    <?php } ?>
                 </div>
                 <div class="half__side">
                     <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
