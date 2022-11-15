@@ -1,7 +1,7 @@
 <?php
     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true)
     {
-    echo '<a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>';
+        echo '<a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>';
     }
     else
     {

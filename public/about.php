@@ -56,24 +56,7 @@
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="menu__collapse">
-                    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                        <a class="nav-item text-light nav-link" href="user-panel.php"><?php echo "WITAJ&nbsp;" . strtoupper($_SESSION['user']) . "!" ?></a>
-                        <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
-                    <?php } else { ?>
-                        <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
-                        <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
-                    <?php } ?>
-                        <a class="nav-item nav-link" href="about.php">O NAS</a>
-                        <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
-                        <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                        <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
-                    <?php
-                    if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                        <a class="nav-item nav-link" href="reviews.php">KALENDARZ&nbsp;WIZYT</a>
-                    <?php
-                    } else { ?>
-                        <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
-                    <?php } ?>
+                    <?php include 'scripts/menu-collapse-script.php'; ?>
                 </div>
             </div>
         </div>
