@@ -1,8 +1,27 @@
 <?php
 session_start();
-require('scripts/time-range.php');
-$timestamp = date('Y-m-d', time());
+if(isset($_SESSION['date']))
+{
+    $timestamp = $_SESSION['date'];
+}
+else
+{
+    $_SESSION['date'] = date('Y-m-d', time());
+}
+if (array_key_exists('date', $_POST))
+{
+    $timestamp = ($_POST['date']);
+    $_SESSION['date'] = $_POST['date'];
+}
+else
+{
+    $timestamp = date('Y-m-d', time());
+    $_SESSION['date'] = $timestamp;
+}
 
+require('scripts/time-range.php');
+require('scripts/check-date.php');
+$today = date('Y-m-d', time());
 
 ?>
 
