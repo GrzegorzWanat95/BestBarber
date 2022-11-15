@@ -9,7 +9,7 @@
     $id = $_POST["id"];
     $description = $_POST['description'];
     $price = $_POST['price'];
- 
+
     $service_query_check = "SELECT * FROM services WHERE id='$id' LIMIT 1";
     $result = mysqli_query($connection, $service_query_check);
     $service = mysqli_fetch_assoc($result);
@@ -20,24 +20,24 @@
         }
     }
 
-    if (empty($description)) 
-    { 
+    if (empty($description))
+    {
       array_push($errors, "Musisz podać nazwę usługi!");
     }
-    if (empty($price)) 
-    { 
+    if (empty($price))
+    {
       array_push($errors, "Musisz podać cenę usługi!");
     }
 
     if($service['id'] == $id)
     {
-      
+
     }
     else
     {
       array_push($errors, "Nie znaleziono takiej usługi!");
     }
-  
+
     if(count($errors) == 0)
     {
       //Finally, register service if there are no errors in the form
@@ -52,5 +52,5 @@
       $_SESSION['edit-service-error'] = $errors;
       header('Location: ../edit-service.php');
     }
-    $connection->close();           
+    $connection->close();
 ?>
