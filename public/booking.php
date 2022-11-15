@@ -23,6 +23,10 @@ require('scripts/time-range.php');
 require('scripts/check-date.php');
 $today = date('Y-m-d', time());
 
+if(!isset($_SESSION['loggedin']))
+{
+    header('Location: /index.php');
+}
 ?>
 
 <!DOCTYPE html>
