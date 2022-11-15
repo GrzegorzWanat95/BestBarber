@@ -2,6 +2,10 @@
 session_start();
 if(isset($_SESSION['date']))
 {
+    $timestamp = $_SESSION['date'];
+}
+else
+{
     $_SESSION['date'] = date('Y-m-d', time());
 }
 if (array_key_exists('date', $_POST))
