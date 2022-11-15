@@ -57,32 +57,16 @@ $today = date('Y-m-d', time());
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <div class="left__menu">
+                <div class="left__menu">
                         <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
                         <a class="nav-item nav-link" href="about.php">O NAS</a>
                         <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
                         <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
-                        <?php
-                        if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                            <a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>
-                        <?php
-                        } else { ?>
-                            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                            <a class="nav-item nav-link" href="booking.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
-                            <?php } else { ?>
-                                <a class="nav-item nav-link" href="login.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>
-                            <?php } ?>
-                        <?php } ?>
+                        <?php include 'scripts/check-admin-script.php'; ?>
                     </div>
                     <div class="right__menu">
-                        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                            <a class="nav-item text-light nav-link" href="user-panel.php"><?php echo "WITAJ&nbsp;" . strtoupper($_SESSION['user']) . "!" ?></a>
-                            <a class="nav-item text-light nav-link" href="scripts/logout.php">WYLOGUJ</a>
-                        <?php } else { ?>
-                            <a class="nav-item text-light nav-link" href="login.php">LOGOWANIE</a>
-                            <a class="nav-item text-light nav-link" href="register.php">REJESTRACJA</a>
-                        <?php } ?>
+                        <?php include 'scripts/check-login-script.php'; ?>
                     </div>
                 </div>
             </div>
