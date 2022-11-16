@@ -3,6 +3,7 @@
     $username = $_SESSION['user'];
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
     $query = "SELECT * FROM bookings WHERE username='$username' ORDER BY date ASC, hour DESC";
+    $today = date('Y-m-d', time());
 
         if ($result = $connection->query($query))
         {
@@ -15,13 +16,20 @@
                 $service = $row["service"];
                 $iterator ++;
 
-                echo
-                '<tr>
-                    <td>'.$date.'</td>
-                    <td>'.$hour.'</td>
-                    <td>'.$service.'</td>
-                    <td>'."<a href=scripts/delete-booking.php?id=" . $row['id'] . ">Odwołaj wizytę 🗑</a>".'</td>
-                </tr>';
+                if($date >= $today)
+                {
+                    echo
+                    '<tr>
+                        <td>'.$date.'</td>
+                        <td>'.$hour.'</td>
+                        <td>'.$service.'</td>
+                        <td>'."<a href=scripts/delete-booking.php?id=" . $row['id'] . ">Odwołaj wizytę 🗑</a>".'</td>
+                    </tr>';
+                }
+                else
+                {
+
+                }
             }
             $result->free();
             if($iterator == 0)
