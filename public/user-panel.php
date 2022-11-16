@@ -93,11 +93,11 @@ require('./scripts/userscript.php');
                             </div>
                         </a>
                     <?php } ?>
+                    <?php if (!isset($_SESSION['ADMIN'])) { ?>
                     <h1 class="header mt-5">
                         ZBLIŻAJACE SIĘ WIZYTY
                     </h1>
                     <table class="table">
-                        <?php if (!isset($_SESSION['ADMIN'])) { ?>
                             <thead>
                                 <tr>
                                     <th colspan="4">Twoje rezerwacje:</th>
