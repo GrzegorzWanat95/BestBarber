@@ -104,7 +104,6 @@ require('./scripts/userscript.php');
                                 </tr>
                             </thead>
                             <tbody>
-                                </br>
                                 <?php include 'scripts/check-user-booking.php'; ?>
                             </tbody>
                         <?php } ?>
