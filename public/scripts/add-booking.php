@@ -31,12 +31,13 @@
         VALUES('$date', '$hour', '$service_name', '$username')";
         mysqli_query($connection, $query);
         $_SESSION['success'] = "Zarezerwowano termin!";
-        header('location: ../add-reservation.php');
+        $_SESSION['date'] = $date;
+        header('location: ../add-reservation.php?date=' . "'$date'");
       }
       else
       {
         $_SESSION['edit-service-error'] = $errors;
-        header('Location: ../booking-date.php');
+        header('Location: ../booking.php');
       }
       $connection->close();
     }

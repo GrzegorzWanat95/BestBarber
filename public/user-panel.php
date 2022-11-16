@@ -21,7 +21,7 @@ require('./scripts/userscript.php');
 </head>
 
 <body>
-<div class="menu__top">
+    <div class="menu__top">
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -93,18 +93,21 @@ require('./scripts/userscript.php');
                             </div>
                         </a>
                     <?php } ?>
+                    <h1 class="header mt-5">
+                        ZBLIŻAJACE SIĘ WIZYTY
+                    </h1>
                     <table class="table">
-                    <?php if (!isset($_SESSION['ADMIN'])) { ?>
-                        <thead>
-                            <tr>
-                                <th colspan="4">Umówione wizyty:</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            </br>
-                            <?php include 'scripts/check-user-booking.php'; ?>
-                        </tbody>
-                    <?php } ?>
+                        <?php if (!isset($_SESSION['ADMIN'])) { ?>
+                            <thead>
+                                <tr>
+                                    <th colspan="4">Twoje rezerwacje:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                </br>
+                                <?php include 'scripts/check-user-booking.php'; ?>
+                            </tbody>
+                        <?php } ?>
                     </table>
                 </div>
                 <div class="half__side">
