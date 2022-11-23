@@ -1,12 +1,14 @@
 <?php
     require_once("connectdb.php");
+
     //connect to database
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
+
     //connection error
     if ($connection->connect_error) {
         die("Błąd połączenia z bazą danych: " . $connection->connect_error);
     }
-    // make a query to price-list
+    //find all services from database
     $sql = "SELECT * FROM services";
     $result = $connection->query($sql);
 

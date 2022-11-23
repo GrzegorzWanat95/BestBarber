@@ -3,11 +3,13 @@
     require_once("connectdb.php");
     //connect to database
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
+
     //connection error
     if ($connection->connect_error) {
         die("Błąd połączenia z bazą danych: " . $connection->connect_error);
     }
-    //make a query 
+
+    //find username to create user-panel info about user
     $username =  $_SESSION['user'];
     $sql = "SELECT * FROM user WHERE login='$username' LIMIT 1";
     $result = $connection->query($sql);

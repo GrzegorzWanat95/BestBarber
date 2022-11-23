@@ -1,4 +1,5 @@
 <?php
+    //render view for admin/non admin user
     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true)
     {
         echo '<a class="nav-item nav-link" href="booking.php">KALENDARZ&nbsp;WIZYT</a>';

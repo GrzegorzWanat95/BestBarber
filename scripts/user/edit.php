@@ -3,8 +3,10 @@
     session_start();
     require_once("connectdb.php");
 
+    //database connection
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
+
     //get data for placeholder
     $id=$_POST['id'];
     $name = $_POST['login'];
@@ -12,11 +14,12 @@
     $password_1 = $_POST['password_1'];
     $password_2 = $_POST['password_2'];
  
-    // form validation
+    //find user from database 
     $user_check_query = "SELECT * FROM user WHERE login='$name' OR email='$email' LIMIT 1";
     $result = mysqli_query($connection, $user_check_query);
     $user = mysqli_fetch_assoc($result);
 
+    //data validation
     if ($user) { // if user exists
         if ($user['login'] === $name) {
           array_push($errors, "Użytkownik o podanej nazwie już istnieje!");

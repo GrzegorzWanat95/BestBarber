@@ -16,11 +16,12 @@
     $password_1 = $_POST['password_1'];
     $password_2 = $_POST['password_2'];
 
-    // form validation
+    //find all user to check if user exist in database
     $user_check_query = "SELECT * FROM user WHERE login='$username' OR email='$email' LIMIT 1";
     $result = mysqli_query($connection, $user_check_query);
     $user = mysqli_fetch_assoc($result);
 
+    //form validation
     if ($user) { // if user exists
         if ($user['login'] === $username) {
           array_push($errors, "Użytkownik o podanej nazwie już istnieje!");

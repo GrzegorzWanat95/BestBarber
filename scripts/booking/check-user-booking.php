@@ -1,7 +1,12 @@
 <?php
+    #adding view and editing booking data as user
     require_once("connectdb.php");
     $username = $_SESSION['user'];
+
+    //database connection
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
+
+    //find all booking terms in database
     $query = "SELECT * FROM bookings WHERE username='$username' ORDER BY date ASC, hour DESC";
     $today = date('Y-m-d', time());
 
@@ -15,7 +20,8 @@
                 $hour = $row["hour"];
                 $service = $row["service"];
                 $iterator ++;
-
+                
+                //if date is not older than today
                 if($date >= $today)
                 {
                     echo
@@ -28,10 +34,12 @@
                 }
                 else
                 {
-
+                    //not show result
                 }
             }
             $result->free();
+
+            //if user hasn't any booking terms 
             if($iterator == 0)
             {
                 echo

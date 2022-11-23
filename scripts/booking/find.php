@@ -2,12 +2,13 @@
     session_start();
     require_once("connectdb.php");
 
+    //connect database
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
 
     $id = $_GET["id"];
 
-    // form validation
+    //find all existing booking terms from database
     $booking_query_check = "SELECT * FROM bookings WHERE id='$id' ";
     $result = mysqli_query($connection, $booking_query_check);
     $booking = mysqli_fetch_assoc($result);
@@ -15,7 +16,7 @@
     $_SESSION['hour'] = $booking['hour'];
     $_SESSION['service'] = $booking['service'];
 
-    //get service description for booking change by admin
+    //get service description for booking change by admin to use in admin input
     $service_upload_query = "SELECT description from services";
     $result_service = mysqli_query($connection, $service_upload_query);
 

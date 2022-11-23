@@ -3,6 +3,7 @@
     session_start();
     require_once("connectdb.php");
 
+    //database connection
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
 
@@ -17,6 +18,7 @@
     }
     else
     {
+      //find user name of review from database in case when user added review in past 
       $user_check_query = "SELECT name FROM reviews WHERE name='$name' LIMIT 1";
       $result = mysqli_query($connection, $user_check_query);
       $user = mysqli_fetch_assoc($result);
@@ -36,7 +38,7 @@
     
       if(count($errors) == 0)
       {
-        //Finally, register service if there are no errors in the form
+        //Finally, add review
          unset($_SESSION['add-review-error']);
          $query = "INSERT INTO reviews (name, content, rating)
                  VALUES('$name', '$content', '$rating')";

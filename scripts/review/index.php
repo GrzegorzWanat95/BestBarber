@@ -6,7 +6,7 @@
     if ($connection->connect_error) {
         die("Błąd połączenia z bazą danych: " . $connection->connect_error);
     }
-    // make a query to price-list 
+    //find all reviews to display them in list 
     $sql = "SELECT * FROM reviews";
     $result = $connection->query($sql);
     $countRatingSql = "SELECT AVG(rating) FROM reviews";
