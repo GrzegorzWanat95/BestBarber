@@ -12,12 +12,13 @@
     }
     else
     {
-      //get data for placeholder
+      //get data from user form
       $date = $_POST['date'];
       $hour = $_POST['hour'];
       $service_name = $_POST['service'];
       $username =  $_SESSION['user'];
 
+      //Validation of data
       if(empty($service_name))
       {
         array_push($errors, "Musisz wybrać rodzaj usługi!");
