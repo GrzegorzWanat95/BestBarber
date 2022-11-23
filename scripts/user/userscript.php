@@ -7,7 +7,7 @@
     if ($connection->connect_error) {
         die("Błąd połączenia z bazą danych: " . $connection->connect_error);
     }
-    // make a query to price-list 
+    //make a query 
     $username =  $_SESSION['user'];
     $sql = "SELECT * FROM user WHERE login='$username' LIMIT 1";
     $result = $connection->query($sql);

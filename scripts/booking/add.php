@@ -2,6 +2,7 @@
     session_start();
     require_once("connectdb.php");
 
+    //connect to database
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
 
@@ -26,7 +27,7 @@
 
       if(count($errors) == 0)
       {
-        //Finally, register service if there are no errors in the form
+        //Finally, adding the booking to database
         unset($_SESSION['service-error']);
         $query = "INSERT INTO bookings (date, hour, service, username)
         VALUES('$date', '$hour', '$service_name', '$username')";
