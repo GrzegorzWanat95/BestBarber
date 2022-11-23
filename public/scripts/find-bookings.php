@@ -14,9 +14,10 @@
     $_SESSION['date'] = $booking['date'];
     $_SESSION['hour'] = $booking['hour'];
     $_SESSION['service'] = $booking['service'];
-    
+
+    //get service description for booking change by admin
     $service_upload_query = "SELECT description from services";
     $result_service = mysqli_query($connection, $service_upload_query);
 
-    $connection->close();           
+    $connection->close();
 ?>
