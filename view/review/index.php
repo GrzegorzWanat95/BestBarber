@@ -96,7 +96,7 @@ require('../../scripts/review/index.php');
                     </table>
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                        <a link href="../../scripts/review/add.php">
+                        <a link href="../../scripts/review/add-review.php">
                             <div class="button__field__xxl">
                                 <p1 class="button__text__table p-1">Dodaj opinię</p1>
                             </div>
