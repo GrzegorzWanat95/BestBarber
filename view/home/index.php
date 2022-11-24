@@ -97,7 +97,7 @@ session_start();
                     <?php }
                 }
                 else { ?>
-                    <a link href="login.php" class="button__container mt-2">
+                    <a link href="../user/login.php" class="button__container mt-2">
                         <div class="button__field">
                             <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
                         </div>

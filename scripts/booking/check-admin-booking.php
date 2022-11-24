@@ -24,8 +24,8 @@ require_once("../../scripts/database-context/connectdb.php");
                     <td>'.$hour.'</td>
                     <td>'.$service.'</td>
                     <td>'.$username1.'</td>
-                    <td>'."<a href=scripts/delete-booking.php?id=" . $row['id'] . ">🗑</a>".'</td>
-                    <td>'."<a href=edit-booking.php?id=" . $row['id'] . ">🖉</a>".'</td>
+                    <td>'."<a href=../../scripts/booking/delete.php?id=" . $row['id'] . ">🗑</a>".'</td>
+                    <td>'."<a href=edit.php?id=" . $row['id'] . ">🖉</a>".'</td>
                 </tr>';
             }
             $result->free();

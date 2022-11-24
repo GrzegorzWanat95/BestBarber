@@ -28,11 +28,11 @@
         $query = "DELETE FROM bookings where id='$id'";
         mysqli_query($connection, $query);
         $_SESSION['success'] = "Usunięto rezerwację!";
-        header('location: ../user-panel.php');
+        header('location: ../../view/booking/index.php');
       }
       else
       {
-        header('Location: ../user-panel.php');
+        header('Location: ../../view/booking/index.php');
       }
 
         $connection->close();

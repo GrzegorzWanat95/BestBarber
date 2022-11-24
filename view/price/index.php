@@ -101,7 +101,7 @@ require('../../scripts/price/index.php');
                     </table>
                     <?php
                     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                        <a link href="add-service.php">
+                        <a link href="add.php">
                             <div class="button__field__xxl">
                                 <p1 class="button__text__table p-1">Dodaj usługę</p1>
                             </div>

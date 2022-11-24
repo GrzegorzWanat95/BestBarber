@@ -1,5 +1,5 @@
 <?php
-    require('index.php');
+    require('../home/index.php');
 
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {
@@ -39,9 +39,9 @@
                     </h1>
                 </div>
                 <div class="button-corner">
-                    <button class="small__button" onclick="window.location='/index.php';">✕</button>
+                    <button class="small__button" onclick="window.location='../home/index.php';">✕</button>
                 </div>
-                    <form class="user__forms" action="scripts/registerscript.php" method="post">
+                    <form class="user__forms" action="../../scripts/user/register.php" method="post">
                     <div class="settings__fields">
                         Login: <input class="input__fields" type="text" name="login">
                     </div>

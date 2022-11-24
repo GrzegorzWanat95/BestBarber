@@ -60,7 +60,7 @@
        mysqli_query($connection, $query);
        $_SESSION['login'] = $username;
        $_SESSION['success'] = "Zalogowano!";
-       header('location: ../../view/homeindex.php');
+       header('location: ../../view/home/index.php');
     }
     else
     {

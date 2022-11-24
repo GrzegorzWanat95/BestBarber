@@ -14,7 +14,7 @@ $date= $_POST['date'];
 //find all booking terms in database 
 $booking_upload_query = "SELECT * FROM bookings where date='$date'";
 $result_bookings = mysqli_query($connection, $booking_upload_query);
-header('location: ../booking-reservation.php');
+header('location: ../../view/booking/index.php');
 
 $connection->close();
 ?>

@@ -37,11 +37,11 @@
                VALUES('$description', '$price')";
        mysqli_query($connection, $query);
        $_SESSION['success'] = "Dodano usługę!";
-       header('location: ../price-list.php');
+       header('location: ../../view/price/index.php');
     }
     else
     {
       $_SESSION['service-error'] = $errors;
-      header('Location: ../add-service.php');
+      header('Location: ../../view/price/add.php');
     }
 ?>

@@ -26,11 +26,11 @@
         $query = "DELETE FROM services where id=$id";
         mysqli_query($connection, $query);
         $_SESSION['success'] = "Usunięto usługę!";
-        header('location: ../price-list.php');
+        header('location: ../../view/price/index.php');
       }
       else
       {
-        header('Location: ../price-list.php');
+        header('Location: ../../view/price/index.php.php');
       }
 
         $connection->close();

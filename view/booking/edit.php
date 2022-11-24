@@ -1,6 +1,6 @@
 <?php
-require('booking.php');
-require('./scripts/find-bookings.php');
+require('index.php');
+require('../../scripts/booking/find.php');
 $id = $_GET["id"];
 $date = $_SESSION['date'];
 $hour = $_SESSION['hour'];

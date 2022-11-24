@@ -161,7 +161,7 @@ if(!isset($_SESSION['loggedin']))
                                             } else {
                                             ?>
                                                 <tr>
-                                                    <form method="post" action="./scripts/add-booking.php">
+                                                    <form method="post" action="../../scripts/booking/add.php">
                                                         <td class="quarter"><?php echo $timestamp; ?></td>
                                                         <td class="quarter"><?php echo $hours_pattern[$iterator]; ?></td>
                                                         <td class="quarter">

@@ -31,12 +31,12 @@
        $query = "UPDATE bookings SET date = '$date', hour = '$hour', service='$service_name' WHERE id='$id'";
        mysqli_query($connection, $query);
        $_SESSION['success'] = "Edytowano rezerwację!";
-       header('location: ../booking.php');
+       header('location: ../../view/booking/index.php');
     }
     else
     {
       $_SESSION['edit-service-error'] = $errors;
-      header('Location: ../edit-booking.php');
+      header('Location: ../edit.php');
     }
     $connection->close();           
 ?>

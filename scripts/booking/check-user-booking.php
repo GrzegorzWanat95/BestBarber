@@ -29,7 +29,7 @@
                         <td>'.$date.'</td>
                         <td>'.$hour.'</td>
                         <td>'.$service.'</td>
-                        <td>'."<a href=scripts/delete-booking.php?id=" . $row['id'] . ">Odwołaj wizytę 🗑</a>".'</td>
+                        <td>'."<a href=../../scripts/booking/delete.php?id=" . $row['id'] . ">Odwołaj wizytę 🗑</a>".'</td>
                     </tr>';
                 }
                 else
