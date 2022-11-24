@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require_once("connectdb.php");
+    require_once("../../scripts/database-context/connectdb.php");
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {
         header('Location: ../register.php');
@@ -60,11 +60,11 @@
        mysqli_query($connection, $query);
        $_SESSION['login'] = $username;
        $_SESSION['success'] = "Zalogowano!";
-       header('location: ../index.php');
+       header('location: ../../view/homeindex.php');
     }
     else
     {
       $_SESSION['register-error'] = $errors;
-      header('Location: ../register.php');
+      header('Location: ../../view/user/register.php');
     }
 ?>

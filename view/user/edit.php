@@ -1,10 +1,10 @@
 <?php
-    require('user-panel.php');
-    require('./scripts/userscript.php');
+    require('index.php');
+    require('../../scripts/user/userscript.php');
 
     if ($_SESSION['loggedin'] != true)
     {
-        header('Location: /index.php');
+        header('Location: ../user/login.php');
         exit();
     }
 ?>
@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
@@ -40,9 +40,9 @@
                     </h1>
                 </div>
                 <div class="button-corner">
-                    <button class="small__button" onclick="window.location='/user-panel.php';">✕</button>
+                    <button class="small__button" onclick="window.location='index.php';">✕</button>
                 </div>
-                    <form class="user__forms" action="scripts/edit-user.php" method="post">
+                    <form class="user__forms" action="../../scripts/user/edit.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $user['ID']; ?>">
                     <div class="settings__fields">
                         Login: <input class="input__fields" type="text" name="login" placeholder="<?php echo $user['login']; ?>">

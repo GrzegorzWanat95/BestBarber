@@ -1,12 +1,12 @@
 <?php
 
     session_start();
-    require_once("connectdb.php");
+    require_once("../../scripts/database-context/connectdb.php");
 
     //check if user is logged to secure page from unathorized acces to services
     if ((!isset($_POST['login'])) || (!isset($_POST['password'])))
     {
-        header('Location: ../login.php');
+        header('Location: ../../view/user/login.php');
         exit();
     }
 
@@ -48,12 +48,12 @@
 
                 $result->free_result();
                 unset($_SESSION['login-error']);
-                header('Location: /index.php');
+                header('Location: ../../view/home/index.php');
             }
             else
             {
                 $_SESSION['login-error'] = "Błędny login lub hasło!";
-                header('Location: ../login.php');
+                header('Location: ../../view/user/login.php');
             }
         }
 

@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require_once("connectdb.php");
+    require_once("../../scripts/database-context/connectdb.php");
 
     //database connection
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
@@ -43,12 +43,12 @@
        $query = "UPDATE services SET description = '$description', price = '$price' WHERE id='$id'";
        mysqli_query($connection, $query);
        $_SESSION['success'] = "Edytowano usługę!";
-       header('location: ../price-list.php');
+       header('location: ../../view/price/index.php');
     }
     else
     {
       $_SESSION['edit-service-error'] = $errors;
-      header('Location: ../edit-service.php');
+      header('Location: ../../view/price/edit.php');
     }
     $connection->close();
 ?>

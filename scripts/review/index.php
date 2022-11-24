@@ -1,5 +1,5 @@
 <?php
-    require_once("connectdb.php");
+    require_once("../../scripts/database-context/connectdb.php");
     //connect to database
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
     //connection error

@@ -3,7 +3,7 @@
 
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {
-        header('Location: /index.php');
+        header('Location: ../home/index.php');
         exit();
     }
 ?>
@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
@@ -36,9 +36,9 @@
                     </h1>
                 </div>
                 <div class="button-corner">
-                    <button class="small__button" onclick="window.location='/index.php';">✕</button>
+                    <button class="small__button" onclick="window.location='index.php';">✕</button>
                 </div>
-                <form class="user__forms" action="scripts/loginscript.php" method="post">
+                <form class="user__forms" action="../../scripts/user/login.php" method="post">
                     <div class="settings__fields">
                         Login: <input class="input__fields" type="text" name="login">
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                 </form>
                 <div class="button-center mt-2">
-                    <button class="small__button" onclick="window.location='/contact.php';">Nie pamiętam hasła</button>
+                    <button class="small__button" onclick="window.location='../home/contact.php';">Nie pamiętam hasła</button>
                 </div>
             </div>
         </div>

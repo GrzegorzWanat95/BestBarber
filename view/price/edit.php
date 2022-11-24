@@ -1,6 +1,6 @@
 <?php
-require('price-list.php');
-require('./scripts/find-service.php');
+require('index.php');
+require('../../scripts/price/find-service.php');
 $id = $_GET["id"];
 $name = $_SESSION['name'];
 $price = $_SESSION['price'];
@@ -20,7 +20,7 @@ $price = $_SESSION['price'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
@@ -40,9 +40,9 @@ $price = $_SESSION['price'];
                     </h1>
                 </div>
                 <div class="button-corner">
-                    <button class="small__button" onclick="window.location='/price-list.php';">✕</button>
+                    <button class="small__button" onclick="window.location='index.php';">✕</button>
                 </div>
-                <form class="user__forms" action="scripts/edit-service.php" method="post">
+                <form class="user__forms" action="../../scripts/price/edit.php" method="post">
                     <div class="settings__fields">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         Nazwa: <input class="input__fields" type="text" name="description" value="<?php echo $name; ?>">

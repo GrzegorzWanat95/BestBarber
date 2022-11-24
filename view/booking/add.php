@@ -1,5 +1,5 @@
 <?php
-require('booking.php');
+require('index.php');
 
 /*if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {
@@ -16,7 +16,7 @@ require('booking.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@ require('booking.php');
         <div class="operation__window">
             <div class="window__frame">
                 <div class="button-corner">
-                    <button class="small__button" onclick="window.location='/price-list.php';">✕</button>
+                    <button class="small__button" onclick="window.location='index.php';">✕</button>
                 </div>
                 <div class="information__field mb-5">
                     <div class="settings">
@@ -40,10 +40,10 @@ require('booking.php');
                         </h1>
                     </div>
                     <div class="settings__fields">
-                            Swoje rezerwacje znajdziesz w&nbsp;<a class="text__link" href=user-panel.php>panelu użytkownika</a>.
+                            Swoje rezerwacje znajdziesz w&nbsp;<a class="text__link" href=../user/index.php>panelu użytkownika</a>.
                     </div>
                 </div>
-                <a link href="booking.php">
+                <a link href="index.php">
                                 <div class="button__field__xxl">
                                     <p1 class="button__text__table p-1">Powrót</p1>
                                 </div>

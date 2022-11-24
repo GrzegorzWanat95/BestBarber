@@ -10,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
@@ -29,15 +29,15 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="left__menu">
-                        <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
+                        <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
                         <a class="nav-item nav-link" href="about.php">O NAS</a>
-                        <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
+                        <a class="nav-item nav-link" href="../price/index.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                        <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
-                        <?php include 'scripts/check-admin-script.php'; ?>
+                        <a class="nav-item nav-link" href="../review/index.php">OPINIE</a>
+                        <?php include '../../scripts/view-model/check-admin-script.php'; ?>
                     </div>
                     <div class="right__menu">
-                        <?php include 'scripts/check-login-script.php'; ?>
+                        <?php include '../../scripts/view-model/check-login-script.php'; ?>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@ session_start();
     <!-- mobile version -->
     <div class="menu__top__mobile">
         <div class="menu__container">
-            <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
+            <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
             <nav class="navbar navbar-dark m-4">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@ session_start();
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="menu__collapse">
-                    <?php include 'scripts/menu-collapse-script.php'; ?>
+                    <?php include '../../scripts/view-model/menu-collapse-script.php'; ?>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@ session_start();
         </div>
     </div>
     <div class="footer">
-        <img class="logo__footer" src="../img/logo1biel.png" alt="BestBarber logo">
+        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo">
         <div class="footer__text">
             Copyright©2022 BestBarber
         </div>

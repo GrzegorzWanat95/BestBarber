@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("connectdb.php");
+    require_once("../../scripts/database-context/connectdb.php");
 
     //connect to database
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
@@ -34,12 +34,12 @@
         mysqli_query($connection, $query);
         $_SESSION['success'] = "Zarezerwowano termin!";
         $_SESSION['date'] = $date;
-        header('location: ../add-reservation.php?date=' . "'$date'");
+        header('location: ../../view/booking/add.php?date=' . "'$date'");
       }
       else
       {
         $_SESSION['edit-service-error'] = $errors;
-        header('Location: ../booking.php');
+        header('Location: ../../view/booking/index.php');
       }
       $connection->close();
     }

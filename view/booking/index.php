@@ -19,13 +19,12 @@ else
     $_SESSION['date'] = $timestamp;
 }
 
-require('scripts/time-range.php');
-require('scripts/check-date.php');
+require('../../scripts/booking/check-date.php');
 $today = date('Y-m-d', time());
 
 if(!isset($_SESSION['loggedin']))
 {
-    header('Location: /index.php');
+    header('Location: ../home/index.php');
 }
 ?>
 
@@ -37,7 +36,7 @@ if(!isset($_SESSION['loggedin']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Bootstra Datepicker CSS -->
@@ -54,23 +53,23 @@ if(!isset($_SESSION['loggedin']))
 </head>
 
 <body>
-    <div class="menu__top">
+<div class="menu__top">
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                <div class="left__menu">
-                        <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
-                        <a class="nav-item nav-link" href="about.php">O NAS</a>
-                        <a class="nav-item nav-link" href="price-list.php">CENNIK</a>
-                        <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
-                        <a class="nav-item nav-link" href="reviews.php">OPINIE</a>
-                        <?php include 'scripts/check-admin-script.php'; ?>
+                    <div class="left__menu">
+                        <a href="../home/index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+                        <a class="nav-item nav-link" href="../home/about.php">O NAS</a>
+                        <a class="nav-item nav-link" href="../price/index.php">CENNIK</a>
+                        <a class="nav-item nav-link" href="../home/contact.php">KONTAKT</a>
+                        <a class="nav-item nav-link" href="../review/index.php">OPINIE</a>
+                        <?php include '../../scripts/view-model/check-admin-script.php'; ?>
                     </div>
                     <div class="right__menu">
-                        <?php include 'scripts/check-login-script.php'; ?>
+                        <?php include '../../scripts/view-model/check-login-script.php'; ?>
                     </div>
                 </div>
             </div>
@@ -79,7 +78,7 @@ if(!isset($_SESSION['loggedin']))
     <!-- mobile version -->
     <div class="menu__top__mobile">
         <div class="menu__container">
-            <a href="index.php"><img class="logo" src="../img/logo2biel.png" alt="BestBarber logo"></a>
+            <a href="../home/index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
             <nav class="navbar navbar-dark m-4">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -89,7 +88,7 @@ if(!isset($_SESSION['loggedin']))
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="menu__collapse">
-                    <?php include 'scripts/menu-collapse-script.php'; ?>
+                    <?php include '../../scripts/view-model/menu-collapse-script.php'; ?>
                 </div>
             </div>
         </div>
@@ -122,14 +121,14 @@ if(!isset($_SESSION['loggedin']))
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php include 'scripts/check-admin-booking.php'; ?>
+                            <?php include '../../scripts/booking/check-admin-booking.php'; ?>
                             </tbody>
                         </table>
                     <?php } else { ?>
 
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
                         <div class="calendar__holder">
-                            <form id="chooseDate" class="booking" method="post" action="booking.php">
+                            <form id="chooseDate" class="booking" method="post" action="index.php">
                                 <div class="calendar">
                                     <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $today ?>  value=<?php echo $timestamp ?> required />
                                 </div>
@@ -200,14 +199,14 @@ if(!isset($_SESSION['loggedin']))
                     <?php } ?>
                 </div>
                 <div class="half__side">
-                    <img class="price" src="../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
+                    <img class="price" src="../../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
                 </div>
 
             </div>
         </div>
     </div>
     <div class="footer">
-        <img class="logo__footer" src="../img/logo1biel.png" alt="BestBarber logo">
+        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo">
         <div class="footer__text">
             Copyright©2022 BestBarber
         </div>

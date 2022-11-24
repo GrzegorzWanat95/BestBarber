@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("connectdb.php");
+    require_once("../../scripts/database-context/connectdb.php");
 
     //database connection
     $connection = new mysqli($host,$db_user,$db_password,$db_name);

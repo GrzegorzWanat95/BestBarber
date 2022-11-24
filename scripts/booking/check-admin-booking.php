@@ -1,6 +1,6 @@
 <?php
 #adding view and editing booking data as administrator
-    require_once("connectdb.php");
+require_once("../../scripts/database-context/connectdb.php");
     $username = $_SESSION['user'];
     //database connection
     $connection = new mysqli($host, $db_user, $db_password, $db_name);

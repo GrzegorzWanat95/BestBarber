@@ -21,7 +21,7 @@ $service = $_SESSION['service'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
@@ -41,9 +41,9 @@ $service = $_SESSION['service'];
                     </h1>
                 </div>
                 <div class="button-corner">
-                    <button class="small__button" onclick="window.location='booking.php';">✕</button>
+                    <button class="small__button" onclick="window.location='index.php';">✕</button>
                 </div>
-                <form class="user__forms" action="scripts/edit-booking.php" method="post">
+                <form class="user__forms" action="../../scripts/booking/edit.php" method="post">
                     <div class="settings__fields">
                         <input type="hidden" name="id"  value="<?php echo $id; ?>">
                         Data: <input class="input__fields" id="date" required type="date" name="date" >

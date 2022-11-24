@@ -1,6 +1,6 @@
 <?php
     #adding view and editing booking data as user
-    require_once("connectdb.php");
+    require_once("../../scripts/database-context/connectdb.php");
     $username = $_SESSION['user'];
 
     //database connection
