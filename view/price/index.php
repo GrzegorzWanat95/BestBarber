@@ -31,7 +31,7 @@ require('../../scripts/price/index.php');
                 <div class="navbar-nav">
                     <div class="left__menu">
                         <a href="../home/index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
-                        <a class="nav-item nav-link" href="about.php">O NAS</a>
+                        <a class="nav-item nav-link" href="../home/about.php">O NAS</a>
                         <a class="nav-item nav-link" href="../price/index.php">CENNIK</a>
                         <a class="nav-item nav-link" href="../home/contact.php">KONTAKT</a>
                         <a class="nav-item nav-link" href="../review/index.php">OPINIE</a>
