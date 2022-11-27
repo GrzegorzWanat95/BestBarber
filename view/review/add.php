@@ -1,5 +1,5 @@
 <?php
-require('reviews.php');
+require('index.php');
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ require('reviews.php');
                 <div class="button-corner">
                     <button class="small__button" onclick="window.location='index.php';">✕</button>
                 </div>
-                <form class="user__forms" action="../../scripts/review/add.php" method="post">
+                <form class="user__forms" action="../../scripts/review/add-review.php" method="post">
                     <div class="settings__fields">
                         Ocena: <input class="input__fields" type="number" name="rating" min="1" max="5">
                     </div>
