@@ -22,6 +22,7 @@ $service = $_SESSION['service'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestBarber</title>
     <link rel="stylesheet" href="../../styles/app.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
@@ -46,12 +47,14 @@ $service = $_SESSION['service'];
                 <form class="user__forms" action="../../scripts/booking/edit.php" method="post">
                     <div class="settings__fields">
                         <input type="hidden" name="id"  value="<?php echo $id; ?>">
-                        Data: <input class="input__fields" id="date" required type="date" name="date" >
+                        Data: <input type="date" id="date" name="date" oninput='chooseDate.submit()' min=<?php echo $today ?>  value=<?php echo $timestamp ?> required />
+                        
                     </div>
                     <select name="hour" required>
                         <option value="" disabled selected>Wybierz godzinę</option>
-                        <?php foreach($times as $key=>$val){ ?>
-                        <option value="<?php echo $val; ?>"><?php echo $val; ?></option>
+                        <?php
+                          foreach ($hours_pattern as $hour) { ?>
+                            <option value="<?php echo $hour; ?>"><?php echo $hour; ?></option>
                         <?php } ?>
                     </select>
                     <select name="service" required >
@@ -83,17 +86,6 @@ $service = $_SESSION['service'];
     <?php unset($_SESSION['edit-service-error']) ?>
     <?php unset($_SESSION['name']) ?>
     <?php unset($_SESSION['price']) ?>
-    <script>
-        const picker = document.getElementById('date');
-        picker.addEventListener('input', function(e){
-        var day = new Date(this.value).getUTCDay();
-        if([6,0].includes(day)){
-            e.preventDefault();
-            this.value = '';
-            alert('W weekendy jesteśmy zamknięci');
-        }
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
