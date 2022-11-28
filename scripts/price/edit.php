@@ -7,7 +7,7 @@
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
     $errors = array();
 
-    //get data for placeholder
+    //get data from user form
     $id = $_POST["id"];
     $description = $_POST['description'];
     $price = $_POST['price'];
