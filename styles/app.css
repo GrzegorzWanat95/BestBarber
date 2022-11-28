@@ -630,22 +630,43 @@ a:active {
     background-color: #fff5eb9c;
 }
 
-.operation__window{
-    position: fixed;
-    z-index: 1001;
-    margin-left: 35vw;
-    margin-right: 35vw;
-    margin-top: 22.5vh;
-    margin-bottom: 22.5vh;
-    width: 30%;
-    min-height: 55%;
-    background-color: #fff5eb;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    border: 1px solid #29231e8a;
+@media screen and (min-width: 300px) {
+    .operation__window{
+        position: fixed;
+        z-index: 1001;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: #fff5eb;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        border: 1px solid #29231e8a;
+    }
 }
+
+@media screen and (min-width: 1300px) {
+    .operation__window{
+        position: fixed;
+        z-index: 1001;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        margin-top: 22.5vh;
+        margin-bottom: 22.5vh;
+        width: 30%;
+        min-height: 55%;
+        background-color: #fff5eb;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        border: 1px solid #29231e8a;
+    }
+  }
 
 .window__frame{
     width: 90%;
@@ -709,9 +730,18 @@ a:active {
     overflow:auto;
 }
 
-.button__regular{
-    border: 2px solid #30342f;
-    width: 10vw;
+@media screen and (min-width: 300px) {
+    .button__regular{
+        border: 2px solid #30342f;
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .button__regular{
+        border: 2px solid #30342f;
+        width: 10vw;
+    }
 }
 
 .button__regular:hover{
