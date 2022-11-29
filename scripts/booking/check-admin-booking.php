@@ -64,8 +64,8 @@ $result = mysqli_query($connection, $query);
                 '<tr>
                     <td>'.$date.'</td>
                     <td>'.$hour.'</td>
-                    <td>'.$service.'</td>
-                    <td>'.$username1.'</td>
+                    <td class="mobile-table">'.$service.'</td>
+                    <td class="mobile-table">'.$username1.'</td>
                     <td>'."<a href=../../scripts/booking/delete.php?id=" . $row['id'] . ">🗑</a>".'</td>
                     <td>'."<a href=edit.php?id=" . $row['id'] . ">🖉</a>".'</td>
                 </tr>';

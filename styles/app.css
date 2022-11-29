@@ -587,6 +587,7 @@ a:active {
         background-color: inherit;
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
   }
 
@@ -818,6 +819,33 @@ label{
     background-color: inherit;
 }
 
+@media screen and (min-width: 300px) {
+    td,th{
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    td,th{
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (min-width: 300px) {
+    .table{
+        font-size: 0.6rem !important;
+        width: 80vw;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .table{
+        width: auto;
+        height: auto;
+    }
+}
+
 .table__end{
     justify-items: flex-end;
     text-align: end;
@@ -935,3 +963,17 @@ label{
     color: #edcfb2 !important;
     background-color: #29231e !important;
 }
+
+@media screen and (min-width: 300px) {
+    .mobile-table{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1300px) {
+    .mobile-table{
+        display: revert;
+    }
+}
+

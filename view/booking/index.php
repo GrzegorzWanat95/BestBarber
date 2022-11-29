@@ -114,8 +114,8 @@ if(!isset($_SESSION['loggedin']))
                                 <tr>
                                     <th>Data</th>
                                     <th>Godzina</th>
-                                    <th>Usługa</th>
-                                    <th>Użytkownik</th>
+                                    <th class="mobile-table">Usługa</th>
+                                    <th class="mobile-table">Użytkownik</th>
                                     <th>Usuń</th>
                                     <th>Edycja</th>
                                 </tr>

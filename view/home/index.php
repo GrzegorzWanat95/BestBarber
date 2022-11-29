@@ -123,11 +123,33 @@ session_start();
                         naszego salonu.
                     </p1>
                 </div>
-                <a link href="../booking/index.php" class="button__container mt-5">
-                    <div class="button__field">
-                        <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
-                    </div>
-                </a>
+                <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                    <?php
+                    if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
+                    <a link href="../booking/index.php" class="button__container mt-2">
+                        <div class="button__field">
+                            <p1 class="button__text p-1">KALENDARZ&nbsp;WIZYT</p1>
+                        </div>
+                    </a>
+                    <?php
+                    }
+                    else
+                    { ?>
+                        <a link href="../booking/index.php" class="button__container mt-2">
+                        <div class="button__field">
+                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                        </div>
+                        </a>
+                    <?php }
+                }
+                else { ?>
+                    <a link href="../user/login.php" class="button__container mt-2">
+                        <div class="button__field">
+                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                        </div>
+                    </a>
+                <?php }
+                ?>
             </div>
         </div>
     </div>

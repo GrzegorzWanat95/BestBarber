@@ -47,7 +47,6 @@ div#calendar div.header a.next {
     right: 0px;
 }
 
-/*******************************Calendar Content Cells*********************************/
 div#calendar div.box-content {
     border: 1px solid #3FA7D6;
     border-top: none;
@@ -85,7 +84,6 @@ div#calendar ul.dates {
     margin-bottom: 5px;
 }
 
-/** overall width = width+padding-right**/
 div#calendar ul.dates li {
     margin: 0px;
     padding: 0px;
@@ -169,3 +167,4 @@ div.booked {
     position:relative;
     top:1px;
 }
+
