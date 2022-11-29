@@ -5,6 +5,8 @@
 
     //database connection
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
+    //PL charset
+    mysqli_set_charset($connection, "utf8mb4");
 
     //find all booking terms in database
     $query = "SELECT * FROM bookings WHERE username='$username' ORDER BY date ASC, hour DESC";

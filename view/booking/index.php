@@ -112,7 +112,6 @@ if(!isset($_SESSION['loggedin']))
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Data</th>
                                     <th>Godzina</th>
                                     <th>Usługa</th>

@@ -4,6 +4,8 @@ require_once("../../scripts/database-context/connectdb.php");
     $username = $_SESSION['user'];
     //database connection
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
+    //PL charset
+    mysqli_set_charset($connection, "utf8mb4");
     $query = "SELECT * FROM bookings ORDER BY date ASC, hour DESC";
         //fetch all booking terms to array
         if ($result = $connection->query($query))
@@ -19,7 +21,6 @@ require_once("../../scripts/database-context/connectdb.php");
                 //display data in booking panel in administrator mode
                 echo
                 '<tr>
-                    <td>'.$id.'</td>
                     <td>'.$date.'</td>
                     <td>'.$hour.'</td>
                     <td>'.$service.'</td>

@@ -4,6 +4,9 @@
 
     //connect to database
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
+    
+    //PL charset
+    mysqli_set_charset($connection, "utf8mb4");
     $errors = array();
 
     if(!$connection)

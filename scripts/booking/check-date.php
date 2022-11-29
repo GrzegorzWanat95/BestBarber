@@ -3,6 +3,9 @@
     require_once("../../scripts/database-context/connectdb.php");
     //database connection
     $connection = new mysqli($host,$db_user,$db_password,$db_name);
+    //PL charset
+    mysqli_set_charset($connection, "utf8mb4");
+    
     $errors = array();
 
     if(isset($_POST['date']))
