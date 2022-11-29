@@ -9,31 +9,22 @@
 
     //get data for placeholder
     $id=$_POST['id'];
-    $name = $_POST['login'];
     $email = $_POST['email'];
     $password_1 = $_POST['password_1'];
     $password_2 = $_POST['password_2'];
  
     //find user from database 
-    $user_check_query = "SELECT * FROM user WHERE login='$name' OR email='$email' LIMIT 1";
+    $user_check_query = "SELECT * FROM user WHERE email='$email' LIMIT 1";
     $result = mysqli_query($connection, $user_check_query);
     $user = mysqli_fetch_assoc($result);
 
     //data validation
     if ($user) { // if user exists
-        if ($user['login'] === $name) {
-          array_push($errors, "Użytkownik o podanej nazwie już istnieje!");
-        }
-
         if ($user['email'] === $email) {
           array_push($errors, "Podany email jest już w bazie!");
         }
     }
 
-    if (empty($name)) 
-    { 
-      array_push($errors, "Musisz podać login użytkownika!");
-    }
     if (empty($email)) 
     { 
       array_push($errors, "Email jest wymagany");
@@ -53,9 +44,8 @@
        unset($_SESSION['register-error']);
        $password = md5($password_1);//encrypt the password before saving in the database
 
-       $query = "UPDATE user SET login = '$name', email = '$email', password = '$password' WHERE id='$id'";
+       $query = "UPDATE user SET email = '$email', password = '$password' WHERE id='$id'";
        mysqli_query($connection, $query);
-       $_SESSION['login'] = $name;
        $_SESSION['success'] = "Zmieniono dane konta!";
        header('location: logout.php');
     }

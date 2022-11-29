@@ -17,7 +17,7 @@
       $errors = array();
   
       //find searching booking term from user input
-      $service_query_check = "SELECT * FROM BOOKINGS WHERE id='$id'";
+      $service_query_check = "SELECT * FROM bookings WHERE id='$id'";
       $result = mysqli_query($connection, $service_query_check);
       $service = mysqli_fetch_assoc($result);
       
