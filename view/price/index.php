@@ -92,7 +92,7 @@ require('../../scripts/price/index.php');
                                         <?php echo "<a href=../../scripts/price/delete.php?id=" . $row['id'] . ">🗑</a>"; ?>
                                     </td>
                                     <td>
-                                        <?php echo "<a href=../../scripts/price/edit.php?id=" . $row['id'] . ">🖉</a>"; ?>
+                                        <?php echo "<a href=edit.php?id=" . $row['id'] . ">🖉</a>"; ?>
                                     </td>
                                         <?php } ?>
                                     <?php } ?>
