@@ -1,5 +1,14 @@
 <?php
 session_start();
+
+$root = dirname(__DIR__) . DIRECTORY_SEPARATOR; 
+
+
+
+
+
+
+
 if(isset($_SESSION['date']))
 {
     $timestamp = $_SESSION['date'];
