@@ -406,6 +406,17 @@ a:active {
     background-color: inherit !important;
 }
 
+.button__field__xxl__navigation{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    background-color: inherit !important;
+    background-color: #29231e !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .button__field{
     background-color: inherit !important;
 }
@@ -909,4 +920,18 @@ label{
     justify-content: center;
     justify-items: center;
     text-align: center;
+}
+
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #fff5eb !important;
+}
+
+.page-item, .page-link{
+    width:fit-content;
+    color: #edcfb2 !important;
+    background-color: #29231e !important;
 }
