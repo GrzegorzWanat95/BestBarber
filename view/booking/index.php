@@ -26,7 +26,7 @@ $today = date('Y-m-d', time());
 if(!isset($_SESSION['loggedin']))
 {
     header('Location: ../home/index.php');
-}
+}        
 ?>
 
 <!DOCTYPE html>
@@ -121,9 +121,19 @@ if(!isset($_SESSION['loggedin']))
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php include '../../scripts/booking/check-admin-booking.php'; ?>
+                            <?php 
+                            include("../../scripts/booking/check-admin-booking.php");
+                            ?>
                             </tbody>
                         </table>
+                        <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link <?= ($page_no <= 1) ? 'disabled' : '' ?>" <?= ($page_no >1) ? 'href=?page=' . $previous_page : ''; 
+                            ?>>Poprzednia</a></li>
+                            <li class="page-item"><a class="page-link <?= ($page_no >= $total_no_of_pages) ? 'disabled' : '' ?>" <?= ($page_no < $total_no_of_pages) ? 'href=?page=' . $next_page : ''; 
+                            ?>>Następna</a></li>
+                        </ul>
+                        </nav>
                     <?php } else { ?>
 
                         <h5 class="calendar__title">Wybierz dzień miesiąca:</h5>
