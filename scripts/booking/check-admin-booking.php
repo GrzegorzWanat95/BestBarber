@@ -13,13 +13,13 @@ else
     $page_no = 1;
 }
 
+$date =  date("Y-m-d");
+
 $username = $_SESSION['user'];
 //database connection
 $connection = new mysqli($host, $db_user, $db_password, $db_name);
 //PL charset
 mysqli_set_charset($connection, "utf8mb4");
-
-
 
 //limit records
 $total_records_per_page = 5;
@@ -45,7 +45,7 @@ $total_records = $records['total_records'];
 //get total pages
 $total_no_of_pages = ceil($total_records/$total_records_per_page);
 
-$query = "SELECT * FROM bookings ORDER BY date ASC, hour ASC LIMIT $offset , $total_records_per_page";
+$query = "SELECT * FROM bookings WHERE date >= '$date' ORDER BY date ASC, hour ASC LIMIT $offset , $total_records_per_page";
 $result = mysqli_query($connection, $query);
 //fetch all booking terms to array
 
