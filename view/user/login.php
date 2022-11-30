@@ -40,10 +40,10 @@
                 </div>
                 <form class="user__forms" action="../../scripts/user/login.php" method="post">
                     <div class="settings__fields">
-                        Login: <input class="input__fields" type="text" name="login">
+                        Login: <input class="input__fields" type="text" name="login" maxlength="30">
                     </div>
                     <div class="settings__fields">
-                        Hasło: <input class="input__fields" type="password" name="password">
+                        Hasło: <input class="input__fields" type="password" name="password" maxlength="30">
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['login-error'])) echo $_SESSION['login-error']?>
@@ -55,7 +55,7 @@
                     </div>
                 </form>
                 <div class="button-center mt-2">
-                    <button class="small__button" onclick="window.location='../home/contact.php';">Nie pamiętam hasła</button>
+                    <button class="small__button" onclick="window.location='../home/contact.php';">Nie pamiętasz hasła? Skontaktuj się z&nbsp;nami</button>
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@ require('index.php');
                     </div>
                     <div class="settings__fields__comments">
                         <label for="comment">Komentarz:</label>
-                        <textarea class="input__fields" id="comment" type="number" rows="2" cols="50" name="content"></textarea>
+                        <textarea class="input__fields" id="comment" type="number" rows="2" cols="50" name="content" maxlength="250"></textarea>
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['add-review-error'])) {

@@ -40,7 +40,7 @@ require('index.php');
                 </div>
                 <form class="user__forms" action="../../scripts/price/add.php" method="post">
                     <div class="settings__fields">
-                        Nazwa: <input class="input__fields" type="text" name="description">
+                        Nazwa: <input class="input__fields" type="text" name="description" maxlength="250">
                     </div>
                     <div class="settings__fields">
                         Cena: <input class="input__fields" type="number" name="price">

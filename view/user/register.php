@@ -43,16 +43,16 @@
                 </div>
                     <form class="user__forms" action="../../scripts/user/register.php" method="post">
                     <div class="settings__fields">
-                        Login: <input class="input__fields" type="text" name="login">
+                        Login: <input class="input__fields" type="text" name="login" minlength="3" maxlength="20">
                     </div>
                     <div class="settings__fields">
-                        Mail: <input class="input__fields" type="text" name="email">
+                        Mail: <input class="input__fields" type="email" name="email" maxlength="30">
                     </div>
                     <div class="settings__fields">
-                        Hasło: <input class="input__fields" type="password" name="password_1">
+                        Hasło: <input class="input__fields" type="password" name="password_1" minlength="6">
                     </div>
                     <div class="settings__fields">
-                        Potwierdź: <input class="input__fields" type="password" name="password_2">
+                        Potwierdź: <input class="input__fields" type="password" name="password_2" minlength="6">
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['register-error']))
