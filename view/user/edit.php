@@ -45,7 +45,7 @@
                     <form class="user__forms" action="../../scripts/user/edit.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $user['ID']; ?>">
                     <div class="settings__fields">
-                        Mail: <input class="input__fields" type="text" name="email" placeholder="<?php echo $user['email']; ?>">
+                        Mail: <input class="input__fields" type="text" name="email" value="<?php echo $user['email']; ?>">
                     </div>
                     <div class="settings__fields">
                         Hasło: <input class="input__fields" type="password" name="password_1">
