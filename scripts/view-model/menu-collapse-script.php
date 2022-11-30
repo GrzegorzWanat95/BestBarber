@@ -21,6 +21,13 @@
     }
     else
     {
-        echo '<a class="nav-item nav-link" href="../booking/index.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>';
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+        {
+            echo '<a class="nav-item nav-link" href="../booking/index.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>';
+        }
+        else
+        {
+            echo '<a class="nav-item nav-link" href="../user/login.php">UMÓW&nbsp;SIĘ&nbsp;NA&nbsp;WIZYTĘ</a>';
+        }
     }
 ?>
