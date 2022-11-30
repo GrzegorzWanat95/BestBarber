@@ -934,9 +934,16 @@ label{
     background-color: inherit;
     display: flex;
     justify-content: center;
+    justify-items: center;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
+}
+
+.text__with__link{
+    color: #29231e !important;
+    background-color: inherit;
 }
 
 .center{

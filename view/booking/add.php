@@ -40,7 +40,7 @@ require('index.php');
                         </h1>
                     </div>
                     <div class="settings__fields">
-                            Swoje rezerwacje znajdziesz w&nbsp;<a class="text__link" href=../user/index.php>panelu użytkownika</a>.
+                            <p1 class="text__with__link">Swoje rezerwacje znajdziesz w&nbsp;<a class="text__link" href=../user/index.php>panelu użytkownika</a>.</p1>
                     </div>
                 </div>
                 <a link href="index.php">
