@@ -62,7 +62,7 @@ if(!isset($_SESSION['loggedin']))
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="left__menu">
-                        <a href="../home/index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+                        <a href="../home/index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
                         <a class="nav-item nav-link" href="../home/about.php">O NAS</a>
                         <a class="nav-item nav-link" href="../price/index.php">CENNIK</a>
                         <a class="nav-item nav-link" href="../home/contact.php">KONTAKT</a>
@@ -79,7 +79,7 @@ if(!isset($_SESSION['loggedin']))
     <!-- mobile version -->
     <div class="menu__top__mobile">
         <div class="menu__container">
-            <a href="../home/index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+            <a href="../home/index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
             <nav class="navbar navbar-dark m-4">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -207,14 +207,14 @@ if(!isset($_SESSION['loggedin']))
                     <?php } ?>
                 </div>
                 <div class="half__side">
-                    <img class="price" src="../../img/14.png" alt="Zdjęcie narzędzi fryzjerskich">
+                    <img class="price" src="../../img/14.png" alt="Zdjęcie narzędzi barbera">
                 </div>
 
             </div>
         </div>
     </div>
     <div class="footer">
-        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo">
+        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo barber Poznań">
         <div class="footer__text">
             Copyright©2022 BestBarber
         </div>

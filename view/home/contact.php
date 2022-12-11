@@ -29,7 +29,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="left__menu">
-                        <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+                        <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
                         <a class="nav-item nav-link" href="about.php">O NAS</a>
                         <a class="nav-item nav-link" href="../price/index.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
@@ -46,7 +46,7 @@ session_start();
     <!-- mobile version -->
     <div class="menu__top__mobile">
         <div class="menu__container">
-            <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+            <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
             <nav class="navbar navbar-dark m-4">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -76,20 +76,9 @@ session_start();
                 </div>
                 <div class="half__side">
                     <div class="mapouter">
-                        <div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Ratajczaka%2031%20Pozna%C5%84&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">
+                        <div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Ratajczaka%2031%20Pozna%C5%84&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">
                                 divi discount</a><br>
-                            <style>
-                                .mapouter {
-                                    position: relative;
-                                    text-align: right;
-                                }
-                            </style><a href="https://www.embedgooglemap.net">show google maps on website</a>
-                            <style>
-                                .gmap_canvas {
-                                    overflow: hidden;
-                                    background: none !important;
-                                }
-                            </style>
+                            <a href="https://www.embedgooglemap.net">show google maps on website</a>                          
                         </div>
                     </div>
                 </div>
@@ -97,7 +86,7 @@ session_start();
         </div>
     </div>
     <div class="footer">
-        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo">
+        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo barber Poznań">
         <div class="footer__text">
             Copyright©2022 BestBarber
         </div>

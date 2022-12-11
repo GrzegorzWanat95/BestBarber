@@ -40,10 +40,10 @@
                 </div>
                 <form class="user__forms" action="../../scripts/user/login.php" method="post">
                     <div class="settings__fields">
-                        Login: <input class="input__fields" type="text" name="login" maxlength="30">
+                        Login: <input class="input__fields" type="text" name="login" maxlength="30" required>
                     </div>
                     <div class="settings__fields">
-                        Hasło: <input class="input__fields" type="password" name="password" maxlength="30">
+                        Hasło: <input class="input__fields" type="password" name="password" maxlength="30" required>
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['login-error'])) echo $_SESSION['login-error']?>

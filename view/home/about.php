@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="left__menu">
-                        <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+                        <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
                         <a class="nav-item nav-link" href="about.php">O NAS</a>
                         <a class="nav-item nav-link" href="../price/index.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
@@ -46,7 +46,7 @@
     <!-- mobile version -->
     <div class="menu__top__mobile">
         <div class="menu__container">
-            <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+            <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
             <nav class="navbar navbar-dark m-4">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@
     <div class="subpage__content">
         <div class="content__frame">
             <h1 class="header">
-                O NAS
+                BestBarber - najlepszy fryzjer w Poznaniu
             </h1>
             <div class="subpage__text">
                 BestBarber to tradycyjny salon barberski w centrum Poznania. Każdego dnia nasz zespół profesjonalnych fryzjerów
@@ -76,16 +76,16 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100 carousele__img" src="../../img/7.png" alt="First slide">
+                                <img class="d-block w-100 carousele__img" src="../../img/7.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="../../img/8.png" alt="Second slide">
+                                <img class="d-block w-100" src="../../img/8.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="../../img/9.png" alt="Third slide">
+                                <img class="d-block w-100" src="../../img/9.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="../../img/10.png" alt="Fourth slide">
+                                <img class="d-block w-100" src="../../img/10.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -102,16 +102,16 @@
                     <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100 carousele__img" src="../../img/12.png" alt="First slide">
+                                <img class="d-block w-100 carousele__img" src="../../img/12.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="../../img/13.png" alt="Second slide">
+                                <img class="d-block w-100" src="../../img/13.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="../../img/14.png" alt="Third slide">
+                                <img class="d-block w-100" src="../../img/14.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="../../img/11.png" alt="Fourth slide">
+                                <img class="d-block w-100" src="../../img/11.png" alt="Strzyżenie BestBarber Poznań">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
@@ -128,7 +128,7 @@
         </div>
     </div>
     <div class="footer">
-        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo">
+        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo barber Poznań">
         <div class="footer__text">
             Copyright©2022 BestBarber
         </div>

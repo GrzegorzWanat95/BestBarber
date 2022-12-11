@@ -365,10 +365,10 @@ a:active {
     }
   }
 
-  @media screen and (min-width: 300px) {
+  @media screen and (min-width: 1300px) {
     .text{
         text-align: center;
-        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        font-size: calc(14px + 6 * ((100vw - 320px) / 680));
     }
   }
 
@@ -796,8 +796,14 @@ a:active {
         margin-top: 0;
     }
   }
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+}
 
 .mapouter{
+    position: relative;
+    text-align: right;
     display: flex;
     justify-content: center;
     align-content: center;

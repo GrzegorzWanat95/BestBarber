@@ -1,11 +1,10 @@
 <?php
 require('index.php');
 
-/*if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+if (!isset($_SESSION['ADMIN']))
     {
-        header('Location: /index.php');
         exit();
-    }*/
+    }
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +42,7 @@ require('index.php');
                         Nazwa: <input class="input__fields" type="text" name="description" maxlength="250">
                     </div>
                     <div class="settings__fields">
-                        Cena: <input class="input__fields" type="number" name="price">
+                        Cena: <input class="input__fields" type="number" name="price" min="1">
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['service-error'])) {

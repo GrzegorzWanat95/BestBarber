@@ -23,16 +23,7 @@
     $result = mysqli_query($connection, $user_check_query);
     $user = mysqli_fetch_assoc($result);
 
-    //form validation
-    if ($user) { // if user exists
-        if ($user['login'] === $username) {
-          array_push($errors, "Użytkownik o podanej nazwie już istnieje!");
-        }
-
-        if ($user['email'] === $email) {
-          array_push($errors, "Podany email jest już w bazie!");
-        }
-    }
+    
 
     if (empty($username)) 
     { 
@@ -49,6 +40,16 @@
     if ($password_1 != $password_2) 
     {
       array_push($errors, "Hasła nie są ze sobą zgodne");
+    }
+    //form validation
+    if ($user!=null) { // if user exists
+        if ($user['login'] === $username) {
+          array_push($errors, "Użytkownik o podanej nazwie już istnieje!");
+        }
+
+        if ($user['email'] === $email) {
+          array_push($errors, "Podany email jest już w bazie!");
+        }
     }
 
     if(count($errors) == 0)

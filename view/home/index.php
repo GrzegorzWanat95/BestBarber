@@ -29,7 +29,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="left__menu">
-                        <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+                        <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
                         <a class="nav-item nav-link" href="about.php">O NAS</a>
                         <a class="nav-item nav-link" href="../price/index.php">CENNIK</a>
                         <a class="nav-item nav-link" href="contact.php">KONTAKT</a>
@@ -46,7 +46,7 @@ session_start();
     <!-- mobile version -->
     <div class="menu__top__mobile">
         <div class="menu__container">
-            <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo"></a>
+            <a href="index.php"><img class="logo" src="../../img/logo2biel.png" alt="BestBarber logo barber Poznań"></a>
             <nav class="navbar navbar-dark m-4">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -68,21 +68,21 @@ session_start();
         <div class="right__content">
             <div class="main__text">
                 <div class="img__field">
-                    <img class="img-fluid middle_image" src="../../img/logo1biel.png" alt="BestBarber logo1biel">
+                    <img class="img-fluid middle_image" src="../../img/logo1biel.png" alt="BestBarber logo barber Poznań">
                 </div>
                 <div class="text__field">
-                    <p1 class="text">
+                    <p class="text">
                         Cenimy tradycyjną elegancję, profesjonalizm i styl. <br>Serdecznie zapraszamy do odwiedzenia
                         naszego&nbsp;salonu.
-                    </p1>
+                    </p>
                 </div>
                 <?php
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                     <?php
                     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                    <a link href="../booking/index.php" class="button__container mt-2">
+                    <a href="../booking/index.php" class="button__container mt-2">
                         <div class="button__field">
-                            <p1 class="button__text p-1">KALENDARZ&nbsp;WIZYT</p1>
+                            <p class="button__text p-1">KALENDARZ&nbsp;WIZYT</p>
                         </div>
                     </a>
                     <?php
@@ -91,15 +91,15 @@ session_start();
                     { ?>
                         <a link href="../booking/index.php" class="button__container mt-2">
                         <div class="button__field">
-                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                            <p class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p>
                         </div>
                         </a>
                     <?php }
                 }
                 else { ?>
-                    <a link href="../user/login.php" class="button__container mt-2">
+                    <a href="../user/login.php" class="button__container mt-2">
                         <div class="button__field">
-                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                            <p class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p>
                         </div>
                     </a>
                 <?php }
@@ -115,37 +115,37 @@ session_start();
         <div class="right__content">
             <div class="main__text">
                 <div class="img__field">
-                    <img class="img-fluid middle_image" src="../../img/logo1biel.png" alt="BestBarber logo1biel">
+                    <img class="img-fluid middle_image" src="../../img/logo1biel.png" alt="BestBarber logo barber Poznań">
                 </div>
                 <div class="text__field">
-                    <p1 class="text">
+                    <p class="text">
                         Cenimy tradycyjną elegancję, profesjonalizm i styl. <br>Serdecznie zapraszamy do odwiedzenia
                         naszego salonu.
-                    </p1>
+                    </p>
                 </div>
                 <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                     <?php
                     if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) { ?>
-                    <a link href="../booking/index.php" class="button__container mt-2">
+                    <a href="../booking/index.php" class="button__container mt-2">
                         <div class="button__field">
-                            <p1 class="button__text p-1">KALENDARZ&nbsp;WIZYT</p1>
+                            <p class="button__text p-1">KALENDARZ&nbsp;WIZYT</p>
                         </div>
                     </a>
                     <?php
                     }
                     else
                     { ?>
-                        <a link href="../booking/index.php" class="button__container mt-2">
+                        <a href="../booking/index.php" class="button__container mt-2">
                         <div class="button__field">
-                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                            <p class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p>
                         </div>
                         </a>
                     <?php }
                 }
                 else { ?>
-                    <a link href="../user/login.php" class="button__container mt-2">
+                    <a href="../user/login.php" class="button__container mt-2">
                         <div class="button__field">
-                            <p1 class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p1>
+                            <p class="button__text p-1">UMÓW SIĘ NA WIZYTĘ</p>
                         </div>
                     </a>
                 <?php }
@@ -154,7 +154,7 @@ session_start();
         </div>
     </div>
     <div class="footer">
-        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo">
+        <img class="logo__footer" src="../../img/logo1biel.png" alt="BestBarber logo barber Poznań">
         <div class="footer__text">
             Copyright©2022 BestBarber
         </div>

@@ -5,11 +5,10 @@ $id = $_GET["id"];
 $name = $_SESSION['name'];
 $price = $_SESSION['price'];
 
-/*if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+if (!isset($_SESSION['ADMIN']))
     {
-        header('Location: /index.php');
         exit();
-    }*/
+    }
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +47,7 @@ $price = $_SESSION['price'];
                         Nazwa: <input class="input__fields" type="text" name="description" value="<?php echo $name; ?>" maxlength="250">
                     </div>
                     <div class="settings__fields">
-                        Cena: <input class="input__fields" type="number" name="price" value="<?php echo $price; ?>">
+                        Cena: <input class="input__fields" type="number" name="price" min="1" value="<?php echo $price; ?>">
                     </div>
                     <div class="settings__fields">
                         <?php if (isset($_SESSION['edit-service-error'])) {

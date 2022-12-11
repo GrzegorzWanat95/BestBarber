@@ -1,5 +1,9 @@
 <?php
 require('index.php');
+if (!isset($_SESSION['loggedin']))
+    {
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
